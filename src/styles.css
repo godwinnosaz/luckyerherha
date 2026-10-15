@@ -5049,3 +5049,26 @@ footer :is(a, button, input):focus-visible {
     width: 100%;
   }
 }
+
+/* Onboarding Exact Replication Styles */
+.onboard-btn {
+  background-color: var(--secondary-color) !important;
+  color: var(--accent) !important;
+  padding-inline: 3rem !important;
+  padding-block: 1rem !important;
+  display: inline-block !important;
+  cursor: pointer !important;
+  border-radius: 0 !important;
+  border: none !important;
+  font-family: 'TrajanPro', serif !important;
+  font-size: 1.3rem !important;
+  line-height: normal !important;
+  text-decoration: none !important;
+  transition: opacity 0.3s ease-in-out !important;
+}
+
+.onboard-btn:hover {
+  opacity: 0.8 !important;
+  color: var(--accent) !important;
+  background-color: var(--secondary-color) !important;
+}

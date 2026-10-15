@@ -6,6 +6,7 @@ import {
   Route,
   Routes,
   useLocation,
+  useParams,
 } from 'react-router-dom';
 
 function ScrollToTopOnRoute() {
@@ -604,25 +605,20 @@ function Footer({ color = false, secondaryColor = false }) {
 // ----------------------------------------------------
 function OnboardingPage() {
   return (
-    <div className="relative bg-[url(/assets/imgs/onboard/onboard-img.jpg)] bg-cover bg-center bg-no-repeat h-screen w-full overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/75 pointer-events-none" />
-      <div className="flex justify-center items-center h-full flex-col relative z-10 px-4 text-center max-w-5xl mx-auto">
-        <span className="trajan-pro text-amber-400 text-xs sm:text-sm tracking-[0.3em] uppercase font-bold mb-4 drop-shadow">
-          THE AWAKENING &bull; AFRICA&apos;S RETURN
-        </span>
-        <h1 className="trajan-pro text-center text-white text-[2.2rem] sm:text-[3.5rem] md:text-[5.2rem] mx-auto leading-tight font-black tracking-wide drop-shadow-2xl">
+    <div className="bg-[url(/assets/imgs/onboard/onboard-img.jpg)] bg-cover bg-center bg-no-repeat h-screen w-full relative overflow-hidden">
+      <div className="flex justify-center items-center h-full flex-col relative px-4">
+        <span header="" className="trajan-pro text-center text-white text-[3rem] md:text-[5rem] mx-auto select-none leading-tight">
           LEFTOVERS ARE FOR SLAVES
-        </h1>
-
-        <div className="mt-8 md:mt-10 flex flex-col justify-center items-center">
-          <p className="text-xs sm:text-sm pb-3 trajan-pro text-amber-300/90 tracking-widest uppercase">
-            ENTER THE SANCTUARY <span className="animate-bounce inline-block ml-1">&darr;</span>
+        </span>
+        <div className="absolute bottom-30 flex flex-col justify-center items-center">
+          <p className="text-[1.1rem] pb-3 trajan-pro text-white">
+            JOIN <span className="animate-bounce inline-block">↓</span>
           </p>
           <Link
             to="/home"
-            className="trajan-pro px-8 py-3.5 sm:px-10 sm:py-4 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-black font-bold text-sm sm:text-base tracking-[0.15em] rounded-lg transition-all shadow-[0_10px_30px_rgba(212,175,55,0.3)] hover:shadow-[0_15px_40px_rgba(212,175,55,0.5)] hover:-translate-y-0.5"
+            className="trajan-pro cta-blue text-[1.3rem] onboard-btn"
           >
-            THE RISE OF ROYALS &rarr;
+            THE RISE OF ROYALS
           </Link>
         </div>
       </div>
@@ -944,8 +940,9 @@ function HomePage() {
             <div className="flex justify-between items-start mb-6 border-b border-white/10 pb-4">
               <div>
                 <span className="text-xs uppercase tracking-widest text-amber-400 trajan-pro">Institutional Sanctuary</span>
-                <h2 className="trajan-pro text-2xl md:text-3xl font-bold mt-1">THE SCHOOL OF BECOMING</h2>
-                <p className="text-sm text-gray-400">Africa's Return School of Economies</p>
+                <h2 className="trajan-pro text-xl md:text-2xl font-bold mt-1">
+                  AFRICA&apos;S RETURN SCHOOL OF ECONOMIES: THE SCHOOL OF BECOMING
+                </h2>
               </div>
               <button
                 type="button"
@@ -1043,6 +1040,9 @@ function AboutPage() {
                 <p className="md:text-[1.15rem] manrope">
                   We explore the questions beneath the questions. Rather than asking only why a particular problem exists, we ask what produced the problem in the first place. Rather than asking how Africa can catch up, we ask what Africa could build that would make the language of &ldquo;catching up&rdquo; irrelevant.
                 </p>
+                <p className="md:text-[1.15rem] manrope">
+                  Our work moves through ideas, conversations, books, films, education, business, community and the stories we tell about ourselves.
+                </p>
                 <p className="md:text-[1.15rem] manrope font-medium">
                   At the centre of everything is a belief that sounds simple but carries enormous responsibility: <strong>the African is capable of creating.</strong> And when a people remember that they can create, they begin to relate differently to their future.
                 </p>
@@ -1083,7 +1083,13 @@ function AboutPage() {
                     <strong>Africa's Return is concerned with that deeper layer.</strong> Our philosophy of liberation begins with first principles: return to the beginning of a problem, question the assumptions beneath it, understand its actual cause, and then create from that understanding rather than simply copying an existing response.
                   </p>
                   <p>
-                    True intellectual freedom means being able to learn from another person without becoming a smaller version of that person. We want Africans to move from consumers to creators, from observers to participants, from people waiting for solutions to people capable of producing them.
+                    We believe this is essential because a people who only inherit solutions will always remain dependent on the people who first imagined them. The goal is not to reject everything that came from outside Africa. Knowledge belongs to humanity and wisdom should travel. The goal is to become capable of receiving knowledge without losing the ability to generate it.
+                  </p>
+                  <p>
+                    True intellectual freedom means being able to learn from another person without becoming a smaller version of that person. It means knowing our history without becoming trapped inside it, embracing our identity without turning identity into an excuse, and looking at the world with enough confidence to say, &ldquo;We can learn from what exists, but we can also create what does not.&rdquo; This is why our liberation is fundamentally creative.
+                  </p>
+                  <p>
+                    We want Africans to move from consumers to creators, from observers to participants, from people waiting for solutions to people capable of producing them. The final expression of liberation is not simply having more. It is becoming more capable of creating what is needed.
                   </p>
                 </div>
               </div>
@@ -1236,6 +1242,9 @@ function AfricasReturnPage() {
                 <p className="trajan-pro text-amber-800 font-bold text-xs uppercase mt-4">
                   This is how civilizations move.
                 </p>
+                <p className="manrope text-sm font-medium text-gray-800 mt-4 pt-3 border-t border-gray-200">
+                  Africa's Call to Action is therefore not simply a call to protest what is wrong. It is a call to become increasingly useful to the future we say we desire. The question is no longer only, &ldquo;What happened to Africa?&rdquo; The question is, &ldquo;What are we going to build now?&rdquo;
+                </p>
               </div>
             </div>
           </div>
@@ -1277,10 +1286,9 @@ function AfricasReturnPage() {
           </div>
           <div className="md:w-1/2 space-y-4">
             <span className="trajan-pro text-xs text-amber-700 tracking-widest uppercase font-bold">The Educational Anchor</span>
-            <h2 className="trajan-pro text-2xl md:text-3xl font-black text-gray-900">
-              The School of Becoming
+            <h2 className="trajan-pro text-2xl md:text-3xl font-black text-gray-900 leading-tight">
+              Africa&apos;s Return School of Economies: The School of Becoming
             </h2>
-            <p className="text-amber-800 text-sm font-semibold">Africa’s Return School of Economies</p>
             <p className="manrope text-gray-700 text-sm leading-relaxed">
               A permanent intellectual institution designed to train African leaders, thinkers, architects, and entrepreneurs in sovereign systems, civilizational governance, and economic independence.
             </p>
@@ -1373,6 +1381,10 @@ function LeadershipPage() {
 // 6. LEGACY OF IMPACT (RJ BRAND & INVESTOR REMOVED, FOCUSED ON ZUMERA)
 // ----------------------------------------------------
 function LegacyPage() {
+  const { tab } = useParams();
+  // Map /legacy-of-impact/rj-brand or /zumera to 'zumera', and /investor-info or /manifesto to 'manifesto'
+  const activeTab = tab === 'manifesto' || tab === 'investor-info' ? 'manifesto' : 'zumera';
+
   return (
     <div className="min-h-screen text-(--primary-color) bg-white">
       <Navbar isDark={true} />
@@ -1382,122 +1394,192 @@ function LegacyPage() {
       <div className="border-b border-gray-200/80 bg-white py-6 sm:py-8 md:py-10">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <span className="trajan-pro text-amber-700 text-[11px] sm:text-xs tracking-[0.25em] uppercase font-bold block mb-1.5">
-            Physical Sovereignty
+            Civilizational Footprints
           </span>
           <h1 className="trajan-pro text-(--text-grey) text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light leading-tight">
             Building Monuments to Resistance.
           </h1>
         </div>
+
+        {/* Tab Navigation System */}
+        <div className="max-w-4xl mx-auto px-4 mt-6">
+          <div className="flex justify-center items-center gap-6 sm:gap-12 border-b border-gray-200">
+            <Link
+              to="/legacy-of-impact/zumera"
+              className={`trajan-pro text-sm sm:text-base md:text-lg pb-3 transition-colors ${
+                activeTab === 'zumera'
+                  ? 'border-b-2 border-gray-950 font-bold text-gray-950'
+                  : 'text-gray-500 hover:text-gray-900'
+              }`}
+            >
+              Zumera
+            </Link>
+            <Link
+              to="/legacy-of-impact/manifesto"
+              className={`trajan-pro text-sm sm:text-base md:text-lg pb-3 transition-colors ${
+                activeTab === 'manifesto'
+                  ? 'border-b-2 border-gray-950 font-bold text-gray-950'
+                  : 'text-gray-500 hover:text-gray-900'
+              }`}
+            >
+              African Sovereignty Manifesto
+            </Link>
+          </div>
+        </div>
       </div>
 
-      {/* Main Architectural Showcase */}
-      <section className="max-w-7xl mx-auto my-8 sm:my-12 md:my-16 px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-12 xl:gap-16 items-start">
-          {/* Column 1: Architectural Render & Brand Crest (Constrained & Responsive) */}
-          <article className="w-full">
-            <div className="w-full rounded-xl overflow-hidden shadow-xl border border-gray-200 group relative aspect-[4/3] sm:aspect-[16/10] md:h-[360px] lg:h-[400px]">
-              <img
-                src="/assets/imgs/rj-brand/BB1.jpg"
-                alt="Zumera Landmark Architecture"
-                className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
-              />
+      {activeTab === 'zumera' ? (
+        /* Main Architectural Showcase: Zumera */
+        <section className="max-w-7xl mx-auto my-8 sm:my-12 md:my-16 px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-12 xl:gap-16 items-start">
+            {/* Column 1: Architectural Render & Brand Crest */}
+            <article className="w-full">
+              <div className="w-full rounded-xl overflow-hidden shadow-xl border border-gray-200 group relative aspect-[4/3] sm:aspect-[16/10] md:h-[360px] lg:h-[400px]">
+                <img
+                  src="/assets/imgs/rj-brand/BB1.jpg"
+                  alt="Zumera Landmark Architecture"
+                  className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+              <div className="mt-3 sm:mt-4 p-3 sm:p-4 bg-gray-50 rounded-lg border border-gray-200/80 flex flex-row items-center justify-between gap-3">
+                <img src="/assets/imgs/home/zumera_logo.png" alt="Zumera Logo" className="legacy-brand-logo h-auto object-contain brightness-0" />
+                <p className="trajan-pro text-[10px] sm:text-xs text-gray-700 tracking-wider uppercase font-medium text-right">
+                  Property &bull; Heritage
+                </p>
+              </div>
+            </article>
+
+            {/* Column 2: Narrative & Philosophy */}
+            <article className="w-full space-y-4 sm:space-y-5 text-gray-800 manrope text-sm sm:text-base leading-relaxed">
+              <div className="border-b border-gray-200 pb-3 sm:pb-4">
+                <span className="trajan-pro text-amber-700 text-xs tracking-widest uppercase font-bold block mb-1">
+                  Civilizational Infrastructure
+                </span>
+                <h2 className="trajan-pro text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">
+                  Zumera Group
+                </h2>
+              </div>
+
+              <p>
+                Zumera is the heart of Africa’s new architectural age; a property development, management, and investment company shaping the continent’s skyline with grandeur and permanence.
+              </p>
+              <p>
+                We are more than builders of structures. We are custodians of legacy, translating the dignity, ambition, and prestige of Africa into landmark real estate that endures through generations.
+              </p>
+              <p>
+                From luxury residences to monumental commercial projects, every Zumera development stands as an emblem of vision, precision, and African pride. Our work is driven by a belief that property should not just appreciate in financial value, but in continental heritage.
+              </p>
+
+              {/* Mission & Vision Cards */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 pt-2">
+                <div className="bg-gray-50 p-3 sm:p-5 rounded-lg border-l-4 border-gray-900 shadow-sm flex flex-col justify-between">
+                  <div>
+                    <span className="trajan-pro text-[10px] sm:text-xs font-bold uppercase text-gray-900 block mb-1">Our Mission</span>
+                    <p className="text-[11px] sm:text-sm text-gray-700 leading-snug sm:leading-relaxed">
+                      We strive to offer the highest possible standard, the most innovative solution, and the best value to Nigerians, one community, one project at a time.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="bg-gray-50 p-3 sm:p-5 rounded-lg border-l-4 border-amber-600 shadow-sm flex flex-col justify-between">
+                  <div>
+                    <span className="trajan-pro text-[10px] sm:text-xs font-bold uppercase text-amber-800 block mb-1">Our Vision</span>
+                    <p className="text-[11px] sm:text-sm text-gray-700 leading-snug sm:leading-relaxed">
+                      To build an inspiring and sustainable future for African communities, starting with Nigeria.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          {/* 3 Pillars of Physical Sovereignty */}
+          <div className="mt-10 sm:mt-16 md:mt-20 pt-8 sm:pt-12 border-t border-gray-200">
+            <div className="text-center max-w-2xl mx-auto mb-6 sm:mb-10">
+              <span className="trajan-pro text-amber-700 text-xs tracking-widest uppercase font-bold block mb-1.5">
+                Foundations of Built Heritage
+              </span>
+              <h3 className="trajan-pro text-xl sm:text-2xl md:text-3xl font-bold text-gray-900">
+                Pillars of Physical Sovereignty
+              </h3>
             </div>
-            <div className="mt-3 sm:mt-4 p-3 sm:p-4 bg-gray-50 rounded-lg border border-gray-200/80 flex flex-row items-center justify-between gap-3">
-              <img src="/assets/imgs/home/zumera_logo.png" alt="Zumera Logo" className="legacy-brand-logo h-auto object-contain brightness-0" />
-              <p className="trajan-pro text-[10px] sm:text-xs text-gray-700 tracking-wider uppercase font-medium text-right">
-                Property &bull; Heritage
+
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-5 xl:gap-6 items-stretch">
+              <div className="p-4 sm:p-5 lg:p-7 bg-gray-50 rounded-xl border border-gray-200/80 hover:border-amber-500/40 hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                <div>
+                  <span className="trajan-pro text-base sm:text-xl lg:text-2xl text-amber-700 font-bold block mb-1 sm:mb-2">01</span>
+                  <h4 className="trajan-pro text-xs sm:text-base lg:text-lg font-bold text-gray-900 mb-1 leading-snug">Grandeur &amp; Permanence</h4>
+                  <p className="manrope text-[11px] sm:text-xs lg:text-sm text-gray-600 leading-relaxed">
+                    Rejecting temporary solutions to construct enduring structures that anchor African pride for centuries to come.
+                  </p>
+                </div>
+              </div>
+
+              <div className="p-4 sm:p-5 lg:p-7 bg-gray-50 rounded-xl border border-gray-200/80 hover:border-amber-500/40 hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                <div>
+                  <span className="trajan-pro text-base sm:text-xl lg:text-2xl text-amber-700 font-bold block mb-1 sm:mb-2">02</span>
+                  <h4 className="trajan-pro text-xs sm:text-base lg:text-lg font-bold text-gray-900 mb-1 leading-snug">Original African Truth</h4>
+                  <p className="manrope text-[11px] sm:text-xs lg:text-sm text-gray-600 leading-relaxed">
+                    Spaces conceptualized from first principles, reflecting the deep aesthetic dignity and civilizational identity of our continent.
+                  </p>
+                </div>
+              </div>
+
+              <div className="p-4 sm:p-5 lg:p-7 bg-gray-50 rounded-xl border border-gray-200/80 hover:border-amber-500/40 hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                <div>
+                  <span className="trajan-pro text-base sm:text-xl lg:text-2xl text-amber-700 font-bold block mb-1 sm:mb-2">03</span>
+                  <h4 className="trajan-pro text-xs sm:text-base lg:text-lg font-bold text-gray-900 mb-1 leading-snug">Generational Custodianship</h4>
+                  <p className="manrope text-[11px] sm:text-xs lg:text-sm text-gray-600 leading-relaxed">
+                    Transforming property from mere commercial assets into monuments of communal resilience and economic sovereignty.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      ) : (
+        /* The African Sovereignty Manifesto Tab */
+        <section className="max-w-5xl mx-auto my-8 sm:my-12 md:my-16 px-4 sm:px-6 lg:px-8">
+          <div className="bg-gradient-to-b from-gray-50 to-white border border-gray-200 rounded-2xl p-6 sm:p-10 md:p-14 shadow-lg">
+            <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
+              <span className="trajan-pro text-amber-700 text-xs tracking-widest uppercase font-bold block mb-2">
+                2. Approved Continental Doctrine
+              </span>
+              <h2 className="trajan-pro text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                THE AFRICAN SOVEREIGNTY MANIFESTO
+              </h2>
+              <div className="w-20 h-0.5 bg-amber-600 mx-auto" />
+            </div>
+
+            <div className="space-y-6 text-gray-800 manrope text-base sm:text-lg leading-relaxed">
+              <p className="font-semibold text-gray-950 text-lg sm:text-xl border-l-4 border-amber-600 pl-4 py-1 italic">
+                “Sovereignty begins long before political independence. Africa's sovereignty must therefore become deeper than independence.”
+              </p>
+              <p>
+                We are interested in the sovereignty of thought. The sovereignty of imagination. The sovereignty to examine our problems without automatically reaching for solutions designed somewhere else, to study what has worked elsewhere without becoming ashamed of what can work here and to build systems that emerge from an honest understanding of African realities rather than an endless attempt to imitate foreign ones.
+              </p>
+              <p>
+                This does not mean rejecting the world. Africa does not need isolation; it needs authorship. We can learn from everywhere without surrendering the authority to decide what belongs in our own land. We can admire another civilization without believing that civilization is superior. We can use technology created elsewhere while developing technologies that emerge from our own questions. We can participate in the global economy without allowing the global economy to become the measure of our human worth.
+              </p>
+              <p className="p-5 sm:p-6 bg-amber-50 rounded-xl border border-amber-200/80 font-medium text-amber-950 text-base sm:text-lg">
+                Sovereignty asks a difficult question: If nobody came to tell us what to build, what would we build? Africa's Return is committed to asking that question repeatedly - not separation from humanity, but a fuller participation in humanity through the strength of our own mind.
               </p>
             </div>
-          </article>
 
-          {/* Column 2: Narrative & Philosophy */}
-          <article className="w-full space-y-4 sm:space-y-5 text-gray-800 manrope text-sm sm:text-base leading-relaxed">
-            <div className="border-b border-gray-200 pb-3 sm:pb-4">
-              <span className="trajan-pro text-amber-700 text-xs tracking-widest uppercase font-bold block mb-1">
-                Civilizational Infrastructure
+            <div className="mt-10 pt-8 border-t border-gray-200 flex flex-wrap items-center justify-between gap-4">
+              <span className="trajan-pro text-xs text-gray-500 uppercase tracking-wider">
+                Lucky R. Erherha &bull; Africa&apos;s Return
               </span>
-              <h2 className="trajan-pro text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">
-                Zumera Group
-              </h2>
-            </div>
-
-            <p>
-              Zumera is the heart of Africa’s new architectural age; a property development, management, and investment company shaping the continent’s skyline with grandeur and permanence.
-            </p>
-            <p>
-              We are more than builders of structures. We are custodians of legacy, translating the dignity, ambition, and prestige of Africa into landmark real estate that endures through generations.
-            </p>
-            <p>
-              From luxury residences to monumental commercial projects, every Zumera development stands as an emblem of vision, precision, and African pride. Our work is driven by a belief that property should not just appreciate in financial value, but in continental heritage.
-            </p>
-
-            {/* Mission & Vision Cards (Responsive 2-Column Horizontal System) */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 pt-2">
-              <div className="bg-gray-50 p-3 sm:p-5 rounded-lg border-l-4 border-gray-900 shadow-sm flex flex-col justify-between">
-                <div>
-                  <span className="trajan-pro text-[10px] sm:text-xs font-bold uppercase text-gray-900 block mb-1">Our Mission</span>
-                  <p className="text-[11px] sm:text-sm text-gray-700 leading-snug sm:leading-relaxed">
-                    We strive to offer the highest possible standard, the most innovative solution, and the best value to Nigerians, one community, one project at a time.
-                  </p>
-                </div>
-              </div>
-
-              <div className="bg-gray-50 p-3 sm:p-5 rounded-lg border-l-4 border-amber-600 shadow-sm flex flex-col justify-between">
-                <div>
-                  <span className="trajan-pro text-[10px] sm:text-xs font-bold uppercase text-amber-800 block mb-1">Our Vision</span>
-                  <p className="text-[11px] sm:text-sm text-gray-700 leading-snug sm:leading-relaxed">
-                    To build an inspiring and sustainable future for African communities, starting with Nigeria.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </article>
-        </div>
-
-        {/* 3 Pillars of Physical Sovereignty (Responsive 3-Column Horizontal System) */}
-        <div className="mt-10 sm:mt-16 md:mt-20 pt-8 sm:pt-12 border-t border-gray-200">
-          <div className="text-center max-w-2xl mx-auto mb-6 sm:mb-10">
-            <span className="trajan-pro text-amber-700 text-xs tracking-widest uppercase font-bold block mb-1.5">
-              Foundations of Built Heritage
-            </span>
-            <h3 className="trajan-pro text-xl sm:text-2xl md:text-3xl font-bold text-gray-900">
-              Pillars of Physical Sovereignty
-            </h3>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-5 xl:gap-6 items-stretch">
-            <div className="p-4 sm:p-5 lg:p-7 bg-gray-50 rounded-xl border border-gray-200/80 hover:border-amber-500/40 hover:shadow-md transition-all duration-300 flex flex-col justify-between">
-              <div>
-                <span className="trajan-pro text-base sm:text-xl lg:text-2xl text-amber-700 font-bold block mb-1 sm:mb-2">01</span>
-                <h4 className="trajan-pro text-xs sm:text-base lg:text-lg font-bold text-gray-900 mb-1 leading-snug">Grandeur &amp; Permanence</h4>
-                <p className="manrope text-[11px] sm:text-xs lg:text-sm text-gray-600 leading-relaxed">
-                  Rejecting temporary solutions to construct enduring structures that anchor African pride for centuries to come.
-                </p>
-              </div>
-            </div>
-
-            <div className="p-4 sm:p-5 lg:p-7 bg-gray-50 rounded-xl border border-gray-200/80 hover:border-amber-500/40 hover:shadow-md transition-all duration-300 flex flex-col justify-between">
-              <div>
-                <span className="trajan-pro text-base sm:text-xl lg:text-2xl text-amber-700 font-bold block mb-1 sm:mb-2">02</span>
-                <h4 className="trajan-pro text-xs sm:text-base lg:text-lg font-bold text-gray-900 mb-1 leading-snug">Original African Truth</h4>
-                <p className="manrope text-[11px] sm:text-xs lg:text-sm text-gray-600 leading-relaxed">
-                  Spaces conceptualized from first principles, reflecting the deep aesthetic dignity and civilizational identity of our continent.
-                </p>
-              </div>
-            </div>
-
-            <div className="p-4 sm:p-5 lg:p-7 bg-gray-50 rounded-xl border border-gray-200/80 hover:border-amber-500/40 hover:shadow-md transition-all duration-300 flex flex-col justify-between">
-              <div>
-                <span className="trajan-pro text-base sm:text-xl lg:text-2xl text-amber-700 font-bold block mb-1 sm:mb-2">03</span>
-                <h4 className="trajan-pro text-xs sm:text-base lg:text-lg font-bold text-gray-900 mb-1 leading-snug">Generational Custodianship</h4>
-                <p className="manrope text-[11px] sm:text-xs lg:text-sm text-gray-600 leading-relaxed">
-                  Transforming property from mere commercial assets into monuments of communal resilience and economic sovereignty.
-                </p>
-              </div>
+              <Link
+                to="/contact-us#support"
+                className="trajan-pro nav-cta-blue rounded-xs text-xs px-6 py-2.5 inline-block"
+              >
+                SUPPORT THE MANIFESTO
+              </Link>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       <Footer color={true} secondaryColor={true} />
     </div>
@@ -1708,12 +1790,14 @@ function MovementPage() {
 // 9. BOOK LRE & SUPPORT SECTION WITH PAYMENT GATEWAY
 // ----------------------------------------------------
 function ContactPage() {
-  const [activeTab, setActiveTab] = useState('book'); // 'book' or 'support'
   const location = useLocation();
+  const [activeTab, setActiveTab] = useState(() => (location.hash === '#support' ? 'support' : 'book'));
 
   useEffect(() => {
     if (location.hash === '#support') {
       setActiveTab('support');
+    } else if (location.hash === '#book') {
+      setActiveTab('book');
     }
   }, [location.hash]);
 
@@ -1747,7 +1831,6 @@ function ContactPage() {
   const [donorEmail, setDonorEmail] = useState('');
   const [amountError, setAmountError] = useState('');
   const [supportRequestStatus, setSupportRequestStatus] = useState('');
-  const [certificateData, setCertificateData] = useState(null);
   const supportFormRef = useRef(null);
 
   const eventTypes = [
@@ -1802,20 +1885,6 @@ ${bookingData.message}
     setSupportRequestStatus('Your email app may open a draft. The request is not sent until you review and send it. No payment has been made.');
   };
 
-  const handleCertificatePreview = () => {
-    if (!supportFormRef.current?.reportValidity()) return;
-    if (!Number.isFinite(selectedAmount) || selectedAmount <= 0) {
-      setAmountError('Enter a custom amount greater than zero.');
-      return;
-    }
-    setCertificateData({
-      name: donorName,
-      amount: selectedAmount,
-      currency,
-      symbol: currencyRates[currency].symbol,
-    });
-  };
-
   return (
     <div className="min-h-screen text-(--primary-color) bg-white">
       <Navbar isDark={true} />
@@ -1861,9 +1930,39 @@ ${bookingData.message}
           <div className="flex flex-col lg:flex-row w-full max-w-7xl mx-auto justify-between">
             <div className="lg:w-1/2 p-4 sm:p-8 lg:p-12 flex flex-col md:items-start text-justify md:text-left mb-10">
               <div className="w-full max-w-md mx-auto">
-                <h1 className="text-3xl lg:text-4xl font-light text-gray-900 manrope md:trajan-pro leading-tight mb-8 start-text">
-                  Events &amp; Engagements <br className="hidden md:block" /> with LRE <br className="hidden md:block" /> (Lucky R. Erherha).
+                <span className="trajan-pro text-amber-700 text-xs tracking-widest uppercase font-bold block mb-2">
+                  Diplomatic &amp; Executive Engagements
+                </span>
+                <h1 className="text-3xl lg:text-4xl font-light text-gray-900 manrope md:trajan-pro leading-tight mb-6 start-text">
+                  Book LRE now
                 </h1>
+
+                {/* Dedicated LRE Book Column / Showcase */}
+                <div className="bg-gray-50 border border-gray-200/90 rounded-xl p-4 sm:p-5 mb-8 flex flex-col sm:flex-row items-center gap-4 shadow-sm">
+                  <img
+                    src="/assets/imgs/home/lre_book.jpg"
+                    alt="The Rise of Royals book by Lucky R. Erherha"
+                    className="w-24 sm:w-28 h-auto rounded shadow shrink-0 object-cover"
+                  />
+                  <div className="space-y-1 text-center sm:text-left">
+                    <span className="trajan-pro text-amber-800 text-[10px] sm:text-xs tracking-wider uppercase font-bold block">
+                      The Foundational Literature
+                    </span>
+                    <h3 className="trajan-pro text-base sm:text-lg font-bold text-gray-900">
+                      The Rise of Royals
+                    </h3>
+                    <p className="manrope text-xs text-gray-600 leading-relaxed">
+                      The return of the African to creative authority and civilizational responsibility.
+                    </p>
+                    <button
+                      type="button"
+                      onClick={() => setActiveTab('support')}
+                      className="trajan-pro text-xs text-amber-800 hover:text-amber-900 font-bold underline pt-1 block"
+                    >
+                      Support Africa&apos;s Return &rarr;
+                    </button>
+                  </div>
+                </div>
                 <div className="space-y-4 text-gray-700 text-justify md:text-left">
                   <p>
                     LRE is not a speaker. He is an awakening. <br /> Every appearance, whether in a private boardroom or a grand auditorium, leaves audiences with conviction, cultural pride, intellectual clarity and restoration to their fullest potential&nbsp;as&nbsp;Africans.
@@ -2072,9 +2171,9 @@ ${bookingData.message}
                   </p>
                   <button
                     type="submit"
-                    className="bg-gray-200 hover:bg-white text-gray-800 font-bold py-3 px-8 rounded uppercase tracking-wide transition-all duration-200 min-w-[120px] focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-2 focus:ring-offset-black cursor-pointer"
+                    className="trajan-pro bg-amber-500 hover:bg-amber-400 text-black font-bold py-3.5 px-8 rounded uppercase tracking-wider transition-all duration-200 min-w-[160px] focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-2 focus:ring-offset-black cursor-pointer shadow-lg"
                   >
-                    SEND BOOKING
+                    Book LRE now
                   </button>
                 </div>
               </form>
@@ -2208,59 +2307,11 @@ ${bookingData.message}
 
               <div className="support-actions">
                 <button type="submit" className="support-request-button">Request support instructions</button>
-                <button type="button" onClick={handleCertificatePreview} className="support-preview-button">Preview draft certificate</button>
               </div>
               {supportRequestStatus && <p className="support-request-status" role="status">{supportRequestStatus}</p>}
             </form>
           </div>
         </section>
-      )}
-
-      {/* Certificate draft preview; it is not evidence of a payment. */}
-      {certificateData && (
-        <div className="modal-overlay" onClick={() => setCertificateData(null)}>
-          <div className="certificate-frame p-6 sm:p-8 md:p-12 max-w-2xl w-full text-center text-white rounded-lg relative" role="dialog" aria-modal="true" aria-labelledby="certificate-title" onClick={(e) => e.stopPropagation()}>
-            <div className="absolute top-4 right-4">
-              <button
-                type="button"
-                aria-label="Close draft preview"
-                onClick={() => setCertificateData(null)}
-                className="text-gray-400 hover:text-white text-2xl font-mono"
-              >
-                &times;
-              </button>
-            </div>
-            <div className="w-16 h-16 mx-auto mb-4 border-2 border-amber-400 rounded-full flex items-center justify-center text-amber-400 text-2xl">
-              ♕
-            </div>
-            <span className="trajan-pro text-amber-300 text-xs tracking-widest uppercase block mb-1">
-              DRAFT PREVIEW &bull; NOT PROOF OF PAYMENT
-            </span>
-            <h2 id="certificate-title" className="trajan-pro text-2xl md:text-3xl font-black gold-gradient-text mb-4">
-              AFRICA’S RETURN
-            </h2>
-            <p className="manrope text-xs text-gray-300 mb-6 italic">
-              &ldquo;The return happens every time an African mind chooses possibility over limitation and creation over dependence.&rdquo;
-            </p>
-            <div className="border-y border-amber-500/30 py-6 my-6 space-y-2">
-              <p className="text-xs uppercase text-gray-400 tracking-wider">Draft prepared for</p>
-              <h3 className="trajan-pro text-xl md:text-2xl font-bold text-white">{certificateData.name}</h3>
-              <p className="text-amber-400 font-mono text-sm pt-2">
-                Intended amount: {certificateData.symbol}{certificateData.amount.toLocaleString()} {certificateData.currency}
-              </p>
-            </div>
-            <p className="text-xs text-gray-400 manrope max-w-md mx-auto mb-6">
-              This is only a visual draft. No payment was collected or verified, and this preview is not a receipt or proof of contribution.
-            </p>
-            <button
-              type="button"
-              onClick={() => setCertificateData(null)}
-              className="trajan-pro nav-cta-blue rounded-xs text-xs px-6 py-2"
-            >
-              COMPLETE &amp; CLOSE
-            </button>
-          </div>
-        </div>
       )}
 
       <Footer color={true} />
@@ -2413,7 +2464,9 @@ export default function App() {
         <Route path="/leadership" element={<LeadershipPage />} />
         <Route path="/legacy-of-impact" element={<LegacyPage />} />
         <Route path="/legacy-of-impact/:tab" element={<LegacyPage />} />
-        <Route path="/Rj-brand" element={<Navigate to="/legacy-of-impact" replace />} />
+        <Route path="/Rj-brand" element={<Navigate to="/legacy-of-impact/zumera" replace />} />
+        <Route path="/zumera" element={<Navigate to="/legacy-of-impact/zumera" replace />} />
+        <Route path="/investor-info" element={<Navigate to="/legacy-of-impact/manifesto" replace />} />
         <Route path="/engagement" element={<EngagementPage />} />
         <Route path="/movement" element={<MovementPage />} />
         <Route path="/contact-us" element={<ContactPage />} />
