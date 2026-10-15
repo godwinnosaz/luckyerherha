@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import {
   Link,
   NavLink,
@@ -342,6 +342,9 @@ function Footer({ color = false, secondaryColor = false }) {
   const handleNewsletterSubmit = (e) => {
     e.preventDefault();
     if (!newsletterEmail || !newsletterEmail.includes('@')) return;
+    const subject = encodeURIComponent('Sovereign Dispatch subscription request');
+    const body = encodeURIComponent(`Please add ${newsletterEmail} to the Sovereign Dispatch mailing list.`);
+    window.location.href = `mailto:LRE@luckyerherha.com?subject=${subject}&body=${body}`;
     setNewsletterSubscribed(true);
   };
 
@@ -353,97 +356,80 @@ function Footer({ color = false, secondaryColor = false }) {
     <footer className={`relative ${bgClass} text-white w-full overflow-hidden`}>
       {/* Subtle overlay gradient for the image variant to guarantee pristine legibility */}
       {!color && (
-        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/65 to-black/90 pointer-events-none z-0" />
+        <div className="footer-image-overlay absolute inset-0 pointer-events-none z-0" />
       )}
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 sm:pt-14 md:pt-16 pb-8 flex flex-col justify-between">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 sm:pt-8 pb-5">
         
         {/* Tier 1: The Sovereign Dispatch (Global Standard Institutional Newsletter Band) */}
-        <div className="pb-8 sm:pb-12 border-b border-white/10">
-          <div className="bg-gradient-to-r from-black/75 via-[#141414] to-black/75 border border-amber-500/25 rounded-2xl p-6 sm:p-8 md:p-10 shadow-2xl backdrop-blur-md relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-amber-500/5 rounded-full blur-3xl pointer-events-none" />
-            <div className="relative z-10 flex flex-col lg:flex-row justify-between items-center gap-6 lg:gap-10">
-              <div className="w-full lg:w-3/5 text-center lg:text-left">
-                <span className="trajan-pro text-amber-400 text-[10px] sm:text-xs tracking-[0.25em] uppercase font-bold inline-flex items-center gap-2 mb-2">
-                  <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
-                  THE SOVEREIGN DISPATCH &bull; INTELLECTUAL SANCTUARY
-                </span>
-                <h3 className="trajan-pro text-white text-xl sm:text-2xl md:text-3xl font-bold leading-snug">
-                  Receive Private Dispatches from Lucky R. Erherha
-                </h3>
-                <p className="manrope text-white/70 text-xs sm:text-sm mt-2 leading-relaxed max-w-2xl">
-                  Essays, strategic counsel on original African economic systems, and invitations to closed assemblies delivered directly to visionary leaders.
-                </p>
-              </div>
+        <div className="pb-5 border-b border-white/15">
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+            <div>
+              <span className="trajan-pro text-amber-400 text-[10px] tracking-[0.18em] uppercase font-bold block mb-1">
+                THE SOVEREIGN DISPATCH
+              </span>
+              <h3 className="trajan-pro text-white text-base sm:text-lg font-bold leading-snug">
+                Dispatches from Lucky R. Erherha
+              </h3>
+            </div>
 
-              <div className="w-full lg:w-2/5">
+            <div className="footer-dispatch-form w-full sm:w-auto sm:min-w-[24rem]">
                 {newsletterSubscribed ? (
-                  <div className="bg-amber-400/15 border border-amber-400/40 text-amber-300 p-4 rounded-xl text-center manrope text-xs sm:text-sm font-medium animate-fadeIn">
-                    ✓ You are inscribed into the Sovereign Assembly. Welcome, Custodian.
+                  <div className="text-amber-200 manrope text-xs" role="status">
+                    Your email app may open a request. The subscription is not complete until you send it.
                   </div>
                 ) : (
-                  <form onSubmit={handleNewsletterSubmit} className="flex flex-col sm:flex-row gap-2.5">
+                  <form onSubmit={handleNewsletterSubmit} className="flex gap-2">
                     <input
                       type="email"
                       required
-                      placeholder="Enter your official email..."
+                      aria-label="Email address for the Sovereign Dispatch"
+                      placeholder="Email address"
                       value={newsletterEmail}
                       onChange={(e) => setNewsletterEmail(e.target.value)}
-                      className="flex-1 px-4 py-3 bg-black/60 border border-white/20 hover:border-white/30 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-amber-400 text-xs sm:text-sm manrope transition-all"
+                      className="min-w-0 flex-1 px-3 py-2 bg-black/60 border border-white/25 rounded text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-amber-400 text-xs manrope"
                     />
                     <button
                       type="submit"
-                      className="px-6 py-3 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-black font-bold trajan-pro text-xs tracking-wider rounded-xl transition-all shadow-lg shrink-0 whitespace-nowrap cursor-pointer hover:shadow-[0_0_20px_rgba(212,175,55,0.4)]"
+                      className="px-4 py-2 bg-amber-500 hover:bg-amber-400 text-black font-bold trajan-pro text-[10px] tracking-wider rounded transition-colors shrink-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-300"
                     >
-                      JOIN THE ASSEMBLY &rarr;
+                      REQUEST
                     </button>
                   </form>
                 )}
-              </div>
             </div>
           </div>
         </div>
 
-        {/* Tier 2: Monogram Crest & The Sovereign Manifesto */}
-        <div className="py-8 sm:py-10 border-b border-white/10">
-          <div className="flex flex-row justify-between items-center gap-4 sm:gap-6">
-            <div>
-              <AppFullLogo src="/assets/imgs/icons/logos/full_logo_white.png" size="w-[130px] sm:w-[155px] md:w-[170px]" />
-              <p className="trajan-pro text-amber-400 text-[9px] sm:text-xs tracking-[0.2em] sm:tracking-[0.25em] uppercase font-bold mt-2">
-                The Rise of Royals &bull; Africa&apos;s Return
-              </p>
+        {/* Main footer groups */}
+        <div className="footer-link-grid py-5 sm:py-6 gap-x-5 gap-y-6 sm:gap-x-8 lg:gap-x-10">
+          {/* Brand, contact, and support */}
+          <div className="footer-brand-column">
+            <AppFullLogo src="/assets/imgs/icons/logos/full_logo_white.png" size="footer-brand-mark" />
+            <p className="trajan-pro text-amber-400 text-[9px] tracking-[0.16em] uppercase font-bold mt-1 mb-3">
+              The Rise of Royals &bull; Africa&apos;s Return
+            </p>
+            <Link to="/contact-us" className="footer-primary-link">BOOK LRE &rarr;</Link>
+            <Link to="/contact-us#support" className="footer-support-link">
+              SUPPORT THE MISSION
+            </Link>
+            <div className="footer-contact-details">
+              <a href="mailto:LRE@luckyerherha.com">LRE@luckyerherha.com</a>
+              <a href="tel:+2347045068663">+234 704 506 8663</a>
+              <span>Abuja &bull; Lagos &bull; London &bull; Pan-Africa</span>
             </div>
-
             <button
               type="button"
               onClick={scrollToTopWithEasing}
-              className="inline-flex items-center gap-2 px-3.5 py-2 sm:px-4 sm:py-2.5 text-[10px] sm:text-xs trajan-pro tracking-wider text-amber-300 border border-amber-400/40 rounded-lg hover:bg-amber-400/10 hover:border-amber-400 transition-all duration-300 group shrink-0"
+              className="footer-back-top"
             >
-              <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 flex items-center justify-center transition-transform group-hover:-translate-y-0.5">
-                <img src="/assets/imgs/icons/footer/to_top.png" alt="" className="w-full h-auto" />
-              </div>
-              <span>BACK TO TOP</span>
+              <img src="/assets/imgs/icons/footer/to_top.png" alt="" />
+              BACK TO TOP
             </button>
           </div>
 
-          <div className="mt-6 sm:mt-8 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8 max-w-5xl">
-            <div className="border-l-2 border-white/20 pl-4 py-1">
-              <p className="manrope text-white/90 text-xs sm:text-sm md:text-[0.98rem] leading-relaxed italic">
-                &ldquo;We were raised to think silence was wisdom. To shrink ourselves. To blend in. To say &lsquo;thank you&rsquo; for scraps.&rdquo;
-              </p>
-            </div>
-            <div className="border-l-2 border-amber-400/60 pl-4 py-1">
-              <p className="manrope text-amber-100 text-xs sm:text-sm md:text-[0.98rem] leading-relaxed font-medium">
-                &ldquo;Burn that mindset. We were not made for servitude. We are the blood of kings and queens. Now we rebuild the kingdom.&rdquo;
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Tier 3: 4-Column Balanced Grid (Horizontal Column System Responsively) */}
-        <div className="py-8 sm:py-10 md:py-12 grid grid-cols-2 md:grid-cols-4 gap-5 sm:gap-8 lg:gap-12">
           {/* Column 1: Navigation */}
-          <div>
+          <div className="footer-group">
             <h4 className="trajan-pro text-[11px] sm:text-xs text-amber-400 tracking-[0.2em] uppercase font-bold mb-3 sm:mb-4 pb-2 border-b border-white/10 flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-amber-400/80" />
               NAVIGATION
@@ -474,7 +460,7 @@ function Footer({ color = false, secondaryColor = false }) {
           </div>
 
           {/* Column 2: Pillars & Archive */}
-          <div>
+          <div className="footer-group">
             <h4 className="trajan-pro text-[11px] sm:text-xs text-amber-400 tracking-[0.2em] uppercase font-bold mb-3 sm:mb-4 pb-2 border-b border-white/10 flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-amber-400/80" />
               PILLARS &amp; ARCHIVE
@@ -502,12 +488,12 @@ function Footer({ color = false, secondaryColor = false }) {
           </div>
 
           {/* Column 3: Community & Diplomatic Channels */}
-          <div>
+          <div className="footer-group">
             <h4 className="trajan-pro text-[11px] sm:text-xs text-amber-400 tracking-[0.2em] uppercase font-bold mb-3 sm:mb-4 pb-2 border-b border-white/10 flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-amber-400/80" />
               COMMUNITY
             </h4>
-            <div className="grid grid-cols-2 sm:grid-cols-1 gap-1.5 sm:gap-2 manrope text-xs sm:text-sm">
+            <div className="footer-community-links manrope text-xs sm:text-sm">
               <a
                 href="https://www.facebook.com/share/18tZawxAqR/?mibextid=qi2Omg"
                 target="_blank"
@@ -588,49 +574,10 @@ function Footer({ color = false, secondaryColor = false }) {
             </div>
           </div>
 
-          {/* Column 4: Executive Office & Patronage */}
-          <div className="flex flex-col justify-between space-y-4">
-            <div>
-              <h4 className="trajan-pro text-[11px] sm:text-xs text-amber-400 tracking-[0.2em] uppercase font-bold mb-3 sm:mb-4 pb-2 border-b border-white/10 flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-amber-400/80" />
-                EXECUTIVE OFFICE
-              </h4>
-              <Link
-                to="/contact-us"
-                className="inline-block trajan-pro text-xs sm:text-sm font-bold text-white hover:text-amber-300 transition-colors mb-2 tracking-wider"
-              >
-                BOOK LRE &rarr;
-              </Link>
-              <div className="mb-3">
-                <Link
-                  to="/contact-us#support"
-                  className="inline-flex items-center gap-1.5 bg-gradient-to-r from-amber-500/25 to-amber-600/15 border border-amber-400/60 text-amber-300 hover:text-white px-3 py-1.5 rounded-lg text-[10px] sm:text-xs trajan-pro tracking-wider font-semibold transition-all shadow-sm hover:shadow-[0_0_15px_rgba(212,175,55,0.3)]"
-                >
-                  <span>★</span> SUPPORT THE MISSION
-                </Link>
-              </div>
-
-              <div className="space-y-1.5 text-xs manrope text-white/80">
-                <p className="text-[10px] text-amber-400/90 trajan-pro tracking-wider uppercase font-semibold">Direct Secretariat:</p>
-                <a href="mailto:LRE@luckyerherha.com" className="block text-white hover:text-amber-300 transition-colors break-all text-[11px] sm:text-xs">
-                  LRE@luckyerherha.com
-                </a>
-                <a href="tel:+2347045068663" className="block text-white hover:text-amber-300 transition-colors text-[11px] sm:text-xs">
-                  +234 704 506 8663
-                </a>
-              </div>
-            </div>
-
-            <div className="pt-2 border-t border-white/10">
-              <p className="text-[10px] sm:text-[11px] text-gray-400 manrope">
-                Abuja &bull; Lagos &bull; London &bull; Pan-Africa
-              </p>
-            </div>
-          </div>
         </div>
 
         {/* Tier 4: Bottom Ribbon (Horizontal 3-Column System Across All Devices) */}
-        <div className="border-t border-white/10 pt-5 mt-4 grid grid-cols-3 gap-2 items-center text-[9px] sm:text-xs manrope text-white/70">
+        <div className="footer-bottom-grid border-t border-white/15 pt-3 mt-1 gap-2 items-center text-[10px] sm:text-xs manrope text-white/75">
           <p className="text-left leading-tight">
             &copy; {new Date().getFullYear()} Lucky R. Erherha.<span className="hidden sm:inline"> All Rights Reserved.</span>
           </p>
@@ -696,8 +643,8 @@ function HomePage() {
 
       {/* Hero Section */}
       <section className="relative h-[80vh] md:h-[130vh] w-full overflow-hidden bg-[url(/assets/imgs/home/throne.jpg)] md:bg-[url(/assets/imgs/home/throne.jpg)] flex items-end p-5 md:items-center bg-cover bg-center md:bg-top bg-no-repeat">
-        <div className="container max-w-7xl mx-auto font-black z-2">
-          <h1 className="trajan-pro text-[1.5rem] md:text-[3rem] mt-[-2rem]">
+        <div className="container max-w-7xl mx-auto font-black z-2 px-4 sm:px-6 lg:px-8 pt-16 md:pt-24 lg:pt-0">
+          <h1 className="trajan-pro text-[1.5rem] sm:text-[2.2rem] md:text-[3rem] leading-tight">
             Africa, take your <br /> throne.
           </h1>
         </div>
@@ -712,8 +659,11 @@ function HomePage() {
         <div className="absolute inset-0 bg-black/40 pointer-events-none" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="home-legacy-brand">
+            <img src="/assets/imgs/home/lre_logo.png" alt="Lucky R. Erherha monogram" />
+          </div>
           {/* Section Header */}
-          <div className="pt-20 pb-12 text-center max-w-3xl mx-auto">
+          <div className="home-legacy-heading pb-8 sm:pb-10 text-center max-w-3xl mx-auto">
             <span className="trajan-pro text-amber-400 text-xs md:text-sm tracking-[0.25em] uppercase font-bold block mb-3">
               Sovereign Footprints
             </span>
@@ -728,19 +678,17 @@ function HomePage() {
 
           {/* 4 Balanced Pillar Cards */}
           <div className="pb-24">
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5 lg:gap-6 items-stretch">
+            <div className="home-legacy-grid grid gap-4 md:gap-5 items-stretch">
               {/* Pillar 1: 61 Million Africans Reached */}
               <div className="group flex flex-col justify-between bg-black/55 hover:bg-black/75 backdrop-blur-md border border-white/10 hover:border-amber-400/50 rounded-lg p-3 sm:p-4 md:p-5 transition-all duration-300 shadow-2xl hover:shadow-[0_10px_30px_rgba(212,175,55,0.15)] hover:-translate-y-1 w-full">
                 <div>
                   {/* Top Emblem / Category Header */}
-                  <div className="h-10 sm:h-12 md:h-14 flex items-center justify-center mb-2.5 sm:mb-4 border-b border-white/10 pb-1.5 sm:pb-2">
-                    <img src="/assets/imgs/home/lre_logo.png" alt="LRE Monogram" className="h-6 sm:h-8 md:h-9 w-auto object-contain brightness-125" />
+                  <div className="home-legacy-card-label">
+                    <span className="trajan-pro text-amber-400 text-[10px] tracking-widest uppercase">The Movement</span>
                   </div>
 
                   {/* Media Showcase */}
-                  <div
-                    className="relative w-full h-[130px] sm:h-[180px] md:h-[200px] lg:h-[190px] xl:h-[210px] rounded overflow-hidden bg-black/60 border border-white/10 group-hover:border-amber-400/40 shadow-inner mb-3 sm:mb-4 cursor-pointer"
-                  >
+                  <div className="home-legacy-media group-hover:border-amber-400/60">
                     <Link to="/movement" className="block w-full h-full">
                       <img
                         src="/assets/imgs/home/9m.jpg"
@@ -765,7 +713,7 @@ function HomePage() {
                   <p className="text-amber-300/80 text-[10px] sm:text-xs mb-1.5 sm:mb-2.5 manrope">
                     61+ Million Africans Reached
                   </p>
-                  <p className="manrope text-white/80 text-[11px] sm:text-xs md:text-sm font-light leading-relaxed line-clamp-3 sm:line-clamp-none mb-3 sm:mb-4">
+                  <p className="manrope text-white/80 text-[11px] sm:text-xs md:text-sm font-light leading-relaxed mb-3 sm:mb-4">
                     Over <strong className="font-bold text-amber-300">61 million</strong> Africans awakened to the sacred glory of their ancestral heritage and creative authority.
                   </p>
                 </div>
@@ -786,17 +734,14 @@ function HomePage() {
               <div className="group flex flex-col justify-between bg-black/55 hover:bg-black/75 backdrop-blur-md border border-white/10 hover:border-amber-400/50 rounded-lg p-3 sm:p-4 md:p-5 transition-all duration-300 shadow-2xl hover:shadow-[0_10px_30px_rgba(212,175,55,0.15)] hover:-translate-y-1 w-full">
                 <div>
                   {/* Top Category Header */}
-                  <div className="h-10 sm:h-12 md:h-14 flex items-center justify-center mb-2.5 sm:mb-4 border-b border-white/10 pb-1.5 sm:pb-2">
+                  <div className="home-legacy-card-label">
                     <span className="trajan-pro text-amber-400 text-[10px] sm:text-xs tracking-widest uppercase border-b border-amber-400/50 pb-1 font-semibold">
                       THE LITERARY WORK
                     </span>
                   </div>
 
                   {/* Media Showcase */}
-                  <div
-                    className="relative w-full h-[130px] sm:h-[180px] md:h-[200px] lg:h-[190px] xl:h-[210px] rounded overflow-hidden bg-black/60 border border-white/10 group-hover:border-amber-400/40 shadow-inner mb-3 sm:mb-4 cursor-pointer"
-                    onClick={() => setSelectedModal('book')}
-                  >
+                  <div className="home-legacy-media group-hover:border-amber-400/60" onClick={() => setSelectedModal('book')}>
                     <img
                       src="/assets/imgs/home/lre_book.jpg"
                       alt="The Rise of Royals Book"
@@ -819,7 +764,7 @@ function HomePage() {
                   <p className="text-amber-300/80 text-[10px] sm:text-xs mb-1.5 sm:mb-2.5 manrope">
                     By Lucky R. Erherha
                   </p>
-                  <p className="manrope text-white/80 text-[11px] sm:text-xs md:text-sm font-light leading-relaxed line-clamp-3 sm:line-clamp-none mb-3 sm:mb-4">
+                  <p className="manrope text-white/80 text-[11px] sm:text-xs md:text-sm font-light leading-relaxed mb-3 sm:mb-4">
                     Returning the African to the consciousness of sacred responsibility, self-mastery, and sovereign enterprise.
                   </p>
                 </div>
@@ -841,17 +786,14 @@ function HomePage() {
               <div className="group flex flex-col justify-between bg-black/55 hover:bg-black/75 backdrop-blur-md border border-white/10 hover:border-amber-400/50 rounded-lg p-3 sm:p-4 md:p-5 transition-all duration-300 shadow-2xl hover:shadow-[0_10px_30px_rgba(212,175,55,0.15)] hover:-translate-y-1 w-full">
                 <div>
                   {/* Top Category Header */}
-                  <div className="h-10 sm:h-12 md:h-14 flex items-center justify-center mb-2.5 sm:mb-4 border-b border-white/10 pb-1.5 sm:pb-2">
+                  <div className="home-legacy-card-label">
                     <span className="trajan-pro text-amber-400 text-[10px] sm:text-xs tracking-widest uppercase border-b border-amber-400/50 pb-1 font-semibold">
                       THE ACADEMY
                     </span>
                   </div>
 
                   {/* Media Showcase */}
-                  <div
-                    className="relative w-full h-[130px] sm:h-[180px] md:h-[200px] lg:h-[190px] xl:h-[210px] rounded overflow-hidden bg-black/60 border border-white/10 group-hover:border-amber-400/40 shadow-inner mb-3 sm:mb-4 cursor-pointer"
-                    onClick={() => setSelectedModal('school')}
-                  >
+                  <div className="home-legacy-media group-hover:border-amber-400/60" onClick={() => setSelectedModal('school')}>
                     <img
                       src="/assets/imgs/home/school_of_economies.jpg"
                       alt="The School of Becoming"
@@ -874,7 +816,7 @@ function HomePage() {
                   <p className="text-amber-300/80 text-[10px] sm:text-xs mb-1.5 sm:mb-2.5 manrope truncate">
                     School of Economies
                   </p>
-                  <p className="manrope text-white/80 text-[11px] sm:text-xs md:text-sm font-light leading-relaxed line-clamp-3 sm:line-clamp-none mb-3 sm:mb-4">
+                  <p className="manrope text-white/80 text-[11px] sm:text-xs md:text-sm font-light leading-relaxed mb-3 sm:mb-4">
                     First-principle thinking and original economic systems rendering the language of &ldquo;catching up&rdquo; irrelevant.
                   </p>
                 </div>
@@ -896,14 +838,12 @@ function HomePage() {
               <div className="group flex flex-col justify-between bg-black/55 hover:bg-black/75 backdrop-blur-md border border-white/10 hover:border-amber-400/50 rounded-lg p-3 sm:p-4 md:p-5 transition-all duration-300 shadow-2xl hover:shadow-[0_10px_30px_rgba(212,175,55,0.15)] hover:-translate-y-1 w-full">
                 <div>
                   {/* Top Category Header */}
-                  <div className="h-10 sm:h-12 md:h-14 flex items-center justify-center mb-2.5 sm:mb-4 border-b border-white/10 pb-1.5 sm:pb-2">
+                  <div className="home-legacy-card-label">
                     <img src="/assets/imgs/home/zumera_logo.png" alt="Zumera Logo" className="h-6 sm:h-8 md:h-9 w-auto object-contain brightness-125" />
                   </div>
 
                   {/* Media Showcase */}
-                  <div
-                    className="relative w-full h-[130px] sm:h-[180px] md:h-[200px] lg:h-[190px] xl:h-[210px] rounded overflow-hidden bg-black/60 border border-white/10 group-hover:border-amber-400/40 shadow-inner mb-3 sm:mb-4 cursor-pointer"
-                  >
+                  <div className="home-legacy-media group-hover:border-amber-400/60">
                     <Link to="/legacy-of-impact" className="block w-full h-full">
                       <img
                         src="/assets/imgs/rj-brand/BB1.jpg"
@@ -928,7 +868,7 @@ function HomePage() {
                   <p className="text-amber-300/80 text-[10px] sm:text-xs mb-1.5 sm:mb-2.5 manrope truncate">
                     Landmark Real Estate
                   </p>
-                  <p className="manrope text-white/80 text-[11px] sm:text-xs md:text-sm font-light leading-relaxed line-clamp-3 sm:line-clamp-none mb-3 sm:mb-4">
+                  <p className="manrope text-white/80 text-[11px] sm:text-xs md:text-sm font-light leading-relaxed mb-3 sm:mb-4">
                     African communities inspired towards an enduring future with landmark real estate and structures of African truth.
                   </p>
                 </div>
@@ -1109,12 +1049,14 @@ function AboutPage() {
               </div>
             </div>
 
-            <div className="relative md:w-[50%] md:h-[60%]">
-              <img
-                src="/assets/imgs/about/vanguard.jpg"
-                alt="Image of the African Renaissance"
-                className="w-full h-full object-cover shadow-lg rounded"
-              />
+            <div className="relative w-full md:w-[50%] flex flex-col justify-start md:justify-center">
+              <div className="w-full rounded-lg overflow-hidden shadow-lg aspect-[4/3] sm:aspect-[16/10] md:aspect-[4/5] lg:aspect-[3/4]">
+                <img
+                  src="/assets/imgs/about/vanguard.jpg"
+                  alt="Image of the African Renaissance"
+                  className="w-full h-full object-cover object-center"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -1372,12 +1314,12 @@ function LeadershipPage() {
       </AppIntersection>
 
       <AppHeaderBg externalClass="bg-[url('/assets/imgs/leadership/awakenings.png')] text-start justify-start mt-8">
-        <div className="container w-full max-w-md md:max-w-7xl text-white md:ms-[15rem] p-5 sm:p-7 flex flex-col">
-          <span className="trajan-pro text-[2.2rem] md:text-[3rem]">
+        <div className="w-full max-w-7xl mx-auto text-white px-5 sm:px-8 md:px-12 lg:px-16 xl:px-20 py-6 sm:py-8 flex flex-col justify-center">
+          <span className="trajan-pro text-[2rem] sm:text-[2.4rem] md:text-[3rem] leading-tight">
             These are awakenings, <br /> not mere <br className="md:hidden" /> conversations.
           </span>
-          <span className="text-[1.1rem] md:text-[1.2rem] ">
-            Every word is crafted to reveal, not to please, as I speak <br /> to your soul.
+          <span className="text-[1rem] sm:text-[1.1rem] md:text-[1.2rem] mt-2 leading-relaxed">
+            Every word is crafted to reveal, not to please, as I speak <br className="hidden sm:inline" /> to your soul.
           </span>
         </div>
       </AppHeaderBg>
@@ -1461,8 +1403,8 @@ function LegacyPage() {
               />
             </div>
             <div className="mt-3 sm:mt-4 p-3 sm:p-4 bg-gray-50 rounded-lg border border-gray-200/80 flex flex-row items-center justify-between gap-3">
-              <img src="/assets/imgs/home/zumera_logo.png" alt="Zumera Logo" className="w-24 sm:w-32 md:w-36 h-auto object-contain" />
-              <p className="trajan-pro text-[10px] sm:text-xs text-gray-500 tracking-wider uppercase font-medium text-right">
+              <img src="/assets/imgs/home/zumera_logo.png" alt="Zumera Logo" className="legacy-brand-logo h-auto object-contain brightness-0" />
+              <p className="trajan-pro text-[10px] sm:text-xs text-gray-700 tracking-wider uppercase font-medium text-right">
                 Property &bull; Heritage
               </p>
             </div>
@@ -1490,7 +1432,7 @@ function LegacyPage() {
             </p>
 
             {/* Mission & Vision Cards (Responsive 2-Column Horizontal System) */}
-            <div className="grid grid-cols-2 gap-2.5 sm:gap-4 pt-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 pt-2">
               <div className="bg-gray-50 p-3 sm:p-5 rounded-lg border-l-4 border-gray-900 shadow-sm flex flex-col justify-between">
                 <div>
                   <span className="trajan-pro text-[10px] sm:text-xs font-bold uppercase text-gray-900 block mb-1">Our Mission</span>
@@ -1523,32 +1465,32 @@ function LegacyPage() {
             </h3>
           </div>
 
-          <div className="grid grid-cols-3 gap-2 sm:gap-4 md:gap-6 lg:gap-8 items-stretch">
-            <div className="p-2.5 sm:p-5 lg:p-7 bg-gray-50 rounded-xl border border-gray-200/80 hover:border-amber-500/40 hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-5 xl:gap-6 items-stretch">
+            <div className="p-4 sm:p-5 lg:p-7 bg-gray-50 rounded-xl border border-gray-200/80 hover:border-amber-500/40 hover:shadow-md transition-all duration-300 flex flex-col justify-between">
               <div>
                 <span className="trajan-pro text-base sm:text-xl lg:text-2xl text-amber-700 font-bold block mb-1 sm:mb-2">01</span>
                 <h4 className="trajan-pro text-xs sm:text-base lg:text-lg font-bold text-gray-900 mb-1 leading-snug">Grandeur &amp; Permanence</h4>
-                <p className="manrope text-[10px] sm:text-xs lg:text-sm text-gray-600 leading-snug sm:leading-relaxed">
+                <p className="manrope text-[11px] sm:text-xs lg:text-sm text-gray-600 leading-relaxed">
                   Rejecting temporary solutions to construct enduring structures that anchor African pride for centuries to come.
                 </p>
               </div>
             </div>
 
-            <div className="p-2.5 sm:p-5 lg:p-7 bg-gray-50 rounded-xl border border-gray-200/80 hover:border-amber-500/40 hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+            <div className="p-4 sm:p-5 lg:p-7 bg-gray-50 rounded-xl border border-gray-200/80 hover:border-amber-500/40 hover:shadow-md transition-all duration-300 flex flex-col justify-between">
               <div>
                 <span className="trajan-pro text-base sm:text-xl lg:text-2xl text-amber-700 font-bold block mb-1 sm:mb-2">02</span>
                 <h4 className="trajan-pro text-xs sm:text-base lg:text-lg font-bold text-gray-900 mb-1 leading-snug">Original African Truth</h4>
-                <p className="manrope text-[10px] sm:text-xs lg:text-sm text-gray-600 leading-snug sm:leading-relaxed">
+                <p className="manrope text-[11px] sm:text-xs lg:text-sm text-gray-600 leading-relaxed">
                   Spaces conceptualized from first principles, reflecting the deep aesthetic dignity and civilizational identity of our continent.
                 </p>
               </div>
             </div>
 
-            <div className="p-2.5 sm:p-5 lg:p-7 bg-gray-50 rounded-xl border border-gray-200/80 hover:border-amber-500/40 hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+            <div className="p-4 sm:p-5 lg:p-7 bg-gray-50 rounded-xl border border-gray-200/80 hover:border-amber-500/40 hover:shadow-md transition-all duration-300 flex flex-col justify-between">
               <div>
                 <span className="trajan-pro text-base sm:text-xl lg:text-2xl text-amber-700 font-bold block mb-1 sm:mb-2">03</span>
                 <h4 className="trajan-pro text-xs sm:text-base lg:text-lg font-bold text-gray-900 mb-1 leading-snug">Generational Custodianship</h4>
-                <p className="manrope text-[10px] sm:text-xs lg:text-sm text-gray-600 leading-snug sm:leading-relaxed">
+                <p className="manrope text-[11px] sm:text-xs lg:text-sm text-gray-600 leading-relaxed">
                   Transforming property from mere commercial assets into monuments of communal resilience and economic sovereignty.
                 </p>
               </div>
@@ -1775,6 +1717,14 @@ function ContactPage() {
     }
   }, [location.hash]);
 
+  useEffect(() => {
+    if (location.hash === '#support' && activeTab === 'support') {
+      requestAnimationFrame(() => {
+        document.getElementById('support')?.scrollIntoView({ block: 'start' });
+      });
+    }
+  }, [activeTab, location.hash]);
+
   // Booking Form State
   const [bookingData, setBookingData] = useState({
     firstName: '',
@@ -1789,15 +1739,16 @@ function ContactPage() {
   });
   const [bookingSubmitted, setBookingSubmitted] = useState(false);
 
-  // Support / Payment Gateway State
+  // Support request state. Payment processing is not available on this site.
   const [currency, setCurrency] = useState('USD');
   const [selectedTier, setSelectedTier] = useState(250);
   const [customAmount, setCustomAmount] = useState('');
   const [donorName, setDonorName] = useState('');
   const [donorEmail, setDonorEmail] = useState('');
-  const [paymentMethod, setPaymentMethod] = useState('card');
-  const [paymentProcessing, setPaymentProcessing] = useState(false);
+  const [amountError, setAmountError] = useState('');
+  const [supportRequestStatus, setSupportRequestStatus] = useState('');
   const [certificateData, setCertificateData] = useState(null);
+  const supportFormRef = useRef(null);
 
   const eventTypes = [
     'A Keynote Address',
@@ -1834,28 +1785,35 @@ ${bookingData.message}
     window.location.href = `mailto:LRE@luckyerherha.com?subject=${subject}&body=${encodeURIComponent(bodyText)}`;
   };
 
-  const handlePaymentSubmit = (e) => {
-    e.preventDefault();
-    const finalAmount = customAmount ? parseFloat(customAmount) : selectedTier;
-    if (!finalAmount || finalAmount <= 0) return;
+  const selectedAmount = customAmount === '' ? selectedTier : Number(customAmount);
 
-    setPaymentProcessing(true);
-    setTimeout(() => {
-      setPaymentProcessing(false);
-      setCertificateData({
-        name: donorName || 'Noble Custodian',
-        email: donorEmail,
-        amount: finalAmount,
-        currency: currency,
-        symbol: currencyRates[currency].symbol,
-        date: new Date().toLocaleDateString('en-US', {
-          year: 'numeric',
-          month: 'long',
-          day: 'numeric',
-        }),
-        ref: 'LRE-CUST-' + Math.floor(100000 + Math.random() * 900000),
-      });
-    }, 1800);
+  const handleSupportRequest = (e) => {
+    e.preventDefault();
+    if (!Number.isFinite(selectedAmount) || selectedAmount <= 0) {
+      setAmountError('Enter a custom amount greater than zero.');
+      return;
+    }
+
+    const subject = encodeURIComponent('Support instructions request');
+    const body = encodeURIComponent(
+      `Support instructions request (not a payment)\nName: ${donorName}\nEmail: ${donorEmail}\nIntended amount: ${currencyRates[currency].symbol}${selectedAmount.toLocaleString()} ${currency}`,
+    );
+    window.location.href = `mailto:LRE@luckyerherha.com?subject=${subject}&body=${body}`;
+    setSupportRequestStatus('Your email app may open a draft. The request is not sent until you review and send it. No payment has been made.');
+  };
+
+  const handleCertificatePreview = () => {
+    if (!supportFormRef.current?.reportValidity()) return;
+    if (!Number.isFinite(selectedAmount) || selectedAmount <= 0) {
+      setAmountError('Enter a custom amount greater than zero.');
+      return;
+    }
+    setCertificateData({
+      name: donorName,
+      amount: selectedAmount,
+      currency,
+      symbol: currencyRates[currency].symbol,
+    });
   };
 
   return (
@@ -1967,7 +1925,7 @@ ${bookingData.message}
                       placeholder="First name"
                       value={bookingData.firstName}
                       onChange={(e) => setBookingData({ ...bookingData, firstName: e.target.value })}
-                      className="w-full px-4 py-3 bg-white border border-gray-300 rounded-md text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent contact-form-input"
+                      className="w-full px-4 py-3 bg-white border border-gray-300 rounded-md text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-amber-400 contact-form-input"
                     />
                   </div>
                   <div>
@@ -1982,7 +1940,7 @@ ${bookingData.message}
                       placeholder="Last name"
                       value={bookingData.lastName}
                       onChange={(e) => setBookingData({ ...bookingData, lastName: e.target.value })}
-                      className="w-full px-4 py-3 bg-white border border-gray-300 rounded-md text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent contact-form-input"
+                      className="w-full px-4 py-3 bg-white border border-gray-300 rounded-md text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-amber-400 contact-form-input"
                     />
                   </div>
                 </div>
@@ -1999,7 +1957,7 @@ ${bookingData.message}
                       placeholder="The name of your company"
                       value={bookingData.company}
                       onChange={(e) => setBookingData({ ...bookingData, company: e.target.value })}
-                      className="w-full px-4 py-3 bg-white border border-gray-300 rounded-md text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent contact-form-input"
+                      className="w-full px-4 py-3 bg-white border border-gray-300 rounded-md text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-amber-400 contact-form-input"
                     />
                   </div>
                   <div>
@@ -2014,7 +1972,7 @@ ${bookingData.message}
                       placeholder="Where are you booking from?"
                       value={bookingData.country}
                       onChange={(e) => setBookingData({ ...bookingData, country: e.target.value })}
-                      className="w-full px-4 py-3 bg-white border border-gray-300 rounded-md text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent contact-form-input"
+                      className="w-full px-4 py-3 bg-white border border-gray-300 rounded-md text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-amber-400 contact-form-input"
                     />
                   </div>
                 </div>
@@ -2031,7 +1989,7 @@ ${bookingData.message}
                     placeholder="you@company.com"
                     value={bookingData.email}
                     onChange={(e) => setBookingData({ ...bookingData, email: e.target.value })}
-                    className="w-full px-4 py-3 bg-white border border-gray-300 rounded-md text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent contact-form-input"
+                    className="w-full px-4 py-3 bg-white border border-gray-300 rounded-md text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-amber-400 contact-form-input"
                   />
                 </div>
 
@@ -2045,7 +2003,7 @@ ${bookingData.message}
                         name="countryCode"
                         value={bookingData.countryCode}
                         onChange={(e) => setBookingData({ ...bookingData, countryCode: e.target.value })}
-                        className="appearance-none bg-white border border-gray-300 rounded-l-md px-4 py-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent pr-8 contact-form-input"
+                        className="appearance-none bg-white border border-gray-300 rounded-l-md px-4 py-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-amber-400 pr-8 contact-form-input"
                       >
                         <option value="NG">NG</option>
                         <option value="US">US</option>
@@ -2061,7 +2019,7 @@ ${bookingData.message}
                       placeholder="+234 802 677 3682"
                       value={bookingData.phone}
                       onChange={(e) => setBookingData({ ...bookingData, phone: e.target.value })}
-                      className="flex-1 px-4 py-3 bg-white border border-l-0 border-gray-300 rounded-r-md text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent contact-form-input"
+                      className="flex-1 px-4 py-3 bg-white border border-l-0 border-gray-300 rounded-r-md text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-amber-400 contact-form-input contact-phone-input"
                     />
                   </div>
                 </div>
@@ -2080,7 +2038,7 @@ ${bookingData.message}
                         value={type}
                         checked={bookingData.eventType === type}
                         onChange={() => setBookingData({ ...bookingData, eventType: type })}
-                        className="mr-2"
+                        className="mr-2 focus:ring-2 focus:ring-amber-400 text-amber-500 accent-amber-500"
                       />
                       <label htmlFor={type} className="text-white text-sm">
                         {type}
@@ -2104,7 +2062,7 @@ ${bookingData.message}
                     placeholder="Leave us a message..."
                     value={bookingData.message}
                     onChange={(e) => setBookingData({ ...bookingData, message: e.target.value })}
-                    className="w-full px-4 py-3 bg-white border border-gray-300 rounded-md text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none contact-form-textarea"
+                    className="w-full px-4 py-3 bg-white border border-gray-300 rounded-md text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-amber-400 resize-none contact-form-textarea"
                   />
                 </div>
 
@@ -2114,7 +2072,7 @@ ${bookingData.message}
                   </p>
                   <button
                     type="submit"
-                    className="bg-gray-200 hover:bg-white text-gray-800 font-bold py-3 px-8 rounded uppercase tracking-wide transition-colors duration-200 min-w-[120px]"
+                    className="bg-gray-200 hover:bg-white text-gray-800 font-bold py-3 px-8 rounded uppercase tracking-wide transition-all duration-200 min-w-[120px] focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-2 focus:ring-offset-black cursor-pointer"
                   >
                     SEND BOOKING
                   </button>
@@ -2125,230 +2083,147 @@ ${bookingData.message}
         </div>
       )}
 
-      {/* TAB 2: SUPPORT SECTION & PAYMENT GATEWAY */}
+      {/* TAB 2: SUPPORT REQUESTS */}
       {activeTab === 'support' && (
-        <section id="support" className="py-12 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
-          <div className="text-center max-w-3xl mx-auto mb-10">
-            <span className="trajan-pro text-amber-600 text-xs tracking-widest uppercase font-bold">Patronage &amp; Endowments</span>
-            <h2 className="trajan-pro text-3xl md:text-5xl font-black text-gray-900 mt-2">
+        <section id="support" className="support-section">
+          <div className="support-heading">
+            <span className="trajan-pro">Patronage &amp; Endowments</span>
+            <h2 className="trajan-pro">
               Support Africa’s Return
             </h2>
-            <p className="manrope text-gray-600 text-sm md:text-base mt-4 leading-relaxed">
+            <p className="manrope">
               Every civilisation is carried by people who decide to care for what they did not personally create. Your patronage funds sovereign research, literature distribution, the School of Becoming, and continental awakenings.
             </p>
           </div>
 
-          <div className="bg-[#121212] text-white p-6 md:p-10 rounded-xl shadow-2xl border border-gray-800">
-            {/* Currency Selector */}
-            <div className="flex justify-between items-center mb-8 border-b border-gray-800 pb-4">
-              <span className="trajan-pro text-xs text-gray-400 tracking-wider">SELECT CURRENCY:</span>
-              <div className="flex gap-2">
-                {Object.keys(currencyRates).map((curr) => (
-                  <button
-                    key={curr}
-                    type="button"
-                    onClick={() => {
-                      setCurrency(curr);
-                      setSelectedTier(currencyRates[curr].tiers[1]);
-                      setCustomAmount('');
-                    }}
-                    className={`px-3 py-1 text-xs font-bold rounded trajan-pro transition-all ${
-                      currency === curr
-                        ? 'bg-amber-500 text-black'
-                        : 'bg-white/10 text-gray-300 hover:bg-white/20'
-                    }`}
-                  >
-                    {curr} ({currencyRates[curr].symbol})
-                  </button>
-                ))}
-              </div>
+          <div className="support-panel">
+            <div className="support-notice" role="status">
+              <strong>Support requests only</strong>
+              <span>No payment is collected on this website. Card, digital wallet, and bank transfer options are not currently available here.</span>
             </div>
 
-            {/* Impact Tiers */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-              {currencyRates[currency].tiers.map((tier, idx) => {
-                const tierTitles = [
-                  'Custodian Patron',
-                  'Sovereign Builder',
-                  'Fellowship Endower',
-                  'Monumental Founder',
-                ];
-                const tierDescs = [
-                  'Funds literature & manifesto distribution.',
-                  'Expands Arsenal of Knowledge productions.',
-                  'Endows School of Becoming fellowships.',
-                  'Accelerates permanent research infrastructure.',
-                ];
-                const isSelected = selectedTier === tier && !customAmount;
-                return (
-                  <div
-                    key={tier}
-                    onClick={() => {
-                      setSelectedTier(tier);
-                      setCustomAmount('');
-                    }}
-                    className={`p-4 rounded-lg cursor-pointer transition-all border ${
-                      isSelected
-                        ? 'border-amber-400 bg-amber-950/30'
-                        : 'border-gray-800 bg-white/5 hover:border-gray-600'
-                    }`}
-                  >
-                    <span className="text-[0.65rem] uppercase tracking-wider text-amber-400 font-mono block">
-                      {tierTitles[idx]}
-                    </span>
-                    <div className="trajan-pro text-2xl font-black my-2">
-                      {currencyRates[currency].symbol}{tier.toLocaleString()}
-                    </div>
-                    <p className="text-xs text-gray-400 leading-snug">{tierDescs[idx]}</p>
+            <form id="support-request-form" ref={supportFormRef} onSubmit={handleSupportRequest} className="support-form">
+              <fieldset className="support-group">
+                <legend>Choose an intended amount</legend>
+                <div className="support-currency-row">
+                  <span className="support-field-label">Currency</span>
+                  <div className="support-currency-options" role="group" aria-label="Currency">
+                    {Object.keys(currencyRates).map((curr) => (
+                      <button
+                        key={curr}
+                        type="button"
+                        aria-pressed={currency === curr}
+                        onClick={() => {
+                          setCurrency(curr);
+                          setSelectedTier(currencyRates[curr].tiers[1]);
+                          setCustomAmount('');
+                          setAmountError('');
+                        }}
+                        className={`support-currency ${currency === curr ? 'is-selected' : ''}`}
+                      >
+                        {curr} <span>{currencyRates[curr].symbol}</span>
+                      </button>
+                    ))}
                   </div>
-                );
-              })}
-            </div>
+                </div>
 
-            {/* Custom Amount */}
-            <div className="mb-8">
-              <label className="block text-xs uppercase tracking-wider text-gray-400 mb-2">
-                Or enter custom contribution ({currencyRates[currency].symbol}):
-              </label>
-              <div className="relative max-w-xs">
-                <span className="absolute left-3 top-3 text-gray-400 font-bold">
-                  {currencyRates[currency].symbol}
-                </span>
-                <input
-                  type="number"
-                  placeholder="Custom Amount"
-                  value={customAmount}
-                  onChange={(e) => setCustomAmount(e.target.value)}
-                  className="w-full pl-8 pr-4 py-2.5 bg-black border border-gray-700 rounded text-white focus:outline-none focus:border-amber-400 text-sm"
-                />
-              </div>
-            </div>
+                <div className="support-tier-grid">
+                  {currencyRates[currency].tiers.map((tier, idx) => {
+                    const tierTitles = ['Custodian Patron', 'Sovereign Builder', 'Fellowship Endower', 'Monumental Founder'];
+                    const tierDescs = [
+                      'Funds literature & manifesto distribution.',
+                      'Expands Arsenal of Knowledge productions.',
+                      'Endows School of Becoming fellowships.',
+                      'Accelerates permanent research infrastructure.',
+                    ];
+                    const isSelected = selectedTier === tier && !customAmount;
+                    return (
+                      <button
+                        key={tier}
+                        type="button"
+                        aria-pressed={isSelected}
+                        onClick={() => {
+                          setSelectedTier(tier);
+                          setCustomAmount('');
+                          setAmountError('');
+                        }}
+                        className={`support-tier ${isSelected ? 'is-selected' : ''}`}
+                      >
+                        <span className="support-tier-name">{tierTitles[idx]}</span>
+                        <span className="support-tier-amount">{currencyRates[currency].symbol}{tier.toLocaleString()}</span>
+                        <span className="support-tier-description">{tierDescs[idx]}</span>
+                      </button>
+                    );
+                  })}
+                </div>
 
-            {/* Payment Details Form */}
-            <form onSubmit={handlePaymentSubmit} className="space-y-6 pt-4 border-t border-gray-800">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-xs text-gray-300 mb-1">Full Name / Patron Name *</label>
+                <div className="support-custom-amount">
+                  <label htmlFor="custom-support-amount" className="support-field-label">
+                    Or enter a custom amount ({currencyRates[currency].symbol})
+                  </label>
                   <input
-                    type="text"
-                    required
-                    placeholder="Enter your name"
-                    value={donorName}
-                    onChange={(e) => setDonorName(e.target.value)}
-                    className="w-full px-3 py-2.5 bg-black border border-gray-700 rounded text-white text-sm focus:border-amber-400 focus:outline-none"
+                    id="custom-support-amount"
+                    type="number"
+                    min="0.01"
+                    step="0.01"
+                    inputMode="decimal"
+                    placeholder="Custom amount"
+                    value={customAmount}
+                    aria-invalid={Boolean(amountError)}
+                    aria-describedby={amountError ? 'support-amount-error' : undefined}
+                    onChange={(e) => {
+                      setCustomAmount(e.target.value);
+                      setAmountError(e.target.value && Number(e.target.value) <= 0 ? 'Enter an amount greater than zero.' : '');
+                    }}
                   />
+                  {amountError && <span className="support-error" id="support-amount-error" role="alert">{amountError}</span>}
                 </div>
-                <div>
-                  <label className="block text-xs text-gray-300 mb-1">Email Address (for certificate &amp; receipt) *</label>
-                  <input
-                    type="email"
-                    required
-                    placeholder="patron@domain.com"
-                    value={donorEmail}
-                    onChange={(e) => setDonorEmail(e.target.value)}
-                    className="w-full px-3 py-2.5 bg-black border border-gray-700 rounded text-white text-sm focus:border-amber-400 focus:outline-none"
-                  />
-                </div>
-              </div>
+              </fieldset>
 
-              {/* Payment Method Selector */}
-              <div>
-                <label className="block text-xs text-gray-300 mb-2">Payment Method:</label>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                  {[
-                    { id: 'card', label: 'Debit / Credit Card', sub: 'Instant & Secure' },
-                    { id: 'bank', label: 'Direct Bank Wire', sub: 'Account Details' },
-                    { id: 'apple', label: 'Digital Wallet', sub: 'Apple/Google Pay' },
-                  ].map((m) => (
-                    <div
-                      key={m.id}
-                      onClick={() => setPaymentMethod(m.id)}
-                      className={`p-3 rounded border cursor-pointer text-left ${
-                        paymentMethod === m.id
-                          ? 'border-amber-400 bg-amber-950/20'
-                          : 'border-gray-800 bg-black hover:border-gray-600'
-                      }`}
-                    >
-                      <div className="text-xs font-bold">{m.label}</div>
-                      <div className="text-[0.65rem] text-gray-400">{m.sub}</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Card Inputs Mockup */}
-              {paymentMethod === 'card' && (
-                <div className="bg-black/50 p-4 rounded border border-gray-800 space-y-3">
+              <fieldset className="support-group support-contact-group">
+                <legend>Request confirmed support instructions</legend>
+                <p className="support-group-copy">Share your contact details and intended amount. This opens an email draft to the Secretariat; it does not make a payment or confirm a contribution.</p>
+                <div className="support-contact-fields">
                   <div>
-                    <label className="block text-[0.7rem] text-gray-400 mb-1">Card Number</label>
-                    <input
-                      type="text"
-                      placeholder="4123 •••• •••• 4242"
-                      defaultValue="4123 5678 9012 3456"
-                      className="w-full px-3 py-2 bg-black border border-gray-700 rounded text-sm text-gray-300"
-                    />
+                    <label htmlFor="support-donor-name" className="support-field-label">Name</label>
+                    <input id="support-donor-name" type="text" autoComplete="name" required value={donorName} onChange={(e) => setDonorName(e.target.value)} placeholder="Your name" />
                   </div>
-                  <div className="grid grid-cols-2 gap-3">
-                    <div>
-                      <label className="block text-[0.7rem] text-gray-400 mb-1">Expires</label>
-                      <input
-                        type="text"
-                        placeholder="MM / YY"
-                        defaultValue="12/28"
-                        className="w-full px-3 py-2 bg-black border border-gray-700 rounded text-sm text-gray-300"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-[0.7rem] text-gray-400 mb-1">CVC</label>
-                      <input
-                        type="password"
-                        placeholder="CVC"
-                        defaultValue="888"
-                        className="w-full px-3 py-2 bg-black border border-gray-700 rounded text-sm text-gray-300"
-                      />
-                    </div>
+                  <div>
+                    <label htmlFor="support-donor-email" className="support-field-label">Email address</label>
+                    <input id="support-donor-email" type="email" autoComplete="email" required value={donorEmail} onChange={(e) => setDonorEmail(e.target.value)} placeholder="you@example.com" />
                   </div>
                 </div>
-              )}
+              </fieldset>
 
-              {paymentMethod === 'bank' && (
-                <div className="bg-black/50 p-4 rounded border border-amber-600/40 text-xs space-y-2 text-gray-300">
-                  <p className="font-bold text-amber-300">Official Endowments Bank Account:</p>
-                  <p>Bank: <span className="text-white">Access Bank Plc / Standard Chartered</span></p>
-                  <p>Account Name: <span className="text-white">Africa’s Return Initiative / LRE</span></p>
-                  <p>Account Number: <span className="text-white">0123894721</span></p>
-                  <p>Reference: <span className="text-amber-300 font-mono">AR-PATRON-{Date.now().toString().slice(-6)}</span></p>
+              <div className="support-methods" aria-labelledby="support-methods-title">
+                <h3 id="support-methods-title">Payment methods</h3>
+                <p>Not available through this website</p>
+                <div className="support-method-list">
+                  <span>Card checkout <b>Unavailable</b></span>
+                  <span>Digital wallet <b>Unavailable</b></span>
+                  <span>Bank transfer <b>Instructions by request only</b></span>
                 </div>
-              )}
-
-              <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4">
-                <div className="flex items-center gap-2 text-xs text-gray-400">
-                  <span>🔒 256-bit Encrypted SSL Gateway</span>
-                </div>
-                <button
-                  type="submit"
-                  disabled={paymentProcessing}
-                  className="w-full sm:w-auto px-8 py-3 bg-amber-500 hover:bg-amber-400 text-black font-bold trajan-pro text-sm rounded shadow-lg transition-all"
-                >
-                  {paymentProcessing ? (
-                    'PROCESSING SECURE DONATION...'
-                  ) : (
-                    `GIVE ${currencyRates[currency].symbol}${(customAmount ? parseFloat(customAmount) : selectedTier).toLocaleString()} NOW`
-                  )}
-                </button>
+                <p className="support-method-note">No card details are requested or stored. Bank details are not published here; confirm official instructions directly with the Secretariat before sending funds.</p>
               </div>
+
+              <div className="support-actions">
+                <button type="submit" className="support-request-button">Request support instructions</button>
+                <button type="button" onClick={handleCertificatePreview} className="support-preview-button">Preview draft certificate</button>
+              </div>
+              {supportRequestStatus && <p className="support-request-status" role="status">{supportRequestStatus}</p>}
             </form>
           </div>
         </section>
       )}
 
-      {/* Royal Patron Certificate Modal */}
+      {/* Certificate draft preview; it is not evidence of a payment. */}
       {certificateData && (
         <div className="modal-overlay" onClick={() => setCertificateData(null)}>
-          <div className="certificate-frame p-8 md:p-12 max-w-2xl w-full text-center text-white rounded-lg relative" onClick={(e) => e.stopPropagation()}>
+          <div className="certificate-frame p-6 sm:p-8 md:p-12 max-w-2xl w-full text-center text-white rounded-lg relative" role="dialog" aria-modal="true" aria-labelledby="certificate-title" onClick={(e) => e.stopPropagation()}>
             <div className="absolute top-4 right-4">
               <button
                 type="button"
+                aria-label="Close draft preview"
                 onClick={() => setCertificateData(null)}
                 className="text-gray-400 hover:text-white text-2xl font-mono"
               >
@@ -2358,27 +2233,24 @@ ${bookingData.message}
             <div className="w-16 h-16 mx-auto mb-4 border-2 border-amber-400 rounded-full flex items-center justify-center text-amber-400 text-2xl">
               ♕
             </div>
-            <span className="trajan-pro text-amber-400 text-xs tracking-widest uppercase block mb-1">
-              OFFICIAL CERTIFICATE OF PATRONAGE
+            <span className="trajan-pro text-amber-300 text-xs tracking-widest uppercase block mb-1">
+              DRAFT PREVIEW &bull; NOT PROOF OF PAYMENT
             </span>
-            <h2 className="trajan-pro text-2xl md:text-3xl font-black gold-gradient-text mb-4">
+            <h2 id="certificate-title" className="trajan-pro text-2xl md:text-3xl font-black gold-gradient-text mb-4">
               AFRICA’S RETURN
             </h2>
             <p className="manrope text-xs text-gray-300 mb-6 italic">
               &ldquo;The return happens every time an African mind chooses possibility over limitation and creation over dependence.&rdquo;
             </p>
             <div className="border-y border-amber-500/30 py-6 my-6 space-y-2">
-              <p className="text-xs uppercase text-gray-400 tracking-wider">This acknowledges the sovereign contribution of</p>
+              <p className="text-xs uppercase text-gray-400 tracking-wider">Draft prepared for</p>
               <h3 className="trajan-pro text-xl md:text-2xl font-bold text-white">{certificateData.name}</h3>
               <p className="text-amber-400 font-mono text-sm pt-2">
-                Contribution: {certificateData.symbol}{certificateData.amount.toLocaleString()} {certificateData.currency}
-              </p>
-              <p className="text-[0.7rem] text-gray-500 font-mono">
-                Official Reference: {certificateData.ref} &bull; Date: {certificateData.date}
+                Intended amount: {certificateData.symbol}{certificateData.amount.toLocaleString()} {certificateData.currency}
               </p>
             </div>
             <p className="text-xs text-gray-400 manrope max-w-md mx-auto mb-6">
-              You are recognized as a distinguished Custodian of the African Renaissance. A receipt and manifesto reading pack has been dispatched to {certificateData.email || 'your email'}.
+              This is only a visual draft. No payment was collected or verified, and this preview is not a receipt or proof of contribution.
             </p>
             <button
               type="button"
