@@ -6,11 +6,11 @@ export default defineConfig({
   server: {
     host: '0.0.0.0',
     port: process.env.PORT ? parseInt(process.env.PORT) : 3000,
-    allowedHosts: true,
+    allowedHosts: ['luckyerherha.onrender.com', '.onrender.com'],
   },
   preview: {
     host: '0.0.0.0',
     port: process.env.PORT ? parseInt(process.env.PORT) : 4173,
-    allowedHosts: true,
+    allowedHosts: ['luckyerherha.onrender.com', '.onrender.com'],
   },
 });
