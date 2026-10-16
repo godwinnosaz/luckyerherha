@@ -26,7 +26,7 @@ export default function HomePage() {
 
       <section className="relative h-[80vh] md:h-[100vh] w-full overflow-hidden bg-[url(/assets/imgs/home/decleration.jpg)] md:bg-[url(/assets/imgs/home/decleration.jpg)] flex items-end p-5 md:items-center bg-cover bg-center bg-no-repeat md:bg-size-[80%]"></section>
 
-      <AppIntersection externalClass="bg-[url(/assets/imgs/home/legacy.png)] text-(--primary-color) mb-[3rem] bg-cover bg-center bg-no-repeat">
+      {/* <AppIntersection externalClass="bg-[url(/assets/imgs/home/legacy.png)] text-(--primary-color) mb-[3rem] bg-cover bg-center bg-no-repeat">
         <h2 className="text-3xl font-bold text-center text-(--accent) mb-[2rem] py-[5rem]">
           LEGACY OF IMPACT
         </h2>
@@ -87,7 +87,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </AppIntersection>
+      </AppIntersection> */}
 
       <Footer />
     </>
