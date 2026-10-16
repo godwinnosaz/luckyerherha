@@ -136,7 +136,7 @@ export default function MissionPage() {
               The African Sovereignty Manifesto
             </h2>
             <div
-              className="space-y-5 manrope text-base md:text-[1.1rem] leading-relaxed text-(--grey)"
+              className="space-y-6 manrope text-base md:text-[1.1rem] leading-relaxed text-(--grey)"
               style={{ textAlign: 'justify', textAlignLast: 'center' }}
             >
               <p>
