@@ -47,17 +47,20 @@ export default function MissionPage() {
 
       <section className="min-h-screen flex justify-center pt-12 md:p-12 bg-[url('/assets/imgs/mission/sov-sm.png')] md:bg-[url('/assets/imgs/mission/sovereignty.png')] relative bg-cover bg-center bg-no-repeat md:mt-[4rem]">
         <div className="absolute top-0 left-0 w-full h-full bg-black/60 z-[1]"></div>
-        <div className="w-full md:w-[60%] max-w-5xl z-[2]">
-          <div className="bg-(--grey) space-y-8 py-8 px-6 mb-10 rounded">
+        <div className="w-full  max-w-5xl z-[2]">
+          <div className="bg-(--grey) space-y-8 py-12 px-6 md:py-16 md:px-14 mb-10 rounded-xl">
             {activeSlide === 0 ? (
-              <div className="h-full flex flex-col justify-center items-center text-justify md:text-center px-4 transition-opacity duration-500">
+              <div className="h-full flex flex-col justify-center items-center transition-opacity duration-500">
                 <h2 className="text-(--text-grey) text-3xl md:text-4xl text-center font-black tracking-wide uppercase mb-4 trajan-pro">
                   VISION STATEMENT
                 </h2>
-                <h3 className="text-(--text-grey) text-xl md:text-2xl mb-4 font-bold trajan-pro">
+                <h3 className="text-(--text-grey) text-xl md:text-2xl mb-6 font-bold trajan-pro text-center">
                   The Rise of Royals
                 </h3>
-                <div className="text-(--text-grey) text-base md:text-[1.1rem] leading-relaxed font-normal manrope space-y-4 max-w-4xl text-justify md:text-center">
+                <div
+                  className="text-(--text-grey) text-base md:text-[1.1rem] leading-relaxed font-normal manrope space-y-5 max-w-2xl mx-auto px-4"
+                  style={{ textAlign: 'justify', textAlignLast: 'center' }}
+                >
                   <p>
                     Africa’s Return exists because we believe that something essential was interrupted.
                   </p>
@@ -76,14 +79,17 @@ export default function MissionPage() {
                 </div>
               </div>
             ) : (
-              <div className="h-full flex flex-col justify-center items-center text-justify md:text-center px-4 transition-opacity duration-500">
+              <div className="h-full flex flex-col justify-center items-center transition-opacity duration-500">
                 <h2 className="text-(--text-grey) text-3xl md:text-4xl text-center font-black tracking-wide uppercase mb-4 trajan-pro">
                   DECLARATION OF PURPOSE
                 </h2>
-                <h3 className="text-(--text-grey) text-xl md:text-2xl mb-4 font-bold trajan-pro">
+                <h3 className="text-(--text-grey) text-xl md:text-2xl mb-6 font-bold trajan-pro text-center">
                   Africa's Return Declaration of Purpose
                 </h3>
-                <div className="text-(--text-grey) text-base md:text-[1.1rem] leading-relaxed font-normal manrope space-y-4 max-w-4xl text-justify md:text-center">
+                <div
+                  className="text-(--text-grey) text-base md:text-[1.1rem] leading-relaxed font-normal manrope space-y-5 max-w-2xl mx-auto px-4"
+                  style={{ textAlign: 'justify', textAlignLast: 'center' }}
+                >
                   <p>
                     Africa's Return was born from a simple but unsettling thought: what if the Africa we have been taught to accept is not the full expression of what Africa was created to become?
                   </p>
