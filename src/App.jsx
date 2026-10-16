@@ -28,10 +28,10 @@ export default function App() {
         <Route path="/leadership" element={<LeadershipPage />} />
         <Route path="/contact-us" element={<ContactPage />} />
         <Route path="/legacy-of-impact" element={<LegacyOfImpactPage />}>
-          <Route index element={<Navigate to="rj-brand" replace />} />
-          <Route path="rj-brand" element={<TheStoryTab />} />
+          <Route index element={<ZumeraTab />} />
           <Route path="zumera" element={<ZumeraTab />} />
-          <Route path="investor-info" element={<InvestorInfoTab />} />
+          <Route path="rj-brand" element={<Navigate to="/legacy-of-impact" replace />} />
+          <Route path="investor-info" element={<Navigate to="/legacy-of-impact" replace />} />
         </Route>
         <Route path="/movement" element={<MovementPage />} />
         <Route path="/engagement" element={<EngagementPage />} />

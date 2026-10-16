@@ -33,30 +33,12 @@ export default function LegacyOfImpactPage() {
       </AppIntersection>
 
       <section className="max-w-sm md:max-w-2xl mx-auto">
-        <div className="navlinks-dark text-lg bg-light-gray flex justify-between items-center gap-x-2 md:gap-x-8 py-5 px-5 my-5">
+        <div className="navlinks-dark text-lg bg-light-gray flex justify-center items-center gap-x-2 md:gap-x-8 py-5 px-5 my-5">
           <NavLink
-            to="/legacy-of-impact/rj-brand"
-            className={({ isActive }) =>
-              `trajan-pro text-[0.8rem] md:text-[1.1rem] ${isActive ? 'active-link' : ''}`
-            }
-          >
-            Rj Brand
-          </NavLink>
-          <NavLink
-            to="/legacy-of-impact/zumera"
-            className={({ isActive }) =>
-              `trajan-pro text-[0.8rem] md:text-[1.1rem] ${isActive ? 'active-link' : ''}`
-            }
+            to="/legacy-of-impact"
+            className="trajan-pro text-[0.8rem] md:text-[1.1rem] active-link"
           >
             Zumera
-          </NavLink>
-          <NavLink
-            to="/legacy-of-impact/investor-info"
-            className={({ isActive }) =>
-              `trajan-pro text-[0.8rem] md:text-[1.1rem] ${isActive ? 'active-link' : ''}`
-            }
-          >
-            Investor Manifesto.
           </NavLink>
         </div>
       </section>

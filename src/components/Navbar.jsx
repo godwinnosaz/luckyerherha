@@ -54,7 +54,7 @@ export default function Navbar({ isDark = false, className = '' }) {
                 to="/mission&vision"
                 className={({ isActive }) => `trajan-pro ${isActive ? 'active-link' : ''}`}
               >
-                Mission & Vision
+                Africa’s Return
               </NavLink>
               <NavLink
                 to="/leadership"
@@ -115,7 +115,7 @@ export default function Navbar({ isDark = false, className = '' }) {
                 to="/mission&vision"
                 className={({ isActive }) => `trajan-pro ${isActive ? 'active-link' : ''}`}
               >
-                Mission & Vision
+                Africa’s Return
               </NavLink>
               <NavLink
                 to="/leadership"

@@ -30,29 +30,43 @@ export default function AboutPage() {
               <div>
                 <h2 className="text-2xl text-center md:text-start md:text-5xl lg:text-4xl font-light mt-8 md:mt-0 mb-8 leading-tight tracking-[0.1em]">
                   <span className="block trajan-pro font-black">
-                    THE <br /> MISSION
+                    ABOUT <br /> AFRICA’S RETURN
                   </span>
                 </h2>
               </div>
-              <div className="space-y-6 text-(--primary-color) leading-relaxed text-justify md:text-start">
-                <p className="md:text-[1.15rem] manrope">
-                  I did not create a brand. <br className="hidden md:block" /> I accepted a responsibility.
+              <div className="space-y-4 text-(--primary-color) leading-relaxed text-justify md:text-start manrope text-base md:text-[1.05rem]">
+                <p className="font-semibold text-lg">
+                  Africa's Return is a movement built around a question:
                 </p>
-                <p className="md:text-[1.15rem] manrope">
-                  Africa’s voice was missing, silenced, reshaped, <br className="hidden md:block" /> and returned to us in unrecognizable pieces. <br className="hidden md:block" /> Generations have grown up disconnected from their own heritage, unsure of the power that <br className="hidden md:block" /> once defined us.
+                <p className="trajan-pro text-xl font-bold text-black">
+                  What if Africa could return to the originality of its creation?
                 </p>
-                <p className="md:text-[1.15rem] manrope">I chose to change that.</p>
-                <p className="md:text-[1.15rem] manrope">
-                  My mission is clear: to restore Africa’s place as a leader, a pioneer, and a force the world must reckon with. I carry the torch that calls us back to unity, dignity, and strength.
+                <p>
+                  We are not using “return” to mean going backwards. We mean returning to the kind of consciousness from which original things can be created again.
                 </p>
-                <p className="md:text-[1.15rem] manrope">
-                  This work is about truth, not applause. It is about reminding Africans that our past was not weakness, but greatness and our future will not be dictated by others, but by us.
+                <p>
+                  Africa has a long history of producing people who could think, organise, build, govern, trade, cultivate knowledge and solve problems according to the realities around them.
                 </p>
-                <p className="md:text-[1.15rem] manrope">
-                  I am LRE. <br className="hidden md:block" /> I stand as a torchbearer and an advocate, holding Africa together, speaking with conviction, and building the path forward.
+                <p>
+                  Yet somewhere along the way, many Africans learned to see themselves primarily as recipients: recipients of knowledge, technology, systems, standards and definitions of progress created elsewhere.
                 </p>
-                <p className="md:text-[1.15rem] manrope">
-                  Until Africa stands tall again, respected, united, and leading, I will not stop.
+                <p className="font-semibold">
+                  We believe this can change.
+                </p>
+                <p>
+                  Africa's Return is a growing intellectual and creative movement committed to restoring Africa's power through first-principle thinking, original creation and a deeper understanding of what Africans are capable of becoming.
+                </p>
+                <p>
+                  We explore the questions beneath the questions. Rather than asking only why a particular problem exists, we ask what produced the problem in the first place. Rather than asking how Africa can catch up, we ask what Africa could build that would make the language of “catching up” irrelevant.
+                </p>
+                <p>
+                  Our work moves through ideas, conversations, books, films, education, business, community and the stories we tell about ourselves.
+                </p>
+                <p className="font-bold text-black text-lg">
+                  At the centre of everything is a belief that sounds simple but carries enormous responsibility: the African is capable of creating.
+                </p>
+                <p>
+                  And when a people remember that they can create, they begin to relate differently to their future.
                 </p>
               </div>
             </div>
@@ -72,39 +86,47 @@ export default function AboutPage() {
           <h2 className="text-4xl md:text-4xl text-center text-(--text-grey) mb-16 tracking-wide trajan-pro font-black">
             ECHOES OF RESISTANCE & INFLUENCE
           </h2>
-          <div className="flex flex-col-reverse md:flex-row justify-around">
-            <div className="md:w-[40%] space-y-8">
-              <h3 className="hidden md:block text-3xl md:text-4xl font-bold trajan-pro mb-8 leading-tight text-(--text-grey)">
-                PHILOSOPHY OF<br /> LIBERATION
+          <div className="flex flex-col-reverse md:flex-row justify-around gap-8">
+            <div className="md:w-[48%] space-y-6">
+              <h3 className="text-3xl md:text-4xl font-bold trajan-pro mb-6 leading-tight text-(--text-grey)">
+                AFRICA’S RETURN<br /> PHILOSOPHY OF LIBERATION
               </h3>
-              <div className="space-y-6 text-justify md:text-start">
-                <div className="philosophy-item">
-                  <p className="leading-relaxed manrope text-[1.2rem]">
-                    <b className="text-lg font-md">SOVEREIGNTY:</b> We do not knock on <br className="hidden md:block" /> doors that were built on our soil.
-                  </p>
-                </div>
-                <div className="philosophy-item">
-                  <p className="leading-relaxed manrope text-[1.2rem]">
-                    <b className="text-lg font-md">LEGACY:</b> When they erase our <br className="hidden md:block" /> names, we etch them in stone.
-                  </p>
-                </div>
-                <div className="philosophy-item">
-                  <p className="leading-relaxed manrope text-[1.2rem]">
-                    <b className="text-lg font-md">POWER:</b> Not rented. Not handed <br className="hidden md:block" /> down. But claimed with wisdom.
-                  </p>
-                </div>
-                <div className="philosophy-item">
-                  <p className="leading-relaxed manrope text-[1.2rem]">
-                    <b className="text-lg font-md">TRUTH:</b> Africa does not need rising. <br className="hidden md:block" /> We have always been gold.
-                  </p>
-                </div>
-              </div>
-              <div className="mt-12 mb-8 md:mt-0 text-center md:text-start">
-                <h3 className="text-3xl md:text-4xl font-bold text-(--text-grey) trajan-pro mb-4 leading-tight">
-                  4 PILLARS.<br /> 0 APOLOGIES.
-                </h3>
-                <p className="leading-relaxed max-w-md text-[1.2rem] manrope">
-                  This is our mindset. If you still think <br /> leftovers are enough, leave now.
+              <div className="space-y-4 text-justify md:text-start manrope text-base md:text-[1.05rem] leading-relaxed">
+                <p className="font-semibold">
+                  Liberation begins when a person discovers that the limits they have accepted are not necessarily the limits of their capacity.
+                </p>
+                <p>
+                  For Africa, this discovery must happen at the level of consciousness.
+                </p>
+                <p>
+                  There is a difference between changing what surrounds a person and changing what a person believes is possible. One can give someone new tools without changing the imagination with which those tools are used. One can change a government, build new roads or introduce new technology while leaving the deeper assumptions about African possibility untouched.
+                </p>
+                <p className="font-semibold text-(--text-grey)">
+                  Africa's Return is concerned with that deeper layer.
+                </p>
+                <p>
+                  Our philosophy of liberation begins with first principles: return to the beginning of a problem, question the assumptions beneath it, understand its actual cause, and then create from that understanding rather than simply copying an existing response.
+                </p>
+                <p>
+                  We believe this is essential because a people who only inherit solutions will always remain dependent on the people who first imagined them.
+                </p>
+                <p>
+                  The goal is not to reject everything that came from outside Africa. Knowledge belongs to humanity and wisdom should travel. The goal is to become capable of receiving knowledge without losing the ability to generate it.
+                </p>
+                <p className="font-semibold">
+                  True intellectual freedom means being able to learn from another person without becoming a smaller version of that person.
+                </p>
+                <p>
+                  It means knowing our history without becoming trapped inside it, embracing our identity without turning identity into an excuse, and looking at the world with enough confidence to say, “We can learn from what exists, but we can also create what does not.”
+                </p>
+                <p className="font-bold text-(--text-grey) text-lg">
+                  This is why our liberation is fundamentally creative.
+                </p>
+                <p>
+                  We want Africans to move from consumers to creators, from observers to participants, from people waiting for solutions to people capable of producing them.
+                </p>
+                <p className="font-semibold text-(--text-grey) text-lg pt-2 border-t border-gray-300">
+                  The final expression of liberation is not simply having more. It is becoming more capable of creating what is needed.
                 </p>
               </div>
             </div>

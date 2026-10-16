@@ -48,29 +48,61 @@ export default function MissionPage() {
       <section className="min-h-screen flex justify-center pt-12 md:p-12 bg-[url('/assets/imgs/mission/sov-sm.png')] md:bg-[url('/assets/imgs/mission/sovereignty.png')] relative bg-cover bg-center bg-no-repeat md:mt-[4rem]">
         <div className="absolute top-0 left-0 w-full h-full bg-black/60 z-[1]"></div>
         <div className="w-full max-w-5xl z-[2]">
-          <div className="bg-(--grey) space-y-8 py-8 mb-10 rounded">
+          <div className="bg-(--grey) space-y-8 py-8 px-6 mb-10 rounded">
             {activeSlide === 0 ? (
               <div className="h-full flex flex-col justify-center items-center text-justify md:text-center px-4 transition-opacity duration-500">
                 <h2 className="text-(--text-grey) text-3xl md:text-4xl text-center font-black tracking-wide uppercase mb-4 trajan-pro">
                   VISION STATEMENT
                 </h2>
-                <h3 className="text-(--text-grey) text-lg md:text-3xl mb-2 font-bold md:font-light manrope">
+                <h3 className="text-(--text-grey) text-xl md:text-2xl mb-4 font-bold trajan-pro">
                   The Rise of Royals
                 </h3>
-                <p className="text-(--text-grey) text-base leading-relaxed font-normal whitespace-pre-line manrope text-[1.2rem]">
-                  Africa does not need pity. Africa returns, not as a charity case, <br />
-                  but as a powerful kingdom. <br />
-                  It needs sons and daughters who remember the crown.
-                </p>
+                <div className="text-(--text-grey) text-base md:text-[1.1rem] leading-relaxed font-normal manrope space-y-4 max-w-4xl text-justify md:text-center">
+                  <p>
+                    Africa’s Return exists because we believe that something essential was interrupted.
+                  </p>
+                  <p>
+                    There was a time when the African did not need to be reminded of his worth. He built, governed, reasoned, traded, created, cultivated, defended and imagined his future from within himself. His understanding of the world did not begin with the question, “What does someone elsewhere think of me ?” It began with a more powerful question: “What is possible, and what can I create?”
+                  </p>
+                  <p>
+                    Somewhere along the line, our relationship with our own possibility was interrupted.
+                  </p>
+                  <p>
+                    The Rise of Royals is the return of the African to that possibility. Royalty here is not about crowns, titles or inherited privilege. It is a consciousness of responsibility. A royal understands that he is not merely living inside a world someone else designed; he has the capacity to participate in designing the world he inhabits.
+                  </p>
+                  <p>
+                    The Africa we are returning to is not a romantic reconstruction of the past. It is an Africa capable of remembering what was once possible and making that memory into a reality that gives Africa domination on the world stage.
+                  </p>
+                </div>
               </div>
             ) : (
               <div className="h-full flex flex-col justify-center items-center text-justify md:text-center px-4 transition-opacity duration-500">
                 <h2 className="text-(--text-grey) text-3xl md:text-4xl text-center font-black tracking-wide uppercase mb-4 trajan-pro">
-                  MISSION STATEMENT
+                  DECLARATION OF PURPOSE
                 </h2>
-                <p className="text-(--text-grey) text-base leading-relaxed font-normal whitespace-pre-line manrope text-[1.5rem]">
-                  Restoring Africa's Power.
-                </p>
+                <h3 className="text-(--text-grey) text-xl md:text-2xl mb-4 font-bold trajan-pro">
+                  Africa's Return Declaration of Purpose
+                </h3>
+                <div className="text-(--text-grey) text-base md:text-[1.1rem] leading-relaxed font-normal manrope space-y-4 max-w-4xl text-justify md:text-center">
+                  <p>
+                    Africa's Return was born from a simple but unsettling thought: what if the Africa we have been taught to accept is not the full expression of what Africa was created to become?
+                  </p>
+                  <p>
+                    That question changes the conversation.
+                  </p>
+                  <p className="font-semibold text-lg text-black">
+                    Our purpose is to help Africans return to the deepest source of their creative identity.
+                  </p>
+                  <p>
+                    It is a return to originality.
+                  </p>
+                  <p>
+                    A return to the discipline of understanding causes rather than endlessly treating symptoms and to the confidence to ask questions for which there may be no existing African answer and then build the answer.
+                  </p>
+                  <p>
+                    Africa's Return exists to nurture that consciousness through ideas, conversations, education, storytelling, community and creation.
+                  </p>
+                </div>
               </div>
             )}
             <div className="flex justify-center space-x-2 pt-2">
@@ -95,24 +127,30 @@ export default function MissionPage() {
 
           <div className="text-center space-y-8 text-(--grey) max-w-sm md:max-w-5xl mx-auto pb-12 md:pb-0">
             <h2 className="text-[1.5rem] md:text-[2rem] font-bold trajan-pro">
-              African Sovereignty Manifesto
+              The African Sovereignty Manifesto
             </h2>
-            <div className="space-y-6 text-justify md:text-center">
-              <p className="text-[1.2rem]">
-                We were taught to be quiet; mistaking silence for wisdom.{' '}
-                <br className="hidden md:block" /> To shrink ourselves. To blend in. To forget our gold and{' '}
-                <br className="hidden md:block" /> glory.
+            <div className="space-y-6 text-justify md:text-center manrope text-[1.1rem] leading-relaxed">
+              <p>
+                Sovereignty begins long before political independence. Africa's sovereignty must therefore become deeper than independence.
               </p>
-              <p className="text-[1.2rem]">
-                But we must be reminded of this: Africa was not made for{' '}
-                <br className="hidden md:block" /> servitude. We are the blood of kings and queens who led with{' '}
-                <br className="hidden md:block" /> grace and built enviable kingdoms.
+              <p>
+                We are interested in the sovereignty of thought. The sovereignty of imagination.
               </p>
-              <p className="text-[1.2rem]">
-                We are not servants in another man’s dream. We are the{' '}
-                <br className="hidden md:block" /> authors of our own rebirth.
+              <p>
+                The sovereignty to examine our problems without automatically reaching for solutions designed somewhere else, to study what has worked elsewhere without becoming ashamed of what can work here and to build systems that emerge from an honest understanding of African realities rather than an endless attempt to imitate foreign ones.
               </p>
-              <p className="text-[1.2rem]">Let this fire spread. It is time to return.</p>
+              <p className="font-semibold text-white">
+                This does not mean rejecting the world. Africa does not need isolation; it needs authorship.
+              </p>
+              <p>
+                We can learn from everywhere without surrendering the authority to decide what belongs in our own land. We can admire another civilization without believing that civilization is superior. We can use technology created elsewhere while developing technologies that emerge from our own questions. We can participate in the global economy without allowing the global economy to become the measure of our human worth.
+              </p>
+              <p>
+                Sovereignty asks a difficult question: If nobody came to tell us what to build, what would we build?
+              </p>
+              <p>
+                Africa's Return is committed to asking that question repeatedly - not separation from humanity, but a fuller participation in humanity through the strength of our own mind.
+              </p>
             </div>
           </div>
         </div>
@@ -121,25 +159,44 @@ export default function MissionPage() {
       <section>
         <div className="bg-white flex items-center justify-center p-[3rem]">
           <div className="max-w-7xl w-full">
-            <div className="grid grid-cols-1 lg:grid-cols-2 items-center justify-around">
-              <div className="space-y-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 items-center justify-around gap-12">
+              <div className="space-y-6">
                 <div className="relative">
-                  <h2 className="text-4xl md:text-4xl text-center md:text-start font-black text-(--text-grey) trajan-pro tracking-wide uppercase">
-                    CALLS TO ACTION
+                  <h2 className="text-3xl md:text-4xl text-center md:text-start font-black text-(--text-grey) trajan-pro tracking-wide uppercase">
+                    Africa's Call to Action
                   </h2>
                 </div>
                 <div className="md:hidden">
                   <img src="assets/imgs/mission/action.png" alt="" className="w-full" />
                 </div>
-                <div className="space-y-1">
-                  {callsToAction.map((item, idx) => (
-                    <div key={idx} className="flex items-start space-x-2">
-                      <div className="flex-shrink-0 w-3 h-3 bg-(--footer-black) rounded-full mt-2"></div>
-                      <p className="text-gray-700 text-lg leading-relaxed font-normal">
-                        {item.text}
-                      </p>
-                    </div>
-                  ))}
+                <div className="space-y-4 text-gray-700 text-base md:text-lg leading-relaxed manrope text-justify md:text-left">
+                  <p className="font-semibold text-gray-900">
+                    Africa does not lack people who care. What we lack is the conversion of concern into creation.
+                  </p>
+                  <p>
+                    We have become remarkably good at identifying what is wrong. We can describe corruption, unemployment, poor infrastructure, weak institutions, dependence, inequality and the countless ways our societies fail ordinary people. Yet identifying a problem is only the beginning of responsibility.
+                  </p>
+                  <p>
+                    The harder question is what we intend to create in its place. Africa's Call to Action is an invitation to move from commentary to construction.
+                  </p>
+                  <ul className="list-disc list-inside space-y-2 pl-2 text-gray-800">
+                    <li>If education is failing, what should education become?</li>
+                    <li>If our cities are struggling, what should an African city designed around African human beings actually look like?</li>
+                    <li>If our young people are leaving because they cannot see a future here, what would we have to build for staying to become an attractive choice?</li>
+                    <li>If we believe African products can compete with the best in the world, where are the products?</li>
+                  </ul>
+                  <p>
+                    These questions are uncomfortable because they return responsibility to us. They remind us that the future is not something waiting somewhere ahead of Africa. It is being produced every day by the decisions, inventions, businesses, institutions, stories and ideas that Africans choose to create.
+                  </p>
+                  <p>
+                    You do not have to begin by changing a continent. Begin with a problem close enough to touch. Understand it deeply. Find its cause. Imagine what should exist instead. Build something useful. Improve it. Teach someone else. Let another person build on what you have made. This is how civilizations move.
+                  </p>
+                  <p className="font-bold text-gray-900">
+                    Africa's Call to Action is therefore not simply a call to protest what is wrong. It is a call to become increasingly useful to the future we say we desire.
+                  </p>
+                  <p className="trajan-pro text-gray-900 font-bold text-base md:text-xl">
+                    The question is no longer only, “What happened to Africa?” The question is, “What are we going to build now?”
+                  </p>
                 </div>
               </div>
               <div className="hidden lg:block">

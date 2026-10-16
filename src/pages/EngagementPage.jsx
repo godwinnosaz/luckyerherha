@@ -56,8 +56,7 @@ export default function EngagementPage() {
               form.{' '}
             </p>
             <p>
-              Every platform I touch becomes sacred ground. <br /> A place for truth. Not
-              decoration.{' '}
+              Every platform I touch becomes sacred ground. <br /> A place for truth.{' '}
             </p>
             <p>
               If your stage is ready for awakening, then let us <br /> begin.{' '}
@@ -97,7 +96,7 @@ export default function EngagementPage() {
           </div>
           <div className="text-center w-[75%] md:w-[35%] border-top text-(--black) pt-2">
             <h2 className="rogan-bold text-[1.5rem]">LUCKY R. ERHERHA</h2>
-            <p className="text-[1.1rem]">CEO/Founder ZUMERA & RJ BRAND</p>
+            <p className="text-[1.1rem]">CEO/Founder ZUMERA</p>
           </div>
         </div>
       </section>

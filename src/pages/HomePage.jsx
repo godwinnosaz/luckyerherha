@@ -31,45 +31,57 @@ export default function HomePage() {
           LEGACY OF IMPACT
         </h2>
         <div className="flex flex-col md:flex-row justify-center">
-          <div className="max-w-7xl mx-auto pb-[5rem]">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
-              <div className="flex flex-col items-center group mt-5">
-                <div>
-                  <img src="/assets/imgs/home/lre_logo.png" alt="" className="w-32 mb-4" />
+          <div className="max-w-7xl mx-auto pb-[5rem] px-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="flex flex-col items-center group">
+                <div className="h-16 flex items-center justify-center mb-4">
+                  <img src="/assets/imgs/home/lre_logo.png" alt="" className="w-32" />
                 </div>
-                <div className="w-80 bg-gray-300 mb-6 shadow-2xl transition-transform duration-300 group-hover:scale-105">
-                  <img src="/assets/imgs/home/9m.jpg" alt="" className="w-full h-full" />
+                <div className="w-full max-w-[280px] h-[340px] bg-gray-300 mb-6 shadow-2xl transition-transform duration-300 group-hover:scale-105 overflow-hidden">
+                  <img src="/assets/imgs/home/9m.jpg" alt="" className="w-full h-full object-cover" />
                 </div>
-                <p className="manrope text-(--accent) text-lg md:text-xl font-light leading-relaxed max-w-xs text-start">
-                  Over 9 million Africans reached and awakened to the glory of their African heritage.
+                <p className="manrope text-(--accent) text-base md:text-lg font-light leading-relaxed max-w-xs text-start">
+                  Over 61 million Africans reached and awakened to the glory of their African heritage.
                 </p>
               </div>
 
               <div className="flex flex-col items-center group">
-                <div>
-                  <img
-                    src="/assets/imgs/home/rj_logo_new-removebg.png"
-                    alt=""
-                    className="w-32 h-32 mb-4"
-                  />
+                <div className="h-16 flex items-center justify-center mb-4">
+                  <img src="/assets/imgs/home/zumera_logo.png" alt="" className="w-48" />
                 </div>
-                <div className="w-80 bg-gray-300 mb-6 shadow-2xl transition-transform duration-300 group-hover:scale-105">
-                  <img src="/assets/imgs/home/new_rj.jpg" alt="" className="w-full h-full" />
+                <div className="w-full max-w-[280px] h-[340px] bg-gray-300 mb-6 shadow-2xl transition-transform duration-300 group-hover:scale-105 overflow-hidden">
+                  <img src="/assets/imgs/rj-brand/BB1.jpg" alt="" className="w-full h-full object-cover" />
                 </div>
-                <p className="manrope text-(--accent) text-lg md:text-xl font-light leading-relaxed max-w-xs text-start">
-                  Revealing African class & authenticity
-                </p>
-              </div>
-
-              <div className="flex flex-col items-center group">
-                <div className="mb-6 mt-4">
-                  <img src="/assets/imgs/home/zumera_logo.png" alt="" className="w-60" />
-                </div>
-                <div className="w-80 bg-gray-300 mb-6 shadow-2xl transition-transform duration-300 group-hover:scale-105">
-                  <img src="/assets/imgs/rj-brand/BB1.jpg" alt="" className="w-full h-full" />
-                </div>
-                <p className="manrope text-(--accent) text-lg md:text-xl font-light leading-relaxed max-w-xs text-start">
+                <p className="manrope text-(--accent) text-base md:text-lg font-light leading-relaxed max-w-xs text-start">
                   African communities inspired towards a better future with structures of African truth
+                </p>
+              </div>
+
+              <div className="flex flex-col items-center group">
+                <div className="h-16 flex items-center justify-center mb-4 text-center">
+                  <span className="trajan-pro text-base md:text-lg font-bold tracking-wider text-(--accent)">
+                    LRE’S BOOK
+                  </span>
+                </div>
+                <div className="w-full max-w-[280px] h-[340px] bg-gray-300 mb-6 shadow-2xl transition-transform duration-300 group-hover:scale-105 overflow-hidden">
+                  <img src="/assets/imgs/home/lre_book.jpg" alt="LRE's Book" className="w-full h-full object-cover" />
+                </div>
+                <p className="manrope text-(--accent) text-base md:text-lg font-light leading-relaxed max-w-xs text-start">
+                  The Rise of Royals — Restoring the consciousness of African royalty, authorship, and creative responsibility.
+                </p>
+              </div>
+
+              <div className="flex flex-col items-center group">
+                <div className="h-16 flex items-center justify-center mb-4 text-center px-2">
+                  <span className="trajan-pro text-sm md:text-base font-bold tracking-wider text-(--accent) leading-tight">
+                    THE SCHOOL OF BECOMING
+                  </span>
+                </div>
+                <div className="w-full max-w-[280px] h-[340px] bg-gray-300 mb-6 shadow-2xl transition-transform duration-300 group-hover:scale-105 overflow-hidden">
+                  <img src="/assets/imgs/home/school_of_becoming.jpg" alt="School of Becoming" className="w-full h-full object-cover" />
+                </div>
+                <p className="manrope text-(--accent) text-base md:text-lg font-light leading-relaxed max-w-xs text-start">
+                  Africa’s Return School of Economies: The School of Becoming — Equipping African minds to move from consumers to creators.
                 </p>
               </div>
             </div>

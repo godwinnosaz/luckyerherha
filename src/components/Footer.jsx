@@ -141,7 +141,7 @@ export default function Footer({ color = false, secondaryColor = false }) {
                       ABOUT LRE
                     </Link>
                     <Link to="/mission&vision" className="block text-white transition-colors duration-300">
-                      MISSION & VISION
+                      AFRICA’S RETURN
                     </Link>
                   </div>
                   <div className="space-y-4 manrope">
@@ -149,7 +149,7 @@ export default function Footer({ color = false, secondaryColor = false }) {
                       THOUGHT LEADERSHIP
                     </Link>
                     <Link to="/legacy-of-impact" className="block text-white transition-colors duration-300">
-                      RJ BRAND
+                      LEGACY OF IMPACT
                     </Link>
                     <Link to="/engagement" className="block text-white transition-colors duration-300">
                       ENGAGEMENT
@@ -225,7 +225,7 @@ export default function Footer({ color = false, secondaryColor = false }) {
                     ABOUT LRE
                   </Link>
                   <Link to="/mission&vision" className="block text-white transition-colors duration-300">
-                    MISSION & VISION
+                    AFRICA’S RETURN
                   </Link>
                   <Link to="/leadership" className="block text-white transition-colors duration-300">
                     THOUGHT LEADERSHIP

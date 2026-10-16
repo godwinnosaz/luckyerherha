@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar';
 import NavSm from '../components/NavSm';
 import AppIntersection from '../components/AppIntersection';
 import Footer from '../components/Footer';
+import SupportPaymentSection from '../components/SupportPaymentSection';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -343,6 +344,8 @@ export default function ContactPage() {
           </div>
         </div>
       </div>
+
+      <SupportPaymentSection />
 
       <Footer color={true} />
     </>

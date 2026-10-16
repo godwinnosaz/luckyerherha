@@ -92,7 +92,7 @@ export default function NavSm({ isDark = false }) {
             className={({ isActive }) => `trajan-pro ${isActive ? 'active-link' : ''}`}
             onClick={closeNav}
           >
-            Mission & Vision
+            Africa’s Return
           </NavLink>
           <NavLink
             to="/leadership"
