@@ -47,7 +47,7 @@ export default function MissionPage() {
 
       <section className="min-h-screen flex justify-center pt-12 md:p-12 bg-[url('/assets/imgs/mission/sov-sm.png')] md:bg-[url('/assets/imgs/mission/sovereignty.png')] relative bg-cover bg-center bg-no-repeat md:mt-[4rem]">
         <div className="absolute top-0 left-0 w-full h-full bg-black/60 z-[1]"></div>
-        <div className="w-full max-w-5xl z-[2]">
+        <div className="w-full md:w-[60%] max-w-5xl z-[2]">
           <div className="bg-(--grey) space-y-8 py-8 px-6 mb-10 rounded">
             {activeSlide === 0 ? (
               <div className="h-full flex flex-col justify-center items-center text-justify md:text-center px-4 transition-opacity duration-500">
