@@ -131,11 +131,14 @@ export default function MissionPage() {
             </div>
           </div>
 
-          <div className="text-center space-y-8 text-(--grey) max-w-sm md:max-w-5xl mx-auto pb-12 md:pb-0">
-            <h2 className="text-[1.5rem] md:text-[2rem] font-bold trajan-pro">
+          <div className="text-center space-y-8 text-(--grey) max-w-2xl mx-auto px-4 pb-16 md:pb-20">
+            <h2 className="text-2xl md:text-3xl font-bold trajan-pro text-center">
               The African Sovereignty Manifesto
             </h2>
-            <div className="space-y-6 text-justify md:text-center manrope text-[1.1rem] leading-relaxed">
+            <div
+              className="space-y-5 manrope text-base md:text-[1.1rem] leading-relaxed text-(--grey)"
+              style={{ textAlign: 'justify', textAlignLast: 'center' }}
+            >
               <p>
                 Sovereignty begins long before political independence. Africa's sovereignty must therefore become deeper than independence.
               </p>
