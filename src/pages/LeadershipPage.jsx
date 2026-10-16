@@ -37,7 +37,7 @@ export default function LeadershipPage() {
       <section className="my-10">
         <article className="flex justify-center items-center py-12 gap-[3rem]">
           <div className="text-(--black) space-y-6 w-[85%] md:w-[50%] text-[1.15rem] manrope">
-            <h2 className="trajan-pro text-(--text-grey) text-[2rem] md:text-[2.5rem] font-bold text-center">
+            <h2 className="trajan-pro text-(--text-grey) text-[40px] font-bold text-center leading-tight">
               Africa's Return Arsenal of Knowledge
             </h2>
             <div className="space-y-4 text-justify md:text-center leading-relaxed">
