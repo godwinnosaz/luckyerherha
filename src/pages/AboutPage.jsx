@@ -28,7 +28,7 @@ export default function AboutPage() {
           <div className="flex flex-col-reverse md:flex-row space-x-8">
             <div className="md:w-[40%]">
               <div>
-                <h2 className="text-2xl text-center md:text-start md:text-5xl lg:text-4xl font-light mt-8 md:mt-0 mb-8 leading-tight tracking-[0.1em]">
+                <h2 className="text-2xl text-center md:text-start md:text-5xl lg:text-4xl font-extrabold mt-8 md:mt-0 mb-8 leading-tight tracking-[0.1em]">
                   <span className="block trajan-pro font-black">
                     ABOUT <br /> AFRICA’S RETURN
                   </span>
@@ -70,11 +70,11 @@ export default function AboutPage() {
                 </p>
               </div>
             </div>
-            <div className="relative md:w-[60%] md:h-[50%]">
+            <div className="relative md:w-[60%] md:h-[50%] image-zoom-frame rounded-lg shadow-xl">
               <img
                 src="assets/imgs/about/vanguard.jpg"
                 alt="Image of the African Renaissance"
-                className="w-full h-full object-cover shadow-lg"
+                className="w-full h-full object-cover transition-transform duration-700 ease-out"
               />
             </div>
           </div>

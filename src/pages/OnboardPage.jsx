@@ -13,16 +13,17 @@ export default function OnboardPage() {
           transition: background .5s ease-in-out, color .5s ease-in-out;
         }
       `}</style>
-      <div className="bg-[url(/assets/imgs/onboard/onboard-img.jpg)] bg-cover bg-center bg-no-repeat h-screen">
-        <div className="flex justify-center items-center h-full flex-col relative">
-          <span className="trajan-pro text-center text-[3rem] md:text-[5rem] mx-auto">
+      <div className="relative h-screen overflow-hidden">
+        <div className="absolute inset-0 bg-[url(/assets/imgs/onboard/onboard-img.jpg)] bg-cover bg-center bg-no-repeat hero-image-motion pointer-events-none"></div>
+        <div className="flex justify-center items-center h-full flex-col relative z-10">
+          <span className="trajan-pro text-center text-[3rem] md:text-[5rem] mx-auto animate-hero-title-reveal drop-shadow-2xl">
             LEFTOVERS ARE FOR SLAVES
           </span>
-          <div className="absolute bottom-30 flex flex-col justify-center items-center">
+          <div className="absolute bottom-30 flex flex-col justify-center items-center animate-fade-in">
             <p className="text-[1.1rem] pb-3 trajan-pro">
               JOIN <span className="animate-bounce inline-block">↓</span>
             </p>
-            <AppButton routerLink="/home" className="trajan-pro cta-blue text-[1.3rem]">
+            <AppButton routerLink="/home" className="trajan-pro cta-blue text-[1.3rem] shadow-2xl">
               THE RISE OF ROYALS
             </AppButton>
           </div>

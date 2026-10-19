@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Navbar from '../components/Navbar';
 import NavSm from '../components/NavSm';
 import AppIntersection from '../components/AppIntersection';
@@ -6,22 +6,6 @@ import AppHeaderBg from '../components/AppHeaderBg';
 import Footer from '../components/Footer';
 
 export default function MissionPage() {
-  const [activeSlide, setActiveSlide] = useState(0);
-
-  const callsToAction = [
-    { text: 'Create. Do not just consume.' },
-    { text: 'Own. And do not apologize for it.' },
-    { text: 'Burn the slave mindset.' },
-    { text: 'Rebuild. Without waiting for Western validation.' }
-  ];
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setActiveSlide(prev => (prev === 0 ? 1 : 0));
-    }, 5000);
-    return () => clearInterval(timer);
-  }, []);
-
   return (
     <>
       <div className="hidden md:block">
@@ -33,7 +17,7 @@ export default function MissionPage() {
 
       <AppIntersection externalClass="bg-(--white) sticky top-0 z-15 py-[2rem]">
         <div className="text-center mt-[3.5rem]">
-          <h1 className="trajan-pro text-4xl md:text-5xl lg:text-[2.5rem] text-(--text-grey) font-[300]">
+          <h1 className="trajan-pro text-4xl md:text-5xl lg:text-[2.8rem] text-(--text-grey) font-extrabold tracking-wide">
             The War for Africa's Soul
           </h1>
         </div>
@@ -45,98 +29,95 @@ export default function MissionPage() {
         </span>
       </AppHeaderBg>
 
-      <section className="min-h-screen flex justify-center pt-12 md:p-12 bg-[url('/assets/imgs/mission/sov-sm.png')] md:bg-[url('/assets/imgs/mission/sovereignty.png')] relative bg-cover bg-center bg-no-repeat md:mt-[4rem]">
+      <section className="min-h-screen flex justify-center pt-12 md:p-12 relative md:mt-[4rem] overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/assets/imgs/mission/sov-sm.png')] md:bg-[url('/assets/imgs/mission/sovereignty.png')] bg-cover bg-center bg-no-repeat hero-image-motion pointer-events-none"></div>
         <div className="absolute top-0 left-0 w-full h-full bg-black/60 z-[1]"></div>
-        <div className="w-full  max-w-5xl z-[2]">
-          <div className="bg-(--grey) space-y-8 py-12 px-6 md:py-16 md:px-14 mb-10 rounded-xl">
-            {activeSlide === 0 ? (
-              <div className="h-full flex flex-col justify-center items-center transition-opacity duration-500">
-                <h2 className="text-(--text-grey) text-3xl md:text-4xl text-center font-black tracking-wide uppercase mb-4 trajan-pro">
+        <div className="w-full max-w-5xl z-[2] relative">
+          {/* Vision Statement Section (Up) */}
+          <div className="bg-(--grey) py-16 px-6 md:py-20 md:px-14 mb-20 md:mb-24 rounded-2xl shadow-2xl transition-all duration-300 hover:shadow-3xl animate-fade-in-up">
+            <div className="flex flex-col justify-center items-center">
+              <div className="text-center mb-10 md:mb-12">
+                <h2 className="text-lg md:text-2xl font-bold tracking-[0.25em] uppercase text-(--text-grey) opacity-70 trajan-pro mb-3">
                   VISION STATEMENT
                 </h2>
-                <h3 className="text-(--text-grey) text-xl md:text-2xl mb-6 font-bold trajan-pro text-center">
+                <h3 className="text-3xl md:text-4xl lg:text-5xl font-black text-(--text-grey) trajan-pro leading-tight">
                   The Rise of Royals
                 </h3>
-                <div
-                  className="text-(--text-grey) text-base md:text-[1.1rem] leading-relaxed font-normal manrope space-y-5 max-w-2xl mx-auto px-4"
-                  style={{ textAlign: 'justify', textAlignLast: 'center' }}
-                >
-                  <p>
-                    Africa’s Return exists because we believe that something essential was interrupted.
-                  </p>
-                  <p>
-                    There was a time when the African did not need to be reminded of his worth. He built, governed, reasoned, traded, created, cultivated, defended and imagined his future from within himself. His understanding of the world did not begin with the question, “What does someone elsewhere think of me ?” It began with a more powerful question: “What is possible, and what can I create?”
-                  </p>
-                  <p>
-                    Somewhere along the line, our relationship with our own possibility was interrupted.
-                  </p>
-                  <p>
-                    The Rise of Royals is the return of the African to that possibility. Royalty here is not about crowns, titles or inherited privilege. It is a consciousness of responsibility. A royal understands that he is not merely living inside a world someone else designed; he has the capacity to participate in designing the world he inhabits.
-                  </p>
-                  <p>
-                    The Africa we are returning to is not a romantic reconstruction of the past. It is an Africa capable of remembering what was once possible and making that memory into a reality that gives Africa domination on the world stage.
-                  </p>
-                </div>
+                <div className="w-16 h-1 bg-(--secondary-color)/40 mx-auto mt-4 rounded-full"></div>
               </div>
-            ) : (
-              <div className="h-full flex flex-col justify-center items-center transition-opacity duration-500">
-                <h2 className="text-(--text-grey) text-3xl md:text-4xl text-center font-black tracking-wide uppercase mb-4 trajan-pro">
-                  DECLARATION OF PURPOSE
-                </h2>
-                <h3 className="text-(--text-grey) text-xl md:text-2xl mb-6 font-bold trajan-pro text-center">
-                  Africa's Return Declaration of Purpose
-                </h3>
-                <div
-                  className="text-(--text-grey) text-base md:text-[1.1rem] leading-relaxed font-normal manrope space-y-5 max-w-2xl mx-auto px-4"
-                  style={{ textAlign: 'justify', textAlignLast: 'center' }}
-                >
-                  <p>
-                    Africa's Return was born from a simple but unsettling thought: what if the Africa we have been taught to accept is not the full expression of what Africa was created to become?
-                  </p>
-                  <p>
-                    That question changes the conversation.
-                  </p>
-                  <p className="font-semibold text-lg text-black">
-                    Our purpose is to help Africans return to the deepest source of their creative identity.
-                  </p>
-                  <p>
-                    It is a return to originality.
-                  </p>
-                  <p>
-                    A return to the discipline of understanding causes rather than endlessly treating symptoms and to the confidence to ask questions for which there may be no existing African answer and then build the answer.
-                  </p>
-                  <p>
-                    Africa's Return exists to nurture that consciousness through ideas, conversations, education, storytelling, community and creation.
-                  </p>
-                </div>
+
+              <div
+                className="text-(--text-grey) text-lg md:text-[1.2rem] leading-relaxed font-medium manrope space-y-6 max-w-3xl mx-auto px-4"
+                style={{ textAlign: 'justify', textAlignLast: 'center' }}
+              >
+                <p className="font-bold text-black text-xl md:text-2xl">
+                  Africa’s Return exists because we believe that something essential was interrupted.
+                </p>
+                <p>
+                  There was a time when the African did not need to be reminded of his worth. He built, governed, reasoned, traded, created, cultivated, defended and imagined his future from within himself. His understanding of the world did not begin with the question, “What does someone elsewhere think of me ?” It began with a more powerful question: <strong className="font-bold text-black">“What is possible, and what can I create?”</strong>
+                </p>
+                <p className="font-semibold text-gray-900">
+                  Somewhere along the line, our relationship with our own possibility was interrupted.
+                </p>
+                <p>
+                  The Rise of Royals is the return of the African to that possibility. Royalty here is not about crowns, titles or inherited privilege. It is a consciousness of responsibility. A royal understands that he is not merely living inside a world someone else designed; he has the capacity to participate in designing the world he inhabits.
+                </p>
+                <p className="font-bold text-black text-xl">
+                  The Africa we are returning to is not a romantic reconstruction of the past. It is an Africa capable of remembering what was once possible and making that memory into a reality that gives Africa domination on the world stage.
+                </p>
               </div>
-            )}
-            <div className="flex justify-center space-x-2 pt-2">
-              <button
-                type="button"
-                onClick={() => setActiveSlide(0)}
-                className={`w-3 h-3 rounded-full transition-colors ${
-                  activeSlide === 0 ? 'bg-(--footer-black)' : 'bg-gray-400'
-                }`}
-                aria-label="Slide 1"
-              />
-              <button
-                type="button"
-                onClick={() => setActiveSlide(1)}
-                className={`w-3 h-3 rounded-full transition-colors ${
-                  activeSlide === 1 ? 'bg-(--footer-black)' : 'bg-gray-400'
-                }`}
-                aria-label="Slide 2"
-              />
             </div>
           </div>
 
-          <div className="text-center space-y-8 text-(--grey) max-w-2xl mx-auto px-4 pb-16 md:pb-20">
-            <h2 className="text-2xl md:text-3xl font-bold trajan-pro text-center">
-              The African Sovereignty Manifesto
-            </h2>
+          {/* Declaration of Purpose Section (Down) */}
+          <div className="bg-(--grey) py-16 px-6 md:py-20 md:px-14 mb-20 md:mb-24 rounded-2xl shadow-2xl transition-all duration-300 hover:shadow-3xl animate-fade-in-up">
+            <div className="flex flex-col justify-center items-center">
+              <div className="text-center mb-10 md:mb-12">
+                <h2 className="text-lg md:text-2xl font-bold tracking-[0.25em] uppercase text-(--text-grey) opacity-70 trajan-pro mb-3">
+                  DECLARATION OF PURPOSE
+                </h2>
+                <h3 className="text-3xl md:text-4xl lg:text-5xl font-black text-(--text-grey) trajan-pro leading-tight">
+                  Africa's Return Declaration of Purpose
+                </h3>
+                <div className="w-16 h-1 bg-(--secondary-color)/40 mx-auto mt-4 rounded-full"></div>
+              </div>
+
+              <div
+                className="text-(--text-grey) text-lg md:text-[1.2rem] leading-relaxed font-medium manrope space-y-6 max-w-3xl mx-auto px-4"
+                style={{ textAlign: 'justify', textAlignLast: 'center' }}
+              >
+                <p className="font-semibold text-gray-900 text-xl">
+                  Africa's Return was born from a simple but unsettling thought: what if the Africa we have been taught to accept is not the full expression of what Africa was created to become?
+                </p>
+                <p className="font-bold text-black text-xl">
+                  That question changes the conversation.
+                </p>
+                <p className="font-extrabold text-2xl md:text-[1.6rem] text-black bg-white/60 p-5 rounded-xl border-l-4 border-(--secondary-color)">
+                  Our purpose is to help Africans return to the deepest source of their creative identity.
+                </p>
+                <p className="font-bold text-lg">
+                  It is a return to originality.
+                </p>
+                <p>
+                  A return to the discipline of understanding causes rather than endlessly treating symptoms and to the confidence to ask questions for which there may be no existing African answer and then build the answer.
+                </p>
+                <p className="font-bold text-black text-xl">
+                  Africa's Return exists to nurture that consciousness through ideas, conversations, education, storytelling, community and creation.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* The African Sovereignty Manifesto */}
+          <div className="text-center space-y-10 text-(--grey) max-w-3xl mx-auto px-4 pt-10 pb-20 md:pb-28">
+            <div className="mb-10">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl mt-20 font-black trajan-pro text-center text-white mb-4 leading-tight">
+                The African Sovereignty Manifesto
+              </h2>
+              <div className="w-16 h-1 bg-white/40 mx-auto rounded-full"></div>
+            </div>
             <div
-              className="space-y-6 manrope text-base md:text-[1.1rem] leading-relaxed text-(--grey)"
+              className="space-y-6 manrope text-base md:text-[1.15rem] leading-relaxed text-(--grey)"
               style={{ textAlign: 'justify', textAlignLast: 'center' }}
             >
               <p>
@@ -166,17 +147,14 @@ export default function MissionPage() {
       </section>
 
       <section>
-        <div className="bg-white flex items-center justify-center p-[3rem]">
+        <div className="bg-white flex items-center justify-center p-6 md:p-12 lg:p-[3rem]">
           <div className="max-w-7xl w-full">
-            <div className="grid grid-cols-1 lg:grid-cols-2 items-center justify-around gap-12">
-              <div className="space-y-6">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-10 lg:gap-16">
+              <div className="w-full md:w-1/2 space-y-6">
                 <div className="relative">
                   <h2 className="text-3xl md:text-4xl text-center md:text-start font-black text-(--text-grey) trajan-pro tracking-wide uppercase">
                     Africa's Call to Action
                   </h2>
-                </div>
-                <div className="md:hidden">
-                  <img src="assets/imgs/mission/action.png" alt="" className="w-full" />
                 </div>
                 <div className="space-y-4 text-gray-700 text-base md:text-lg leading-relaxed manrope text-justify md:text-left">
                   <p className="font-semibold text-gray-900">
@@ -208,8 +186,12 @@ export default function MissionPage() {
                   </p>
                 </div>
               </div>
-              <div className="hidden lg:block">
-                <img src="assets/imgs/mission/action.png" alt="" className="w-full" />
+              <div className="w-full md:w-1/2 flex items-center justify-center">
+                <img
+                  src="/assets/imgs/mission/action.png"
+                  alt="Africa's Call to Action"
+                  className="w-full rounded-2xl shadow-2xl object-cover"
+                />
               </div>
             </div>
           </div>

@@ -148,8 +148,8 @@ export default function Footer({ color = false, secondaryColor = false }) {
                     <Link to="/leadership" className="block text-white transition-colors duration-300">
                       THOUGHT LEADERSHIP
                     </Link>
-                    <Link to="/legacy-of-impact" className="block text-white transition-colors duration-300">
-                      LEGACY OF IMPACT
+                    <Link to="/legacy-of-impact" className="block text-white transition-colors duration-300 font-semibold hover:text-white/80">
+                      ZUMERA
                     </Link>
                     <Link to="/engagement" className="block text-white transition-colors duration-300">
                       ENGAGEMENT
@@ -178,8 +178,8 @@ export default function Footer({ color = false, secondaryColor = false }) {
             </div>
           </div>
 
-          <div className="border-t border-gray-800 py-6 text-center text-sm text-gray-400 manrope">
-            <p>Copyright: © 2025 Lucky R. Erherha. All Rights Reserved — The Rise of Royals</p>
+          <div className="border-t border-gray-800 py-6 text-center text-base text-gray-300 manrope font-medium">
+            <p>Copyright: © 2026 Lucky R. Erherha. All Rights Reserved — The Rise of Royals</p>
           </div>
         </div>
       </footer>
@@ -230,8 +230,8 @@ export default function Footer({ color = false, secondaryColor = false }) {
                   <Link to="/leadership" className="block text-white transition-colors duration-300">
                     THOUGHT LEADERSHIP
                   </Link>
-                  <Link to="/legacy-of-impact" className="block text-white transition-colors duration-300">
-                    LEGACY OF IMPACT
+                  <Link to="/legacy-of-impact" className="block text-white transition-colors duration-300 font-semibold hover:text-white/80">
+                    ZUMERA
                   </Link>
                   <Link to="/engagement" className="block text-white transition-colors duration-300">
                     ENGAGEMENT
@@ -349,8 +349,8 @@ export default function Footer({ color = false, secondaryColor = false }) {
 
         <footer className="px-8 py-6 mt-12 border-t border-gray-800">
           <div className="max-w-6xl mx-auto text-center">
-            <p className="text-(--white) text-sm manrope">
-              Copyright: © 2025 Lucky R. Erherha. All Rights Reserved — The Rise of Royals
+            <p className="text-(--white) text-base font-medium manrope">
+              Copyright: © 2026 Lucky R. Erherha. All Rights Reserved — The Rise of Royals
             </p>
           </div>
         </footer>

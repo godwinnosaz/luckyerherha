@@ -14,17 +14,20 @@ export default function HomePage() {
         <NavSm />
       </div>
 
-      <section className="relative h-[80vh] md:h-[130vh] w-full overflow-hidden bg-[url(/assets/imgs/home/throne.jpg)] md:bg-[url(/assets/imgs/home/throne.jpg)] flex items-end p-5 md:items-center bg-cover bg-center md:bg-top bg-no-repeat">
-        <div className="container max-w-7xl mx-auto font-black z-2">
-          <h1 className="trajan-pro text-[1.5rem] md:text-[3rem] mt-[-2rem]">
+      <section className="relative h-[80vh] md:h-[130vh] w-full overflow-hidden flex items-end p-5 md:items-end">
+        <div className="absolute inset-0 bg-cover bg-center md:bg-top bg-no-repeat bg-[url(/assets/imgs/home/throne.jpg)] md:bg-[url(/assets/imgs/home/throne.jpg)] hero-image-motion pointer-events-none"></div>
+        <div className="container max-w-7xl mx-auto font-black z-2 pb-8 md:pb-16 relative">
+          <h1 className="trajan-pro text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[6rem] font-black leading-tight text-white drop-shadow-xl animate-hero-title-reveal">
             Africa, take your <br />
             throne.
           </h1>
         </div>
-        <div className="absolute top-0 left-0 w-full h-full bg-black/15 z-1"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-black/25 z-1"></div>
       </section>
 
-      <section className="relative h-[80vh] md:h-[100vh] w-full overflow-hidden bg-[url(/assets/imgs/home/decleration.jpg)] md:bg-[url(/assets/imgs/home/decleration.jpg)] flex items-end p-5 md:items-center bg-cover bg-center bg-no-repeat md:bg-size-[80%]"></section>
+      <section className="relative h-[90vh] md:h-[130vh] w-full overflow-hidden flex items-end p-5 md:items-center">
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-[url(/assets/imgs/home/decleration.jpg)] md:bg-[url(/assets/imgs/home/decleration.jpg)] hero-image-motion pointer-events-none"></div>
+      </section>
 
       {/* <AppIntersection externalClass="bg-[url(/assets/imgs/home/legacy.png)] text-(--primary-color) mb-[3rem] bg-cover bg-center bg-no-repeat">
         <h2 className="text-3xl font-bold text-center text-(--accent) mb-[2rem] py-[5rem]">

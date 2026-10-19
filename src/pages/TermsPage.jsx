@@ -12,7 +12,8 @@ export default function TermsPage() {
         }
         header.terms-header h1 {
           margin: 0;
-          font-size: clamp(1.75rem, 1.1rem + 2vw, 2.5rem);
+          font-size: clamp(2rem, 1.5rem + 2vw, 3rem);
+          font-weight: 800;
           color: var(--text-grey);
         }
         main.terms-main {
@@ -20,30 +21,41 @@ export default function TermsPage() {
           padding: 0rem 1rem 4rem;
         }
         main.terms-main h2 {
-          margin-top: 2rem;
-          font-size: 1.375rem;
+          margin-top: 2.5rem;
+          font-size: 1.6rem;
+          font-weight: 800;
           color: #0f172a;
-          border-bottom: 1px solid #e5e7eb;
-          padding-bottom: .25rem;
+          border-bottom: 2px solid #e5e7eb;
+          padding-bottom: .5rem;
         }
         main.terms-main h3 {
-          margin-top: 1.5rem;
-          font-size: 1.125rem;
+          margin-top: 1.75rem;
+          font-size: 1.3rem;
+          font-weight: 700;
           color: #111827;
         }
         main.terms-main p {
-          margin: .75rem 0;
+          margin: 1rem 0;
+          font-size: 1.15rem;
+          font-weight: 500;
+          line-height: 1.75;
           color: var(--text-grey);
         }
         main.terms-main ul {
-          padding-left: 1.25rem;
+          padding-left: 1.5rem;
           list-style-type: disc;
         }
         main.terms-main ul li {
+          font-size: 1.15rem;
+          font-weight: 500;
+          line-height: 1.75;
           color: var(--text-grey);
+          margin-bottom: 0.5rem;
         }
         .muted {
-          color: #6b7280;
+          color: #4b5563;
+          font-size: 1.15rem;
+          font-weight: 500;
         }
       `}</style>
       <div className="hidden md:block">

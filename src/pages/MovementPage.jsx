@@ -16,7 +16,7 @@ export default function MovementPage() {
 
       <div className="sentinel"></div>
       <AppIntersection externalClass="bg-(--white) sticky top-0 z-15">
-        <h1 className="max-w-sm md:max-w-7xl mx-auto trajan-pro text-(--text-grey) text-4xl">
+        <h1 className="max-w-sm md:max-w-7xl mx-auto trajan-pro text-(--text-grey) text-4xl md:text-5xl font-extrabold tracking-wide">
           The Growing Kingdom.
         </h1>
       </AppIntersection>
@@ -24,14 +24,14 @@ export default function MovementPage() {
       <section>
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-around items-center py-12 px-4 gap-8">
           <div className="w-full md:w-[50%] text-(--text-grey) space-y-6 text-center md:text-left">
-            <h2 className="trajan-pro text-2xl md:text-3xl font-black">
+            <h2 className="trajan-pro text-2xl md:text-4xl font-black">
               THE GROWING KINGDOM:<br /> COMMUNITY OF CUSTODIANS
             </h2>
-            <div className="md:hidden max-w-sm mx-auto">
+            <div className="md:hidden max-w-sm mx-auto image-zoom-frame rounded-lg shadow-xl">
               <img
                 src="assets/imgs/movement/custodians_new.jpg"
                 alt="custiodian images"
-                className="w-full"
+                className="w-full object-cover transition-transform duration-700 ease-out"
               />
             </div>
             <div className="leading-relaxed space-y-4 text-base md:text-[1.05rem] manrope text-justify md:text-left">
@@ -61,21 +61,21 @@ export default function MovementPage() {
               </p>
             </div>
           </div>
-          <div className="w-[50%] hidden md:block">
-            <img src="assets/imgs/movement/custodians_new.jpg" alt="" className="w-full" />
+          <div className="w-[50%] hidden md:block image-zoom-frame rounded-lg shadow-xl">
+            <img src="assets/imgs/movement/custodians_new.jpg" alt="" className="w-full object-cover transition-transform duration-700 ease-out" />
           </div>
         </div>
       </section>
 
       <section className="bg-(--grey) mb-8">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-around items-center py-12 px-4 gap-8">
-          <div className="w-[50%] hidden md:block">
-            <img src="assets/imgs/movement/movement.jpg" alt="" className="w-full" />
+          <div className="w-[50%] hidden md:block image-zoom-frame rounded-lg shadow-xl">
+            <img src="assets/imgs/movement/movement.jpg" alt="" className="w-full object-cover transition-transform duration-700 ease-out" />
           </div>
           <div className="w-full md:w-[50%] text-(--text-grey) space-y-6 text-center md:text-left">
             <h2 className="trajan-pro text-2xl md:text-3xl font-black">Join the Resistance now</h2>
-            <div className="md:hidden max-w-sm mx-auto">
-              <img src="assets/imgs/movement/movement.jpg" alt="" className="w-full" />
+            <div className="md:hidden max-w-sm mx-auto image-zoom-frame rounded-lg shadow-xl">
+              <img src="assets/imgs/movement/movement.jpg" alt="" className="w-full object-cover transition-transform duration-700 ease-out" />
             </div>
             <div className="leading-relaxed space-y-4 text-base md:text-[1.05rem] manrope text-justify md:text-left">
               <p>

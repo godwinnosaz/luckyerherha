@@ -1,6 +1,7 @@
 import React from 'react';
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop';
+import IntelligentAnimator from './components/IntelligentAnimator';
 
 import OnboardPage from './pages/OnboardPage';
 import HomePage from './pages/HomePage';
@@ -17,28 +18,33 @@ import EngagementPage from './pages/EngagementPage';
 import TermsPage from './pages/TermsPage';
 
 export default function App() {
+  const location = useLocation();
+
   return (
     <>
       <ScrollToTop />
-      <Routes>
-        <Route path="/" element={<OnboardPage />} />
-        <Route path="/home" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/mission&vision" element={<MissionPage />} />
-        <Route path="/leadership" element={<LeadershipPage />} />
-        <Route path="/contact-us" element={<ContactPage />} />
-        <Route path="/legacy-of-impact" element={<LegacyOfImpactPage />}>
-          <Route index element={<ZumeraTab />} />
-          <Route path="zumera" element={<ZumeraTab />} />
-          <Route path="rj-brand" element={<Navigate to="/legacy-of-impact" replace />} />
-          <Route path="investor-info" element={<Navigate to="/legacy-of-impact" replace />} />
-        </Route>
-        <Route path="/movement" element={<MovementPage />} />
-        <Route path="/engagement" element={<EngagementPage />} />
-        <Route path="/terms" element={<TermsPage />} />
-        {/* Fallback to home */}
-        <Route path="*" element={<Navigate to="/home" replace />} />
-      </Routes>
+      <IntelligentAnimator />
+      <div key={location.pathname} className="page-transition-enter">
+        <Routes location={location}>
+          <Route path="/" element={<OnboardPage />} />
+          <Route path="/home" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/mission&vision" element={<MissionPage />} />
+          <Route path="/leadership" element={<LeadershipPage />} />
+          <Route path="/contact-us" element={<ContactPage />} />
+          <Route path="/legacy-of-impact" element={<LegacyOfImpactPage />}>
+            <Route index element={<ZumeraTab />} />
+            <Route path="zumera" element={<ZumeraTab />} />
+            <Route path="rj-brand" element={<Navigate to="/legacy-of-impact" replace />} />
+            <Route path="investor-info" element={<Navigate to="/legacy-of-impact" replace />} />
+          </Route>
+          <Route path="/movement" element={<MovementPage />} />
+          <Route path="/engagement" element={<EngagementPage />} />
+          <Route path="/terms" element={<TermsPage />} />
+          {/* Fallback to home */}
+          <Route path="*" element={<Navigate to="/home" replace />} />
+        </Routes>
+      </div>
     </>
   );
 }

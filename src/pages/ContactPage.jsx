@@ -121,7 +121,7 @@ export default function ContactPage() {
         <div className="flex flex-col lg:flex-row w-full max-w-7xl mx-auto justify-between">
           <div className="lg:w-1/2 p-8 lg:p-12 flex flex-col md:items-start text-justify md:text-left mb-10">
             <div className="max-w-[20rem] mx-auto md:max-w-md">
-              <h1 className="text-3xl lg:text-4xl font-light text-gray-900 manrope md:trajan-pro leading-tight mb-8 start-text">
+              <h1 className="text-3xl lg:text-4xl font-extrabold text-gray-900 manrope md:trajan-pro leading-tight mb-8 start-text">
                 Events &amp; Engagements <br className="hidden md:block" /> with LRE{' '}
                 <br className="hidden md:block" /> (Lucky R. Erherha).
               </h1>
@@ -246,22 +246,22 @@ export default function ContactPage() {
                   <label htmlFor="phone" className="block text-sm font-medium text-white mb-2">
                     Phone Number <span className="text-red-400">*</span>
                   </label>
-                  <div className="flex">
-                    <div className="relative">
+                  <div className="flex w-full min-w-0">
+                    <div className="relative flex-shrink-0">
                       <select
                         name="countryCode"
                         value={formData.countryCode}
                         onChange={handleChange}
-                        className="appearance-none bg-white border border-gray-300 rounded-l-md px-4 py-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent pr-8"
+                        className="appearance-none bg-black border border-gray-300 rounded-l-md px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent pr-8"
                       >
                         <option value="NG">NG</option>
                         <option value="US">US</option>
                         <option value="UK">UK</option>
                         <option value="CA">CA</option>
                       </select>
-                      <div className="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+                      <div className="absolute inset-y-0 right-0 flex items-center px-1.5 pointer-events-none">
                         <svg
-                          className="w-4 h-4 text-gray-400"
+                          className="w-4 h-4 text-gray-500"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -285,7 +285,7 @@ export default function ContactPage() {
                       pattern="[0-9]*"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="flex-1 px-4 py-3 bg-white border border-l-0 border-gray-300 rounded-r-md text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="flex-1 min-w-0 w-full px-4 py-3 bg-white border border-l-0 border-gray-300 rounded-r-md text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     />
                   </div>
                 </div>

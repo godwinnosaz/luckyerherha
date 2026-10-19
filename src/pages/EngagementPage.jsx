@@ -21,21 +21,21 @@ export default function EngagementPage() {
       </div>
 
       <AppIntersection externalClass="bg-(--white) sticky top-0 z-15">
-        <h1 className="trajan-pro text-center text-4xl md:text-5xl lg:text-[2.5rem] text-(--text-grey) font-[300] text-shadow-lg">
+        <h1 className="trajan-pro text-center text-4xl md:text-5xl lg:text-[2.8rem] text-(--text-grey) font-extrabold text-shadow-lg tracking-wide">
           Spreading the Fire
         </h1>
       </AppIntersection>
 
-      <div className="relative w-full min-h-[80vh]">
+      <div className="relative w-full min-h-[80vh] overflow-hidden image-zoom-frame">
         <img
           src="assets/imgs/engagement/fire.jpg"
           alt="Background"
-          className="w-full h-full object-cover hidden md:block"
+          className="w-full h-full object-cover hidden md:block transition-transform duration-1000 ease-out"
         />
         <img
           src="assets/imgs/engagement/fire-1.jpg"
           alt="Background"
-          className="w-full h-full object-cover md:hidden"
+          className="w-full h-full object-cover md:hidden transition-transform duration-1000 ease-out"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
         <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-center text-white">
@@ -62,8 +62,8 @@ export default function EngagementPage() {
               If your stage is ready for awakening, then let us <br /> begin.{' '}
             </p>
             <div className="md:hidden justify-center max-w-sm md:w-[50%]">
-              <div className="w-full md:w-[75%]">
-                <img src="assets/imgs/engagement/keynote.jpg" alt="" className="w-full" />
+              <div className="w-full md:w-[75%] image-zoom-frame rounded-lg shadow-2xl">
+                <img src="assets/imgs/engagement/keynote.jpg" alt="" className="w-full object-cover transition-transform duration-700 ease-out" />
               </div>
             </div>
             <div className="flex justify-center md:justify-start">
@@ -76,8 +76,8 @@ export default function EngagementPage() {
             </div>
           </div>
           <div className="hidden md:flex justify-center w-[50%]">
-            <div className="w-[100%]">
-              <img src="assets/imgs/engagement/keynote.jpg" alt="" className="w-full" />
+            <div className="w-[100%] image-zoom-frame rounded-lg shadow-2xl">
+              <img src="assets/imgs/engagement/keynote.jpg" alt="" className="w-full object-cover transition-transform duration-700 ease-out" />
             </div>
           </div>
         </article>
@@ -101,8 +101,8 @@ export default function EngagementPage() {
         </div>
       </section>
 
-      <section>
-        <img src="assets/imgs/engagement/speech.jpg" alt="" className="w-full" />
+      <section className="image-zoom-frame shadow-xl">
+        <img src="assets/imgs/engagement/speech.jpg" alt="" className="w-full object-cover transition-transform duration-1000 ease-out" />
       </section>
 
       <section className="py-8 my-12">
@@ -111,7 +111,7 @@ export default function EngagementPage() {
             <h2 className="rogan-bold text-[1.6rem] uppercase">
               You want me on your platform?
             </h2>
-            <p className="text-[1.1rem] md:text-[1.7rem] md:font-light mb-10">
+            <p className="text-[1.2rem] md:text-[1.85rem] md:font-semibold font-medium mb-10 leading-snug">
               Then do not ask me to “tone it down.” If your platform is{' '}
               <br className="hidden md:block" /> not ready for truth, do not bother.
             </p>

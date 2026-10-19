@@ -66,7 +66,7 @@ export default function Navbar({ isDark = false, className = '' }) {
                 to="/legacy-of-impact"
                 className={({ isActive }) => `trajan-pro ${isActive ? 'active-link' : ''}`}
               >
-                Legacy of Impact
+                Zumera
               </NavLink>
               <NavLink
                 to="/engagement"
@@ -127,7 +127,7 @@ export default function Navbar({ isDark = false, className = '' }) {
                 to="/legacy-of-impact"
                 className={({ isActive }) => `trajan-pro ${isActive ? 'active-link' : ''}`}
               >
-                Legacy of Impact
+                Zumera
               </NavLink>
               <NavLink
                 to="/engagement"

@@ -9,5 +9,9 @@ export default function AppIntersection({ externalClass = '', className = '', ch
     .filter(Boolean)
     .join(' ');
 
-  return <div className={combinedClass}>{children}</div>;
+  return (
+    <div className={combinedClass}>
+      <div className="w-full animate-intersection-reveal">{children}</div>
+    </div>
+  );
 }

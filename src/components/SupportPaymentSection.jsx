@@ -127,7 +127,7 @@ export default function SupportPaymentSection() {
           <span className="trajan-pro text-xs md:text-sm uppercase tracking-widest text-amber-500 font-semibold">
             Partner With The Vision
           </span>
-          <h2 className="trajan-pro text-3xl md:text-4xl lg:text-5xl font-light text-white mt-2 mb-4">
+          <h2 className="trajan-pro text-3xl md:text-4xl lg:text-5xl font-extrabold text-white mt-2 mb-4 tracking-wide">
             Support Africa’s Return
           </h2>
           <p className="manrope text-gray-300 max-w-2xl mx-auto text-base md:text-lg leading-relaxed">
@@ -192,22 +192,20 @@ export default function SupportPaymentSection() {
                   <button
                     type="button"
                     onClick={() => setFrequency('one-time')}
-                    className={`px-5 py-2 text-sm trajan-pro rounded transition-all ${
-                      frequency === 'one-time'
+                    className={`px-5 py-2 text-sm trajan-pro rounded transition-all ${frequency === 'one-time'
                         ? 'bg-amber-500 text-black font-bold'
                         : 'text-gray-400 hover:text-white'
-                    }`}
+                      }`}
                   >
                     One-Time Gift
                   </button>
                   <button
                     type="button"
                     onClick={() => setFrequency('monthly')}
-                    className={`px-5 py-2 text-sm trajan-pro rounded transition-all ${
-                      frequency === 'monthly'
+                    className={`px-5 py-2 text-sm trajan-pro rounded transition-all ${frequency === 'monthly'
                         ? 'bg-amber-500 text-black font-bold'
                         : 'text-gray-400 hover:text-white'
-                    }`}
+                      }`}
                   >
                     Monthly Patron
                   </button>
@@ -217,22 +215,20 @@ export default function SupportPaymentSection() {
                   <button
                     type="button"
                     onClick={() => handleCurrencyChange('NGN')}
-                    className={`px-4 py-1.5 text-xs font-semibold rounded transition-all ${
-                      currency === 'NGN'
+                    className={`px-4 py-1.5 text-xs font-semibold rounded transition-all ${currency === 'NGN'
                         ? 'bg-neutral-700 text-white'
                         : 'text-gray-400 hover:text-white'
-                    }`}
+                      }`}
                   >
                     NGN (₦)
                   </button>
                   <button
                     type="button"
                     onClick={() => handleCurrencyChange('USD')}
-                    className={`px-4 py-1.5 text-xs font-semibold rounded transition-all ${
-                      currency === 'USD'
+                    className={`px-4 py-1.5 text-xs font-semibold rounded transition-all ${currency === 'USD'
                         ? 'bg-neutral-700 text-white'
                         : 'text-gray-400 hover:text-white'
-                    }`}
+                      }`}
                   >
                     USD ($)
                   </button>
@@ -255,11 +251,10 @@ export default function SupportPaymentSection() {
                           setSelectedPreset(preset.value);
                           setCustomAmount('');
                         }}
-                        className={`py-3 px-4 rounded-md border text-center transition-all manrope font-medium text-base ${
-                          isSelected
+                        className={`py-3 px-4 rounded-md border text-center transition-all manrope font-medium text-base ${isSelected
                             ? 'border-amber-500 bg-amber-500/10 text-amber-400 font-bold shadow-md'
                             : 'border-neutral-700 bg-neutral-950 hover:border-neutral-500 text-gray-300'
-                        }`}
+                          }`}
                       >
                         {preset.label}
                       </button>
@@ -324,33 +319,30 @@ export default function SupportPaymentSection() {
                   <button
                     type="button"
                     onClick={() => setPaymentMethod('card')}
-                    className={`pb-3 text-sm font-medium transition-all relative ${
-                      paymentMethod === 'card'
+                    className={`pb-3 text-sm font-medium transition-all relative ${paymentMethod === 'card'
                         ? 'text-amber-400 border-b-2 border-amber-500'
                         : 'text-gray-400 hover:text-white'
-                    }`}
+                      }`}
                   >
                     💳 Card (Debit / Credit)
                   </button>
                   <button
                     type="button"
                     onClick={() => setPaymentMethod('transfer')}
-                    className={`pb-3 text-sm font-medium transition-all relative ${
-                      paymentMethod === 'transfer'
+                    className={`pb-3 text-sm font-medium transition-all relative ${paymentMethod === 'transfer'
                         ? 'text-amber-400 border-b-2 border-amber-500'
                         : 'text-gray-400 hover:text-white'
-                    }`}
+                      }`}
                   >
                     🏦 Bank Transfer
                   </button>
                   <button
                     type="button"
                     onClick={() => setPaymentMethod('ussd')}
-                    className={`pb-3 text-sm font-medium transition-all relative ${
-                      paymentMethod === 'ussd'
+                    className={`pb-3 text-sm font-medium transition-all relative ${paymentMethod === 'ussd'
                         ? 'text-amber-400 border-b-2 border-amber-500'
                         : 'text-gray-400 hover:text-white'
-                    }`}
+                      }`}
                   >
                     📱 USSD Code
                   </button>
