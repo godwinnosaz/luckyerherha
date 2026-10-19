@@ -89,7 +89,7 @@ export default function LegacyOfImpactPage() {
             }}
           >
             <a
-              href="https://zumeraproperty.com"
+              href="https://zumera.org/"
               target="_blank"
               rel="noreferrer"
               className="shadow-md hover:shadow-2xl transition-all duration-300 hover:scale-105 active:scale-95 inline-block text-center"
