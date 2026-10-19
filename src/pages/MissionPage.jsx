@@ -107,11 +107,11 @@ export default function MissionPage() {
               </div>
             </div>
           </div>
-
+<br /> <br />
           {/* The African Sovereignty Manifesto */}
-          <div className="text-center space-y-10 text-(--grey) max-w-3xl mx-auto px-4 pt-10 pb-20 md:pb-28">
+          <div className="text-center space-y-10 text-(--grey) max-w-3xl mx-auto px-4 mt-20 md:mt-32 pt-10 md:pt-14 pb-20 md:pb-28 border-t border-white/10">
             <div className="mb-10">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl mt-20 font-black trajan-pro text-center text-white mb-4 leading-tight">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-black trajan-pro text-center text-white mb-4 leading-tight">
                 The African Sovereignty Manifesto
               </h2>
               <div className="w-16 h-1 bg-white/40 mx-auto rounded-full"></div>

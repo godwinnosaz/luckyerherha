@@ -110,18 +110,18 @@ export default function NavSm({ isDark = false }) {
             Africa’s Return
           </NavLink>
           <NavLink
-            to="/leadership"
-            className={({ isActive }) => `trajan-pro ${isActive ? 'active-link' : ''}`}
-            onClick={closeNav}
-          >
-            Thought Leadership
-          </NavLink>
-          <NavLink
             to="/legacy-of-impact"
             className={({ isActive }) => `trajan-pro ${isActive ? 'active-link' : ''}`}
             onClick={closeNav}
           >
             Zumera
+          </NavLink>
+          <NavLink
+            to="/leadership"
+            className={({ isActive }) => `trajan-pro ${isActive ? 'active-link' : ''}`}
+            onClick={closeNav}
+          >
+            Thought Leadership
           </NavLink>
           <NavLink
             to="/engagement"

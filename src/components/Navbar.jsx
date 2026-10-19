@@ -17,8 +17,7 @@ export default function Navbar({ isDark = false, className = '' }) {
           color: var(--primary-color);
         }
         .navlinks a:hover, .navlinks-dark a:hover, .active-link {
-          text-decoration: underline;
-          text-underline-offset: 5px;
+          text-decoration: none !important;
         }
         .nav-cta-blue {
           background-color: var(--secondary-color);
@@ -57,16 +56,16 @@ export default function Navbar({ isDark = false, className = '' }) {
                 Africa’s Return
               </NavLink>
               <NavLink
-                to="/leadership"
-                className={({ isActive }) => `trajan-pro ${isActive ? 'active-link' : ''}`}
-              >
-                Thought Leadership
-              </NavLink>
-              <NavLink
                 to="/legacy-of-impact"
                 className={({ isActive }) => `trajan-pro ${isActive ? 'active-link' : ''}`}
               >
                 Zumera
+              </NavLink>
+              <NavLink
+                to="/leadership"
+                className={({ isActive }) => `trajan-pro ${isActive ? 'active-link' : ''}`}
+              >
+                Thought Leadership
               </NavLink>
               <NavLink
                 to="/engagement"
@@ -118,16 +117,16 @@ export default function Navbar({ isDark = false, className = '' }) {
                 Africa’s Return
               </NavLink>
               <NavLink
-                to="/leadership"
-                className={({ isActive }) => `trajan-pro ${isActive ? 'active-link' : ''}`}
-              >
-                Thought Leadership
-              </NavLink>
-              <NavLink
                 to="/legacy-of-impact"
                 className={({ isActive }) => `trajan-pro ${isActive ? 'active-link' : ''}`}
               >
                 Zumera
+              </NavLink>
+              <NavLink
+                to="/leadership"
+                className={({ isActive }) => `trajan-pro ${isActive ? 'active-link' : ''}`}
+              >
+                Thought Leadership
               </NavLink>
               <NavLink
                 to="/engagement"

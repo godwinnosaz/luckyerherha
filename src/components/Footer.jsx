@@ -145,11 +145,11 @@ export default function Footer({ color = false, secondaryColor = false }) {
                     </Link>
                   </div>
                   <div className="space-y-4 manrope">
-                    <Link to="/leadership" className="block text-white transition-colors duration-300">
-                      THOUGHT LEADERSHIP
-                    </Link>
                     <Link to="/legacy-of-impact" className="block text-white transition-colors duration-300 font-semibold hover:text-white/80">
                       ZUMERA
+                    </Link>
+                    <Link to="/leadership" className="block text-white transition-colors duration-300">
+                      THOUGHT LEADERSHIP
                     </Link>
                     <Link to="/engagement" className="block text-white transition-colors duration-300">
                       ENGAGEMENT
@@ -227,11 +227,11 @@ export default function Footer({ color = false, secondaryColor = false }) {
                   <Link to="/mission&vision" className="block text-white transition-colors duration-300">
                     AFRICA’S RETURN
                   </Link>
-                  <Link to="/leadership" className="block text-white transition-colors duration-300">
-                    THOUGHT LEADERSHIP
-                  </Link>
                   <Link to="/legacy-of-impact" className="block text-white transition-colors duration-300 font-semibold hover:text-white/80">
                     ZUMERA
+                  </Link>
+                  <Link to="/leadership" className="block text-white transition-colors duration-300">
+                    THOUGHT LEADERSHIP
                   </Link>
                   <Link to="/engagement" className="block text-white transition-colors duration-300">
                     ENGAGEMENT

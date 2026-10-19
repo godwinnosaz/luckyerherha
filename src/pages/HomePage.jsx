@@ -16,8 +16,8 @@ export default function HomePage() {
 
       <section className="relative h-[80vh] md:h-[130vh] w-full overflow-hidden flex items-end p-5 md:items-end">
         <div className="absolute inset-0 bg-cover bg-center md:bg-top bg-no-repeat bg-[url(/assets/imgs/home/throne.jpg)] md:bg-[url(/assets/imgs/home/throne.jpg)] hero-image-motion pointer-events-none"></div>
-        <div className="container max-w-7xl mx-auto font-black z-2 pb-8 md:pb-16 relative">
-          <h1 className="trajan-pro text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[6rem] font-black leading-tight text-white drop-shadow-xl animate-hero-title-reveal">
+        <div className="container max-w-7xl lg:max-w-[90rem] mx-auto font-black z-2 pb-8 md:pb-20 relative">
+          <h1 className="trajan-pro text-6xl sm:text-7xl md:text-8xl lg:text-[7.5rem] xl:text-[9.5rem] 2xl:text-[11.5rem] font-black leading-[0.88] text-white drop-shadow-2xl animate-hero-title-reveal">
             Africa, take your <br />
             throne.
           </h1>
