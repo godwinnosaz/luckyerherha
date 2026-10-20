@@ -17,126 +17,83 @@ export default function AboutPage() {
       <section className="min-h-screen text-(--primary-color)">
         <AppIntersection
           externalClass="bg-(--white) sticky top-0 z-15"
-          className="max-w-sm md:max-w-7xl mx-auto text-center pb-8 md:pb-[8rem] pt-3 px-4"
+          className="w-full max-w-7xl mx-auto text-center pb-8 md:pb-[8rem] pt-3 px-4"
         >
           <span className="text-2xl md:text-3xl lg:text-[2.7rem] text-(--primary-color) uppercase trajan-pro font-black">
             The Vanguard of the African Renaissance
           </span>
         </AppIntersection>
 
-        <div className="max-w-sm md:max-w-7xl mx-auto px-4 lg:px-8 mb-8">
-          <div className="flex flex-col-reverse md:flex-row space-x-8">
-            <div className="md:w-[40%]">
-              <div>
-                <h2 className="text-2xl text-center md:text-start md:text-5xl lg:text-4xl font-extrabold mt-8 md:mt-0 mb-8 leading-tight tracking-[0.1em]">
-                  <span className="block trajan-pro font-black">
-                    ABOUT <br /> AFRICA’S RETURN
-                  </span>
-                </h2>
-              </div>
-              <div className="space-y-4 text-(--primary-color) leading-relaxed text-justify md:text-start manrope text-base md:text-[1.05rem]">
-                <p className="font-semibold text-lg">
-                  Africa's Return is a movement built around a question:
-                </p>
+        <div className="about-vanguard-content">
+          <div className="about-vanguard-image image-zoom-frame">
+            <img
+              src="assets/imgs/about/vanguard.jpg"
+              alt="Image of the African Renaissance"
+              className="about-vanguard-photo w-full h-auto object-cover transition-transform duration-700 ease-out"
+            />
+          </div>
+          <div className="about-vanguard-copy">
+            <h2 className="trajan-pro font-black">AFRICA’S RETURN</h2>
+            <div className="space-y-4 text-(--primary-color) leading-relaxed manrope text-base md:text-[1.05rem]">
                 <p className="trajan-pro text-xl font-bold text-black">
-                  What if Africa could return to the originality of its creation?
+                  What if we returned to the raw, original power we once owned?
                 </p>
                 <p>
-                  We are not using “return” to mean going backwards. We mean returning to the kind of consciousness from which original things can be created again.
+                  We are done trying to “catch up.” Catching up is a trap that keeps us chasing someone else's path. The real question is: What will we build that makes us focus on our own creations and forget about “catching up”?
                 </p>
                 <p>
-                  Africa has a long history of producing people who could think, organise, build, govern, trade, cultivate knowledge and solve problems according to the realities around them.
-                </p>
-                <p>
-                  Yet somewhere along the way, many Africans learned to see themselves primarily as recipients: recipients of knowledge, technology, systems, standards and definitions of progress created elsewhere.
-                </p>
-                <p className="font-semibold">
-                  We believe this can change.
-                </p>
-                <p>
-                  Africa's Return is a growing intellectual and creative movement committed to restoring Africa's power through first-principle thinking, original creation and a deeper understanding of what Africans are capable of becoming.
-                </p>
-                <p>
-                  We explore the questions beneath the questions. Rather than asking only why a particular problem exists, we ask what produced the problem in the first place. Rather than asking how Africa can catch up, we ask what Africa could build that would make the language of “catching up” irrelevant.
-                </p>
-                <p>
-                  Our work moves through ideas, conversations, books, films, education, business, community and the stories we tell about ourselves.
+                  Beyond discussing the future; we are here to forge it.
                 </p>
                 <p className="font-bold text-black text-lg">
-                  At the centre of everything is a belief that sounds simple but carries enormous responsibility: the African is capable of creating.
+                  Africans are creators, not consumers.
                 </p>
                 <p>
-                  And when a people remember that they can create, they begin to relate differently to their future.
+                  The second an African remembers they can create, the world changes forever.
                 </p>
-              </div>
-            </div>
-            <div className="relative md:w-[60%] md:h-[50%] image-zoom-frame rounded-lg shadow-xl">
-              <img
-                src="assets/imgs/about/vanguard.jpg"
-                alt="Image of the African Renaissance"
-                className="w-full h-full object-cover transition-transform duration-700 ease-out"
-              />
             </div>
           </div>
         </div>
       </section>
 
       <section className="bg-gray-100 py-16 px-8 text-(--primary-color)">
-        <div className="max-w-sm md:max-w-7xl mx-auto">
+        <div className="w-full max-w-7xl mx-auto px-4">
           <h2 className="text-4xl md:text-4xl text-center text-(--text-grey) mb-16 tracking-wide trajan-pro font-black">
             ECHOES OF RESISTANCE & INFLUENCE
           </h2>
-          <div className="flex flex-col-reverse md:flex-row justify-around gap-8">
-            <div className="md:w-[48%] space-y-6">
+          <div className="flex flex-col gap-10 md:gap-14">
+            <div className="echoes-feature-frame image-zoom-frame w-full rounded-lg shadow-xl">
+              <img
+                src="assets/imgs/about/echoes.jpg"
+                alt="Image of the African Renaissance"
+                className="echoes-feature-image w-full object-cover shadow-lg"
+              />
+            </div>
+            <div className="w-full space-y-6">
               <h3 className="text-3xl md:text-4xl font-bold trajan-pro mb-6 leading-tight text-(--text-grey)">
-                AFRICA’S RETURN<br /> PHILOSOPHY OF LIBERATION
+                AFRICA’S RETURN PHILOSOPHY OF LIBERATION
               </h3>
               <div className="space-y-4 text-justify md:text-start manrope text-base md:text-[1.05rem] leading-relaxed">
                 <p className="font-semibold">
-                  Liberation begins when a person discovers that the limits they have accepted are not necessarily the limits of their capacity.
+                  Real freedom starts in the mind.
                 </p>
                 <p>
-                  For Africa, this discovery must happen at the level of consciousness.
-                </p>
-                <p>
-                  There is a difference between changing what surrounds a person and changing what a person believes is possible. One can give someone new tools without changing the imagination with which those tools are used. One can change a government, build new roads or introduce new technology while leaving the deeper assumptions about African possibility untouched.
-                </p>
-                <p className="font-semibold text-(--text-grey)">
-                  Africa's Return is concerned with that deeper layer.
+                  Changing what is around us changes nothing if our minds remain unchanged. Give a man new technology without transforming his imagination and he will only ever copy the man who built it.
                 </p>
                 <p>
                   Our philosophy of liberation begins with first principles: return to the beginning of a problem, question the assumptions beneath it, understand its actual cause, and then create from that understanding rather than simply copying an existing response.
-                </p>
-                <p>
-                  We believe this is essential because a people who only inherit solutions will always remain dependent on the people who first imagined them.
-                </p>
-                <p>
-                  The goal is not to reject everything that came from outside Africa. Knowledge belongs to humanity and wisdom should travel. The goal is to become capable of receiving knowledge without losing the ability to generate it.
                 </p>
                 <p className="font-semibold">
                   True intellectual freedom means being able to learn from another person without becoming a smaller version of that person.
                 </p>
                 <p>
-                  It means knowing our history without becoming trapped inside it, embracing our identity without turning identity into an excuse, and looking at the world with enough confidence to say, “We can learn from what exists, but we can also create what does not.”
-                </p>
-                <p className="font-bold text-(--text-grey) text-lg">
-                  This is why our liberation is fundamentally creative.
+                  True liberation is creative and Africans must unlock their levels of consciousness to tap into their original creativity.
                 </p>
                 <p>
-                  We want Africans to move from consumers to creators, from observers to participants, from people waiting for solutions to people capable of producing them.
+                  Africa's Return is moving Africans from consumer to creator. From passive observer to active builder. From waiting for solutions to producing them.
                 </p>
                 <p className="font-semibold text-(--text-grey) text-lg pt-2 border-t border-gray-300">
-                  The final expression of liberation is not simply having more. It is becoming more capable of creating what is needed.
+                  Freedom isn't just about having more. It is becoming capable of building whatever we need.
                 </p>
-              </div>
-            </div>
-            <div className="relative md:w-[60%] md:h-[50%] mb-8 md:mt-0">
-              <div className="w-full md:w-[80%] mx-auto">
-                <img
-                  src="assets/imgs/about/echoes.jpg"
-                  alt="Image of the African Renaissance"
-                  className="w-full h-full object-cover shadow-lg"
-                />
               </div>
             </div>
           </div>

@@ -49,7 +49,7 @@ export default function EngagementPage() {
         <article className="max-w-5xl mx-auto flex justify-center md:justify-between items-center">
           <div className="space-y-8 text-[1.1rem] md:w-[50%]">
             <p>
-              I am not a keynote speaker. I am the echo of a <br /> thousand ancestors.{' '}
+              I am the echo of a thousand ancestors.{' '}
             </p>
             <p>
               I do not deliver talks. I deliver identity in its raw, <br /> unshaken, unrehearsed
@@ -61,7 +61,7 @@ export default function EngagementPage() {
             <p>
               If your stage is ready for awakening, then let us <br /> begin.{' '}
             </p>
-            <div className="md:hidden justify-center max-w-sm md:w-[50%]">
+            <div className="md:hidden justify-center max-w-md md:w-[50%]">
               <div className="w-full md:w-[75%] image-zoom-frame rounded-lg shadow-2xl">
                 <img src="assets/imgs/engagement/keynote.jpg" alt="" className="w-full object-cover transition-transform duration-700 ease-out" />
               </div>
@@ -71,7 +71,7 @@ export default function EngagementPage() {
                 routerLink="/contact-us"
                 className="trajan-pro cta-grey text-[1.1rem] self-center"
               >
-                BOOK NOW
+                BOOK LRE NOW
               </AppButton>
             </div>
           </div>
@@ -96,7 +96,7 @@ export default function EngagementPage() {
           </div>
           <div className="text-center w-[75%] md:w-[35%] border-top text-(--black) pt-2">
             <h2 className="rogan-bold text-[1.5rem]">LUCKY R. ERHERHA</h2>
-            <p className="text-[1.1rem]">CEO/Founder ZUMERA</p>
+            <p className="text-[1.1rem]">CEO/Founder</p>
           </div>
         </div>
       </section>
@@ -106,7 +106,7 @@ export default function EngagementPage() {
       </section>
 
       <section className="py-8 my-12">
-        <article className="max-w-sm md:max-w-7xl mx-auto">
+        <article className="w-full max-w-7xl mx-auto px-4">
           <div className="space-y-2 text-[1.1rem] text-center text-(--black)">
             <h2 className="rogan-bold text-[1.6rem] uppercase">
               You want me on your platform?
@@ -116,7 +116,7 @@ export default function EngagementPage() {
               <br className="hidden md:block" /> not ready for truth, do not bother.
             </p>
             <AppButton routerLink="/contact-us" className="trajan-pro cta-blue text-[1.1rem]">
-              BOOKING FORM
+              BOOK LRE NOW
             </AppButton>
           </div>
         </article>

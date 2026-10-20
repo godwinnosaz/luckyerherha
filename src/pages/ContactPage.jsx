@@ -120,7 +120,7 @@ export default function ContactPage() {
       <div className="min-h-[120vh] flex items-start justify-start py-12 px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row w-full max-w-7xl mx-auto justify-between">
           <div className="lg:w-1/2 p-8 lg:p-12 flex flex-col md:items-start text-justify md:text-left mb-10">
-            <div className="max-w-[20rem] mx-auto md:max-w-md">
+            <div className="w-full max-w-md mx-auto">
               <h1 className="text-3xl lg:text-4xl font-extrabold text-gray-900 manrope md:trajan-pro leading-tight mb-8 start-text">
                 Events &amp; Engagements <br className="hidden md:block" /> with LRE{' '}
                 <br className="hidden md:block" /> (Lucky R. Erherha).

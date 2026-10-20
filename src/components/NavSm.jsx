@@ -18,7 +18,7 @@ export default function NavSm({ isDark = false }) {
     ? 'assets/imgs/icons/logos/full_logo_black.png'
     : 'assets/imgs/icons/logos/full_logo_white.png';
 
-  const menuBgClass = isDark ? 'bg-(--grey-bg)' : 'bg-(--nav-black-bg)';
+  const menuBgClass = isDark ? 'mobile-menu-surface-light' : 'mobile-menu-surface-dark';
 
   return (
     <>
@@ -40,11 +40,25 @@ export default function NavSm({ isDark = false }) {
           transform: translateY(0);
           transition: all .35s cubic-bezier(0.16, 1, 0.3, 1);
           box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
-          backdrop-filter: blur(14px);
-          -webkit-backdrop-filter: blur(14px);
+        }
+        .mobile-menu-surface-light {
+          background-color: #ffffff;
+          color: #171717;
+          border: 1px solid rgba(23, 23, 23, 0.12);
+        }
+        .mobile-menu-surface-dark {
+          background-color: #111111;
+          color: #ffffff;
+          border: 1px solid rgba(255, 255, 255, 0.14);
         }
         .menu-visible a {
           animation: fadeInLeft 0.35s cubic-bezier(0.16, 1, 0.3, 1) both;
+        }
+        .menu-visible a:not(.nav-cta-blue) {
+          color: inherit;
+        }
+        .menu-visible a:hover {
+          opacity: 0.75;
         }
         .menu-visible a:nth-child(1) { animation-delay: 0.04s; }
         .menu-visible a:nth-child(2) { animation-delay: 0.08s; }

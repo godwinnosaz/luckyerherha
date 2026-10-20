@@ -2,6 +2,7 @@ import React from 'react';
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop';
 import IntelligentAnimator from './components/IntelligentAnimator';
+import WhatsAppButton from './components/WhatsAppButton';
 
 import OnboardPage from './pages/OnboardPage';
 import HomePage from './pages/HomePage';
@@ -24,6 +25,7 @@ export default function App() {
     <>
       <ScrollToTop />
       <IntelligentAnimator />
+      <WhatsAppButton />
       <div key={location.pathname} className="page-transition-enter">
         <Routes location={location}>
           <Route path="/" element={<OnboardPage />} />

@@ -51,19 +51,22 @@ export default function MissionPage() {
                 style={{ textAlign: 'justify', textAlignLast: 'center' }}
               >
                 <p className="font-bold text-black text-xl md:text-2xl">
-                  Africa’s Return exists because we believe that something essential was interrupted.
+                  Africa’s Return is The New Era of Creators.
                 </p>
                 <p>
-                  There was a time when the African did not need to be reminded of his worth. He built, governed, reasoned, traded, created, cultivated, defended and imagined his future from within himself. His understanding of the world did not begin with the question, “What does someone elsewhere think of me ?” It began with a more powerful question: <strong className="font-bold text-black">“What is possible, and what can I create?”</strong>
-                </p>
-                <p className="font-semibold text-gray-900">
-                  Somewhere along the line, our relationship with our own possibility was interrupted.
+                  We cannot afford to wait. Africa’s Return exists because something essential was interrupted and the time to reclaim it is now.
                 </p>
                 <p>
-                  The Rise of Royals is the return of the African to that possibility. Royalty here is not about crowns, titles or inherited privilege. It is a consciousness of responsibility. A royal understands that he is not merely living inside a world someone else designed; he has the capacity to participate in designing the world he inhabits.
+                  There was a time when Africans never questioned their worth. They built, governed, and imagined their future from within. They didn’t ask, “What do others think of me?” They demanded: “What can we create?”
+                </p>
+                <p>
+                  That connection was fractured, but it is waiting to be restored.
+                </p>
+                <p>
+                  The Rise of Royals is our call to action to fierce responsibility. It is the absolute refusal to live passively in a world designed by others when we have the power to shape it.
                 </p>
                 <p className="font-bold text-black text-xl">
-                  The Africa we are returning to is not a romantic reconstruction of the past. It is an Africa capable of remembering what was once possible and making that memory into a reality that gives Africa domination on the world stage.
+                  Africa's Return is a wakeup call: remembering what we are capable of and forging an Africa that dominates the global stage right now.
                 </p>
               </div>
             </div>
@@ -121,25 +124,19 @@ export default function MissionPage() {
               style={{ textAlign: 'justify', textAlignLast: 'center' }}
             >
               <p>
-                Sovereignty begins long before political independence. Africa's sovereignty must therefore become deeper than independence.
+                True freedom does not start with a flag, it starts in the mind. If we do not own our thoughts, political independence is an illusion.
               </p>
               <p>
-                We are interested in the sovereignty of thought. The sovereignty of imagination.
+                We are starving for a new kind of freedom: the sovereignty of imagination.
               </p>
               <p>
-                The sovereignty to examine our problems without automatically reaching for solutions designed somewhere else, to study what has worked elsewhere without becoming ashamed of what can work here and to build systems that emerge from an honest understanding of African realities rather than an endless attempt to imitate foreign ones.
+                We must stop instinctively reaching for foreign blueprints to solve African problems. We have imitated foreign blueprints enough.
               </p>
               <p className="font-semibold text-white">
-                This does not mean rejecting the world. Africa does not need isolation; it needs authorship.
+                Now, we take authorship for our continent.
               </p>
               <p>
-                We can learn from everywhere without surrendering the authority to decide what belongs in our own land. We can admire another civilization without believing that civilization is superior. We can use technology created elsewhere while developing technologies that emerge from our own questions. We can participate in the global economy without allowing the global economy to become the measure of our human worth.
-              </p>
-              <p>
-                Sovereignty asks a difficult question: If nobody came to tell us what to build, what would we build?
-              </p>
-              <p>
-                Africa's Return is committed to asking that question repeatedly - not separation from humanity, but a fuller participation in humanity through the strength of our own mind.
+                The time for Africa to play on the global stage: unapologetic, self-reliant, and driven by the sheer strength of our own minds is NOW.
               </p>
             </div>
           </div>
@@ -149,49 +146,35 @@ export default function MissionPage() {
       <section>
         <div className="bg-white flex items-center justify-center p-6 md:p-12 lg:p-[3rem]">
           <div className="max-w-7xl w-full">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-10 lg:gap-16">
-              <div className="w-full md:w-1/2 space-y-6">
-                <div className="relative">
-                  <h2 className="text-3xl md:text-4xl text-center md:text-start font-black text-(--text-grey) trajan-pro tracking-wide uppercase">
-                    Africa's Call to Action
-                  </h2>
-                </div>
-                <div className="space-y-4 text-gray-700 text-base md:text-lg leading-relaxed manrope text-justify md:text-left">
-                  <p className="font-semibold text-gray-900">
-                    Africa does not lack people who care. What we lack is the conversion of concern into creation.
-                  </p>
-                  <p>
-                    We have become remarkably good at identifying what is wrong. We can describe corruption, unemployment, poor infrastructure, weak institutions, dependence, inequality and the countless ways our societies fail ordinary people. Yet identifying a problem is only the beginning of responsibility.
-                  </p>
-                  <p>
-                    The harder question is what we intend to create in its place. Africa's Call to Action is an invitation to move from commentary to construction.
-                  </p>
-                  <ul className="list-disc list-inside space-y-2 pl-2 text-gray-800">
-                    <li>If education is failing, what should education become?</li>
-                    <li>If our cities are struggling, what should an African city designed around African human beings actually look like?</li>
-                    <li>If our young people are leaving because they cannot see a future here, what would we have to build for staying to become an attractive choice?</li>
-                    <li>If we believe African products can compete with the best in the world, where are the products?</li>
-                  </ul>
-                  <p>
-                    These questions are uncomfortable because they return responsibility to us. They remind us that the future is not something waiting somewhere ahead of Africa. It is being produced every day by the decisions, inventions, businesses, institutions, stories and ideas that Africans choose to create.
-                  </p>
-                  <p>
-                    You do not have to begin by changing a continent. Begin with a problem close enough to touch. Understand it deeply. Find its cause. Imagine what should exist instead. Build something useful. Improve it. Teach someone else. Let another person build on what you have made. This is how civilizations move.
-                  </p>
-                  <p className="font-bold text-gray-900">
-                    Africa's Call to Action is therefore not simply a call to protest what is wrong. It is a call to become increasingly useful to the future we say we desire.
-                  </p>
-                  <p className="trajan-pro text-gray-900 font-bold text-base md:text-xl">
-                    The question is no longer only, “What happened to Africa?” The question is, “What are we going to build now?”
-                  </p>
-                </div>
-              </div>
-              <div className="w-full md:w-1/2 flex items-center justify-center">
+            <div className="flex flex-col gap-8 md:gap-12">
+              <h2 className="text-3xl md:text-4xl text-center font-black text-(--text-grey) trajan-pro tracking-wide uppercase">
+                Africa's Call to Action
+              </h2>
+              <div className="mission-action-image image-zoom-frame w-full rounded-2xl shadow-2xl">
                 <img
                   src="/assets/imgs/mission/action.png"
                   alt="Africa's Call to Action"
-                  className="w-full rounded-2xl shadow-2xl object-cover"
+                  className="w-full h-auto object-cover"
                 />
+              </div>
+              <div className="w-full space-y-6">
+                <div className="space-y-4 text-gray-700 text-base md:text-lg leading-relaxed manrope text-justify md:text-left">
+                  <p className="font-semibold text-gray-900">
+                    Africa does not lack people who care. What we lack is the transformation of anger and concern into creation.
+                  </p>
+                  <p>
+                    We are experts at discussing our challenges, but pointing out a fire does not put it out. Identifying the problem is only where responsibility begins.
+                  </p>
+                  <p>
+                    The real, uncomfortable question is: What are we going to build in place of what we do not like?
+                  </p>
+                  <p>
+                    You do not need to transform a continent overnight. Find a problem close enough to touch. Master it. Build a solution. Refine it. Pass the torch. This is how civilizations are born.
+                  </p>
+                  <p className="font-bold text-gray-900">
+                    We can no longer afford to just protest what is wrong. We must become useful in building the future we desire.
+                  </p>
+                </div>
               </div>
             </div>
           </div>

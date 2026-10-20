@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar';
 import NavSm from '../components/NavSm';
 import AppIntersection from '../components/AppIntersection';
 import Footer from '../components/Footer';
+import declarationImage from '../../assets/imgs/home/declaration.jpeg';
 
 export default function HomePage() {
   return (
@@ -18,16 +19,34 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-cover bg-center md:bg-top bg-no-repeat bg-[url(/assets/imgs/home/throne.jpg)] md:bg-[url(/assets/imgs/home/throne.jpg)] hero-image-motion pointer-events-none"></div>
         <div className="w-full max-w-7xl lg:max-w-[94rem] mx-auto font-black z-2 pb-8 md:pb-24 relative">
           <h1 className="trajan-pro hero-throne-title text-white drop-shadow-2xl animate-hero-title-reveal">
-            Africa, take your <br />
-            throne.
+            Africa, take<span className="hero-mobile-break"><br /></span> your
+            <span className="hero-desktop-break"><br /></span> throne.
           </h1>
         </div>
         <div className="absolute top-0 left-0 w-full h-full bg-black/25 z-1"></div>
       </section>
 
-      <section className="relative h-[90vh] md:h-[130vh] w-full overflow-hidden flex items-end p-5 md:items-center">
-        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-[url(/assets/imgs/home/decleration.jpg)] md:bg-[url(/assets/imgs/home/decleration.jpg)] hero-image-motion pointer-events-none"></div>
+      <section className="home-declaration-section relative w-full overflow-hidden flex items-end p-5 md:items-center">
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat hero-image-motion pointer-events-none"
+          style={{ backgroundImage: `url(${declarationImage})` }}
+        ></div>
       </section>
+{/* 
+      <section className="home-declaration-copy">
+        <div className="home-declaration-copy-inner">
+          <h2>Africa's Return Declaration of Purpose</h2>
+          <p className="home-declaration-lead">
+            Africa's Return started with one uncomfortable truth: the Africa we were taught to accept is nowhere near what we were meant to be.
+          </p>
+          <p>That single thought changes everything.</p>
+          <p>Africa's Return exists to spark a return to who we truly are - to raw originality.</p>
+          <p>We are attacking root causes rather than treating symptoms.</p>
+          <p>
+            Hand in hand, we are building, creating and keying into the deepest source of their creative identity; nurturing that consciousness through ideas, conversations, education, storytelling, community and creation.
+          </p>
+        </div>
+      </section> */}
 
       {/* <AppIntersection externalClass="bg-[url(/assets/imgs/home/legacy.png)] text-(--primary-color) mb-[3rem] bg-cover bg-center bg-no-repeat">
         <h2 className="text-3xl font-bold text-center text-(--accent) mb-[2rem] py-[5rem]">

@@ -4,7 +4,7 @@ export default function TheStoryTab() {
   return (
     <section className="flex flex-col md:flex-row justify-between items-center">
       <article className="md:w-[50%]">
-        <div className="w-[90%] md:w-[75%] mx-auto">
+        <div className="w-full mx-auto">
           <img src="assets/imgs/rj-brand/rj.png" alt="" className="w-full" />
         </div>
       </article>

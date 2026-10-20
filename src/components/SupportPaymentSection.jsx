@@ -123,14 +123,16 @@ export default function SupportPaymentSection() {
   return (
     <section id="support-section" className="w-full bg-(--footer-black) text-white py-16 px-4 sm:px-6 lg:px-8 border-t border-gray-800">
       <div className="max-w-5xl mx-auto">
-        <div className="text-center mb-12">
-          <span className="trajan-pro text-xs md:text-sm uppercase tracking-widest text-amber-500 font-semibold">
-            Partner With The Vision
-          </span>
-          <h2 className="trajan-pro text-3xl md:text-4xl lg:text-5xl font-extrabold text-white mt-2 mb-4 tracking-wide">
-            Support Africa’s Return
-          </h2>
-          <p className="manrope text-gray-300 max-w-2xl mx-auto text-base md:text-lg leading-relaxed">
+        <div className="support-intro">
+          <div className="support-intro-heading">
+            <span className="support-intro-eyebrow trajan-pro">
+              Partner With The Vision
+            </span>
+            <h2 className="support-intro-title trajan-pro">
+              Support Africa’s Return
+            </h2>
+          </div>
+          <p className="support-intro-copy manrope">
             Every contribution directly funds sovereign African education, independent intellectual dialogues,
             historic research, and the creation of enduring institutions that awaken millions.
           </p>
@@ -240,7 +242,7 @@ export default function SupportPaymentSection() {
                 <label className="block text-sm font-medium text-gray-300 mb-3 trajan-pro tracking-wide">
                   Select Contribution Amount
                 </label>
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 mb-4">
+                <div className="support-amount-grid mb-4">
                   {presets[currency].map(preset => {
                     const isSelected = selectedPreset === preset.value && !customAmount;
                     return (

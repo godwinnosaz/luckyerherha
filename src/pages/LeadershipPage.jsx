@@ -33,47 +33,30 @@ export default function LeadershipPage() {
             className="text-(--black) space-y-8 w-[90%] md:w-[80%] max-w-5xl mx-auto text-[1.15rem] manrope"
             style={{ color: '#1a202c' }}
           >
-            {/* Awakenings Lead */}
             <div className="text-center space-y-4 pb-2 animate-editorial-lead">
               <h2 className="trajan-pro text-3xl sm:text-4xl md:text-5xl font-extrabold text-black leading-tight tracking-wide">
-                These are awakenings, <br className="hidden sm:inline" /> not mere conversations.
+                Africa's Return Arsenal of Knowledge
               </h2>
               <p className="manrope text-base sm:text-lg md:text-xl font-medium text-gray-700 italic max-w-2xl mx-auto leading-relaxed">
-                Every word is crafted to reveal, not to please, as I speak to your soul.
+                Inspiration fades. Real movements are built on conviction that lasts.
               </p>
             </div>
 
             {/* Subtle Divider */}
             <div className="w-24 h-[2px] bg-gray-300 mx-auto"></div>
 
-            {/* Section Headline */}
-            <h3
-              className="trajan-pro text-(--text-grey) font-bold text-center"
-              style={{ fontSize: 'clamp(1.8rem, 3.2vw, 2.5rem)', lineHeight: 1.25 }}
-            >
-              Africa's Return Arsenal of Knowledge
-            </h3>
-
             {/* Editorial Body Text */}
             <div className="space-y-6 text-justify md:text-center leading-relaxed text-gray-800 text-[1.1rem] md:text-[1.15rem]">
-              <p className="font-bold text-lg md:text-xl text-black">
-                Every serious movement needs more than inspiration. It needs knowledge that can sharpen the mind long after the emotion of a moment has passed.
+              <p>
+                The Arsenal of Knowledge is where we gather the intellectual weight behind Africa’s Return. This is not a library designed to tell you what to think; it is a training ground to make you think harder, deeper, and clearer.
               </p>
               <p>
-                The Arsenal of Knowledge is where we gather the deeper conversations behind Africa's Return: full-length videos, teachings, interviews, intellectual explorations and discussions that give you enough room to think rather than simply react.
-              </p>
-              <p className="font-semibold text-black">
-                This is not a library designed to tell you what to think. It is a place designed to make you think more deeply.
+                Here, you’ll find unfiltered conversations, long-form teachings and tough inquiries into history, technology, leadership, and the future we are bound to build.
               </p>
               <p>
-                You will find conversations about Africa, creation, consciousness, history, business, civilisation, leadership, technology, identity and the future we are capable of building. Some ideas may confirm what you already believe. Others may challenge it. Both can be useful if they make you examine your assumptions more honestly.
+                Some ideas will validate you while others will shatter your assumptions. Good. Growth requires friction.
               </p>
-              <p className="font-extrabold text-black text-lg md:text-xl tracking-wide">
-                Take your time here.
-              </p>
-              <p>
-                Watch beyond the headline. Follow an argument to its roots. Return to a conversation when your understanding has changed. Share an idea that forces someone else to ask a better question because knowledge becomes powerful when it changes the quality of the questions we are able to ask.
-              </p>
+              <p>Challenge what you know, then pass it on to force someone else to ask a better question.</p>
               <p className="trajan-pro font-bold text-xl md:text-2xl text-(--text-grey) pt-4 tracking-wide">
                 Enter the Arsenal. Watch deeply. Think freely. Create deliberately.
               </p>
