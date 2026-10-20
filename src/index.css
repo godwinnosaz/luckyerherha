@@ -9,9 +9,35 @@
   --type-small: 0.875rem;
 }
 
+@font-face {
+  font-family: 'Minion Web Pro';
+  src: url('/media/Minion%20Web%20Pro%20Regular-WUOVVPF5.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
 
 html {
   scroll-behavior: smooth;
+}
+
+.brand-logo-link {
+  display: block;
+  width: 3.75rem;
+  height: 4.75rem;
+  flex: 0 0 auto;
+}
+
+.brand-logo-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.brand-logo-image-invert {
+  filter: brightness(0) saturate(100%);
 }
 
 /* ==========================================================================
@@ -85,28 +111,41 @@ h1:not(.hero-throne-title) {
 
 /* Grand Hero Throne Title - Twice Larger & Monumental */
 .hero-throne-title {
-  font-size: clamp(4.2rem, 9vw, 6rem) !important;
-  line-height: 0.88 !important;
+  font-size: 6rem !important;
+  line-height: 0.98 !important;
   font-weight: 600 !important;
-  letter-spacing: -0.01em !important;
+  letter-spacing: 0 !important;
+  text-align: left;
 }
 
-.hero-mobile-break {
-  display: none;
+.home-throne-copy {
+  padding-left: clamp(0.5rem, 4vw, 4rem);
+}
+
+.home-throne-hero {
+  align-items: center;
 }
 
 @media (max-width: 640px) {
   .hero-throne-title {
-    font-size: clamp(2.6rem, 10vw, 3.8rem) !important;
-    line-height: 0.9 !important;
+    font-size: 2.75rem !important;
+    line-height: 1.02 !important;
   }
 
-  .hero-mobile-break {
-    display: inline;
+  .home-throne-copy {
+    padding-left: 0;
   }
+}
 
-  .hero-desktop-break {
-    display: none;
+@media (min-width: 641px) and (max-width: 1023px) {
+  .hero-throne-title {
+    font-size: 4.5rem !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero-throne-title {
+    font-size: 2.4rem !important;
   }
 }
 
@@ -138,7 +177,7 @@ h4 {
 .navlinks-dark a,
 nav a {
   font-weight: 700 !important;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.07em;
   font-size: 1.05rem;
   text-decoration: none !important;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
@@ -678,16 +717,14 @@ nav a:hover,
   display: flex;
   width: 100%;
   justify-content: center;
-  gap: clamp(1.25rem, 5vw, 4rem);
+  gap: 0.5rem;
   margin: 0 auto 2.5rem;
-  border-bottom: 1px solid rgba(17, 17, 17, 0.18);
 }
 
 .movement-tab {
-  position: relative;
   min-height: 3.75rem;
-  padding: 0.75rem 0.25rem;
-  border: 0;
+  padding: 0.75rem 1.25rem;
+  border: 1px solid #062441;
   background: transparent;
   color: #555555;
   cursor: pointer;
@@ -695,34 +732,74 @@ nav a:hover,
   font-size: 1rem;
   font-weight: 700;
   text-align: center;
-  transition: color 0.25s ease;
-}
-
-.movement-tab::after {
-  position: absolute;
-  right: 0;
-  bottom: -1px;
-  left: 0;
-  height: 3px;
-  background: #062441;
-  content: '';
-  transform: scaleX(0);
-  transform-origin: center;
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: color 0.25s ease, background-color 0.25s ease;
 }
 
 .movement-tab:hover,
 .movement-tab.is-active {
-  color: #062441;
-}
-
-.movement-tab.is-active::after {
-  transform: scaleX(1);
+  background-color: #062441;
+  color: #ffffff;
 }
 
 .movement-tab:focus-visible {
   outline: 2px solid #062441;
   outline-offset: 4px;
+}
+
+.movement-hero {
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  isolation: isolate;
+  text-align: center;
+}
+
+.movement-hero::before {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.36);
+  content: '';
+  pointer-events: none;
+}
+
+.movement-hero-content {
+  display: flex;
+  min-height: calc(80vh - 4rem);
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  color: #ffffff;
+  transform: translateY(-12vh);
+}
+
+.movement-hero-logo {
+  display: block;
+  width: 6rem;
+  height: 7.5rem;
+  object-fit: contain;
+}
+
+.movement-hero-quote {
+  max-width: 52rem;
+  margin: 0;
+  font-family: 'Minion Web Pro', Georgia, serif;
+  font-size: clamp(1.375rem, 2vw, 1.875rem);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.35;
+  text-wrap: balance;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.42);
+}
+
+.movement-hero-name {
+  margin: -0.75rem 0 0;
+  font-family: 'Minion Web Pro', Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
 }
 
 .movement-screen {
@@ -761,15 +838,29 @@ nav a:hover,
 }
 
 @media (max-width: 640px) {
-  .movement-tabs {
-    justify-content: space-between;
+  .movement-hero-content {
     gap: 1rem;
+  }
+
+  .movement-hero-logo {
+    width: 5rem;
+    height: 6rem;
+  }
+
+  .movement-hero-quote {
+    font-size: 1.375rem;
+  }
+
+  .movement-tabs {
+    justify-content: stretch;
+    gap: 0.5rem;
     margin-bottom: 1.75rem;
   }
 
   .movement-tab {
     flex: 1;
     min-height: 3.5rem;
+    padding: 0.75rem 0.5rem;
     font-size: 0.875rem;
   }
 

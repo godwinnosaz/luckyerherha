@@ -16,6 +16,16 @@ export default function Navbar({ isDark = false, className = '' }) {
           border-bottom: 1px solid var(--primary-color);
           color: var(--primary-color);
         }
+        .nav-desktop-links {
+          width: fit-content;
+          max-width: 100%;
+          margin-inline: auto;
+          justify-content: center;
+          gap: clamp(0.75rem, 1.5vw, 1.5rem);
+        }
+        .nav-desktop-links .nav-cta-blue {
+          flex-shrink: 0;
+        }
         .navlinks a:hover, .navlinks-dark a:hover, .active-link {
           text-decoration: none !important;
         }
@@ -32,11 +42,12 @@ export default function Navbar({ isDark = false, className = '' }) {
           <div className="mx-auto relative top-0 w-full max-w-7xl z-10">
             <div className="flex justify-center items-center">
               <FullLogo
-                src="assets/imgs/icons/logos/full_logo_black.png"
-                size="w-[150px] mx-auto mt-3"
+                src="assets/imgs/icons/logos/new-logo.png"
+                size="mx-auto mt-3"
+                invert
               />
             </div>
-            <div className="navlinks-dark text-lg bg-light-gray md:flex justify-between items-center gap-x-8 hidden py-4 px-5 my-5">
+            <div className="navlinks-dark nav-desktop-links text-lg bg-light-gray md:flex items-center hidden py-4 px-5 my-5">
               <NavLink
                 to="/home"
                 className={({ isActive }) => `trajan-pro ${isActive ? 'active-link' : ''}`}
@@ -65,7 +76,7 @@ export default function Navbar({ isDark = false, className = '' }) {
                 to="/movement"
                 className={({ isActive }) => `trajan-pro ${isActive ? 'active-link' : ''}`}
               >
-                Movement
+                The Moment
               </NavLink>
               <NavLink
                 to="/contact-us"
@@ -81,11 +92,11 @@ export default function Navbar({ isDark = false, className = '' }) {
           <div className="mx-auto absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl z-10">
             <div className="flex justify-center items-center">
               <FullLogo
-                src="assets/imgs/icons/logos/full_logo_white.png"
-                size="w-[150px] mx-auto mt-3"
+                src="assets/imgs/icons/logos/new-logo.png"
+                size="mx-auto mt-3"
               />
             </div>
-            <div className="navlinks text-lg bg-light-gray md:flex justify-between items-center gap-x-8 hidden py-4 px-5 my-5">
+            <div className="navlinks nav-desktop-links text-lg bg-light-gray md:flex items-center hidden py-4 px-5 my-5">
               <NavLink
                 to="/home"
                 className={({ isActive }) => `trajan-pro ${isActive ? 'active-link' : ''}`}
@@ -114,7 +125,7 @@ export default function Navbar({ isDark = false, className = '' }) {
                 to="/movement"
                 className={({ isActive }) => `trajan-pro ${isActive ? 'active-link' : ''}`}
               >
-                Movement
+                The Moment
               </NavLink>
               <NavLink
                 to="/contact-us"

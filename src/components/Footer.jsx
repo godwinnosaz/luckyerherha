@@ -27,7 +27,7 @@ export default function Footer({ color = false, secondaryColor = false }) {
       <footer className={`text-white ${bgClass}`}>
         <div className="relative z-10 flex flex-col flex-1 text-white max-w-sm md:max-w-7xl mx-auto w-full pt-16">
           <div className="flex flex-col items-center md:items-start mb-8 mr-4">
-            <FullLogo src="assets/imgs/icons/logos/full_logo_white.png" size="w-[150px]" />
+            <FullLogo src="assets/imgs/icons/logos/new-logo.png" />
           </div>
 
           <div className="flex-1 py-8">
@@ -151,7 +151,7 @@ export default function Footer({ color = false, secondaryColor = false }) {
                   </div>
                   <div className="space-y-4 manrope">
                     <Link to="/movement" className="block text-white transition-colors duration-300">
-                      MOVEMENT
+                      The Moment
                     </Link>
                     <Link to="/terms" className="block text-white transition-colors duration-300">
                       LEGAL TERMS
@@ -184,7 +184,7 @@ export default function Footer({ color = false, secondaryColor = false }) {
     <footer className="text-white relative bg-[url(/assets/imgs/home/Footer1.png)] min-h-screen flex flex-col overflow-hidden bg-cover bg-center bg-no-repeat">
       <div className="max-w-2xs md:max-w-7xl mx-auto flex flex-col w-full flex-1">
         <div className="py-10 self-center md:self-start">
-          <FullLogo src="assets/imgs/icons/logos/full_logo_white.png" size="w-[150px]" />
+          <FullLogo src="assets/imgs/icons/logos/new-logo.png" />
         </div>
 
         <div className="flex-1 py-12">

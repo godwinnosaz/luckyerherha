@@ -15,8 +15,8 @@ export default function NavSm({ isDark = false }) {
   };
 
   const logoSrc = isDark
-    ? 'assets/imgs/icons/logos/full_logo_black.png'
-    : 'assets/imgs/icons/logos/full_logo_white.png';
+    ? 'assets/imgs/icons/logos/new-logo.png'
+    : 'assets/imgs/icons/logos/new-logo.png';
 
   const menuBgClass = isDark ? 'mobile-menu-surface-light' : 'mobile-menu-surface-dark';
 
@@ -81,6 +81,8 @@ export default function NavSm({ isDark = false }) {
           <div className="w-full max-w-7xl z-10">
             <div className="flex justify-center items-center">
               <FullLogo src={logoSrc} size="w-[100px] mx-auto mt-3" />
+                          <FullLogo src={logoSrc} size="mx-auto mt-3" invert={isDark} />
+                          <FullLogo src={logoSrc} size="mx-auto mt-3" />
             </div>
             <div className="md:hidden absolute z-12 left-10 top-12">
               <HamburgerMenu dark={true} isActive={navOpen} onToggle={toggleNav} />
@@ -135,7 +137,7 @@ export default function NavSm({ isDark = false }) {
             className={({ isActive }) => `trajan-pro ${isActive ? 'active-link' : ''}`}
             onClick={closeNav}
           >
-            Movement
+            The Moment
           </NavLink>
           <NavLink
             to="/contact-us"

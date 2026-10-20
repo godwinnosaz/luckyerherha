@@ -15,12 +15,13 @@ export default function HomePage() {
         <NavSm />
       </div>
 
-      <section className="relative h-[80vh] md:h-[130vh] w-full overflow-hidden flex items-end p-5 md:items-end">
+      <section className="home-throne-hero relative h-[80vh] md:h-[130vh] w-full overflow-hidden flex items-center p-5">
         <div className="absolute inset-0 bg-cover bg-center md:bg-top bg-no-repeat bg-[url(/assets/imgs/home/throne.jpg)] md:bg-[url(/assets/imgs/home/throne.jpg)] hero-image-motion pointer-events-none"></div>
-        <div className="w-full max-w-7xl lg:max-w-[94rem] mx-auto font-black z-2 pb-8 md:pb-24 relative">
+        <div className="home-throne-copy w-full max-w-7xl lg:max-w-[94rem] mx-auto font-black z-2 relative">
           <h1 className="trajan-pro hero-throne-title text-white drop-shadow-2xl animate-hero-title-reveal">
-            Africa, take<span className="hero-mobile-break"><br /></span> your
-            <span className="hero-desktop-break"><br /></span> throne.
+            AFRICA,<br />
+            TAKE YOUR<br />
+            THRONE
           </h1>
         </div>
         <div className="absolute top-0 left-0 w-full h-full bg-black/25 z-1"></div>

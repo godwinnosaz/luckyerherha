@@ -1,10 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default function FullLogo({ size = '', src = '' }) {
+export default function FullLogo({ size = '30px', src = '', invert = false }) {
   return (
-    <Link to="/home" className={`block ${size}`}>
-      <img alt="Brand logo white " className="w-100" src={src} />
+    <Link to="/home" className={`brand-logo-link ${size}`}>
+      <img
+        alt="Lucky R. Erherha logo"
+        className={`brand-logo-image ${invert ? 'brand-logo-image-invert' : ''}`}
+        src={src}
+      />
     </Link>
   );
 }

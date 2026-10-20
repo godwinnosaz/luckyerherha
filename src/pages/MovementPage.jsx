@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import NavSm from '../components/NavSm';
 import AppIntersection from '../components/AppIntersection';
+import AppHeaderBg from '../components/AppHeaderBg';
 import Footer from '../components/Footer';
 
 export default function MovementPage() {
@@ -36,6 +37,22 @@ export default function MovementPage() {
           The Returning Royals.
         </h1>
       </AppIntersection>
+
+      <AppHeaderBg
+        externalClass="bg-[url('/assets/imgs/movement/midnight.png')] movement-hero mt-8"
+      >
+        <div className="movement-hero-content">
+          <img
+            src="assets/imgs/icons/logos/new-logo.png"
+            alt="Lucky R. Erherha logo"
+            className="movement-hero-logo"
+          />
+          <blockquote className="movement-hero-quote">
+            "it is time for our people to dream new dreams"
+          </blockquote>
+          <p className="movement-hero-name">Luck R. Erherha</p>
+        </div>
+      </AppHeaderBg>
 
       <div className="movement-switch max-w-7xl mx-auto px-4">
         <div className="movement-tabs" role="tablist" aria-label="Movement stories">
