@@ -339,7 +339,7 @@ nav a:hover,
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background-color: #25d366;
+  background-color: #062441;
   color: #ffffff;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
   animation: whatsappFloat 3.6s ease-in-out infinite;
@@ -354,7 +354,7 @@ nav a:hover,
 }
 
 .whatsapp-float:focus-visible {
-  outline: 2px solid #25d366;
+  outline: 2px solid #062441;
   outline-offset: 4px;
 }
 
@@ -362,7 +362,7 @@ nav a:hover,
   content: '';
   position: absolute;
   inset: 0;
-  border: 2px solid #25d366;
+  border: 2px solid #062441;
   border-radius: 50%;
   animation: whatsappRing 2.8s ease-out infinite;
   pointer-events: none;
@@ -666,6 +666,116 @@ nav a:hover,
   overflow: hidden;
   border-radius: 0.5rem;
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.16);
+}
+
+.movement-switch {
+  width: 100%;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+.movement-tabs {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: clamp(1.25rem, 5vw, 4rem);
+  margin: 0 auto 2.5rem;
+  border-bottom: 1px solid rgba(17, 17, 17, 0.18);
+}
+
+.movement-tab {
+  position: relative;
+  min-height: 3.75rem;
+  padding: 0.75rem 0.25rem;
+  border: 0;
+  background: transparent;
+  color: #555555;
+  cursor: pointer;
+  font-family: 'TrajanPro', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  transition: color 0.25s ease;
+}
+
+.movement-tab::after {
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  left: 0;
+  height: 3px;
+  background: #062441;
+  content: '';
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.movement-tab:hover,
+.movement-tab.is-active {
+  color: #062441;
+}
+
+.movement-tab.is-active::after {
+  transform: scaleX(1);
+}
+
+.movement-tab:focus-visible {
+  outline: 2px solid #062441;
+  outline-offset: 4px;
+}
+
+.movement-screen {
+  animation: movementScreenEnter 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.movement-screen-inner {
+  display: grid;
+  gap: 2.5rem;
+}
+
+.movement-copy {
+  display: grid;
+  gap: 1.5rem;
+  color: var(--text-grey);
+}
+
+.movement-copy h2 {
+  margin: 0;
+}
+
+.movement-copy p {
+  margin: 0;
+}
+
+@keyframes movementScreenEnter {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 640px) {
+  .movement-tabs {
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .movement-tab {
+    flex: 1;
+    min-height: 3.5rem;
+    font-size: 0.875rem;
+  }
+
+  .movement-screen-inner {
+    gap: 1.75rem;
+  }
 }
 
 .about-vanguard-photo {

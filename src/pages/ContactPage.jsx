@@ -4,6 +4,7 @@ import NavSm from '../components/NavSm';
 import AppIntersection from '../components/AppIntersection';
 import Footer from '../components/Footer';
 import SupportPaymentSection from '../components/SupportPaymentSection';
+import EngagementPage from './EngagementPage';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -114,8 +115,10 @@ export default function ContactPage() {
       </div>
 
       <AppIntersection externalClass="bg-(--white) sticky top-0 z-15">
-        <h1 className="trajan-pro text-(--text-grey) text-4xl">The Gates of the Kingdom.</h1>
+        <h1 className="trajan-pro text-(--text-grey) text-4xl">Book LRE</h1>
       </AppIntersection>
+
+      <EngagementPage embedded />
 
       <div className="min-h-[120vh] flex items-start justify-start py-12 px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row w-full max-w-7xl mx-auto justify-between">

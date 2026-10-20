@@ -47,13 +47,7 @@ export default function Navbar({ isDark = false, className = '' }) {
                 to="/about"
                 className={({ isActive }) => `trajan-pro ${isActive ? 'active-link' : ''}`}
               >
-                About
-              </NavLink>
-              <NavLink
-                to="/mission&vision"
-                className={({ isActive }) => `trajan-pro ${isActive ? 'active-link' : ''}`}
-              >
-                Africa’s Return
+                LRE
               </NavLink>
               <NavLink
                 to="/legacy-of-impact"
@@ -66,12 +60,6 @@ export default function Navbar({ isDark = false, className = '' }) {
                 className={({ isActive }) => `trajan-pro ${isActive ? 'active-link' : ''}`}
               >
                 Thought Leadership
-              </NavLink>
-              <NavLink
-                to="/engagement"
-                className={({ isActive }) => `trajan-pro ${isActive ? 'active-link' : ''}`}
-              >
-                Engagement
               </NavLink>
               <NavLink
                 to="/movement"
@@ -108,13 +96,7 @@ export default function Navbar({ isDark = false, className = '' }) {
                 to="/about"
                 className={({ isActive }) => `trajan-pro ${isActive ? 'active-link' : ''}`}
               >
-                About
-              </NavLink>
-              <NavLink
-                to="/mission&vision"
-                className={({ isActive }) => `trajan-pro ${isActive ? 'active-link' : ''}`}
-              >
-                Africa’s Return
+                LRE
               </NavLink>
               <NavLink
                 to="/legacy-of-impact"
@@ -127,12 +109,6 @@ export default function Navbar({ isDark = false, className = '' }) {
                 className={({ isActive }) => `trajan-pro ${isActive ? 'active-link' : ''}`}
               >
                 Thought Leadership
-              </NavLink>
-              <NavLink
-                to="/engagement"
-                className={({ isActive }) => `trajan-pro ${isActive ? 'active-link' : ''}`}
-              >
-                Engagement
               </NavLink>
               <NavLink
                 to="/movement"

@@ -5,15 +5,19 @@ import AppIntersection from '../components/AppIntersection';
 import AppHeaderBg from '../components/AppHeaderBg';
 import Footer from '../components/Footer';
 
-export default function MissionPage() {
+export default function MissionPage({ embedded = false }) {
   return (
     <>
-      <div className="hidden md:block">
-        <Navbar isDark={true} />
-      </div>
-      <div className="md:hidden">
-        <NavSm isDark={true} />
-      </div>
+      {!embedded && (
+        <>
+          <div className="hidden md:block">
+            <Navbar isDark={true} />
+          </div>
+          <div className="md:hidden">
+            <NavSm isDark={true} />
+          </div>
+        </>
+      )}
 
       <AppIntersection externalClass="bg-(--white) sticky top-0 z-15 py-[2rem]">
         <div className="text-center mt-[3.5rem]">
@@ -181,7 +185,7 @@ export default function MissionPage() {
         </div>
       </section>
 
-      <Footer color={true} />
+      {!embedded && <Footer color={true} />}
     </>
   );
 }

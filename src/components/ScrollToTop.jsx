@@ -66,7 +66,7 @@ export default function ScrollToTop() {
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              strokeLineline="round"
+              strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth="2.5"
               d="M5 15l7-7 7 7"

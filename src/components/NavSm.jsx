@@ -114,14 +114,7 @@ export default function NavSm({ isDark = false }) {
             className={({ isActive }) => `trajan-pro ${isActive ? 'active-link' : ''}`}
             onClick={closeNav}
           >
-            About
-          </NavLink>
-          <NavLink
-            to="/mission&vision"
-            className={({ isActive }) => `trajan-pro ${isActive ? 'active-link' : ''}`}
-            onClick={closeNav}
-          >
-            Africa’s Return
+            LRE
           </NavLink>
           <NavLink
             to="/legacy-of-impact"
@@ -136,13 +129,6 @@ export default function NavSm({ isDark = false }) {
             onClick={closeNav}
           >
             Thought Leadership
-          </NavLink>
-          <NavLink
-            to="/engagement"
-            className={({ isActive }) => `trajan-pro ${isActive ? 'active-link' : ''}`}
-            onClick={closeNav}
-          >
-            Engagement
           </NavLink>
           <NavLink
             to="/movement"

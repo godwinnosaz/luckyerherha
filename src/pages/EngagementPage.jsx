@@ -5,7 +5,7 @@ import AppIntersection from '../components/AppIntersection';
 import AppButton from '../components/AppButton';
 import Footer from '../components/Footer';
 
-export default function EngagementPage() {
+export default function EngagementPage({ embedded = false }) {
   return (
     <>
       <style>{`
@@ -13,12 +13,16 @@ export default function EngagementPage() {
           border-top: 2px solid var(--black);
         }
       `}</style>
-      <div className="hidden md:block">
-        <Navbar isDark={true} />
-      </div>
-      <div className="md:hidden">
-        <NavSm isDark={true} />
-      </div>
+      {!embedded && (
+        <>
+          <div className="hidden md:block">
+            <Navbar isDark={true} />
+          </div>
+          <div className="md:hidden">
+            <NavSm isDark={true} />
+          </div>
+        </>
+      )}
 
       <AppIntersection externalClass="bg-(--white) sticky top-0 z-15">
         <h1 className="trajan-pro text-center text-4xl md:text-5xl lg:text-[2.8rem] text-(--text-grey) font-extrabold text-shadow-lg tracking-wide">
@@ -122,7 +126,7 @@ export default function EngagementPage() {
         </article>
       </section>
 
-      <Footer color={true} />
+      {!embedded && <Footer color={true} />}
     </>
   );
 }

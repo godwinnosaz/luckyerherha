@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar';
 import NavSm from '../components/NavSm';
 import AppIntersection from '../components/AppIntersection';
 import Footer from '../components/Footer';
+import MissionPage from './MissionPage';
 
 export default function AboutPage() {
   return (
@@ -99,6 +100,8 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      <MissionPage embedded />
 
       <Footer color={true} />
     </>
