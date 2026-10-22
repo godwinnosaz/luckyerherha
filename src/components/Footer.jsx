@@ -45,8 +45,8 @@ export default function Footer({ color = false, secondaryColor = false }) {
             </div>
 
             <div className="mt-auto pb-8">
-              <div className="flex flex-col-reverse lg:flex-row items-start lg:items-start gap-10 md:gap-0">
-                <div className="mb-8 md:me-[15rem] lg:mb-0">
+              <div className="footer-content-layout items-start">
+                <div>
                   <button
                     type="button"
                     onClick={scrollToTopWithEasing}
@@ -133,28 +133,22 @@ export default function Footer({ color = false, secondaryColor = false }) {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 flex-1">
-                  <div className="space-y-4 manrope">
-                    <Link to="/home" className="block text-white transition-colors duration-300">
-                      HOME
-                    </Link>
-                    <Link to="/about" className="block text-white transition-colors duration-300">
-                      LRE
-                    </Link>
-                  </div>
-                  <div className="space-y-4 manrope">
-                    <Link to="/leadership" className="block text-white transition-colors duration-300">
-                      THOUGHT LEADERSHIP
-                    </Link>
-                  </div>
-                  <div className="space-y-4 manrope">
-                    <Link to="/movement" className="block text-white transition-colors duration-300">
-                      THE MOVEMENT
-                    </Link>
-                    <Link to="/legacy-of-impact" className="block text-white transition-colors duration-300 font-semibold hover:text-white/80">
-                      ZUMERA
-                    </Link>
-                  </div>
+                <div className="footer-page-links flex flex-col items-start gap-4 manrope">
+                  <Link to="/home" className="block text-white transition-colors duration-300">
+                    HOME
+                  </Link>
+                  <Link to="/about" className="block text-white transition-colors duration-300">
+                    LRE
+                  </Link>
+                  <Link to="/leadership" className="block text-white transition-colors duration-300">
+                    THOUGHT LEADERSHIP
+                  </Link>
+                  <Link to="/movement" className="block text-white transition-colors duration-300">
+                    THE MOVEMENT
+                  </Link>
+                  <Link to="/legacy-of-impact" className="block text-white transition-colors duration-300 font-semibold hover:text-white/80">
+                    ZUMERA
+                  </Link>
                 </div>
 
                 <div>

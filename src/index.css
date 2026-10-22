@@ -796,14 +796,15 @@ nav a:hover,
 }
 
 .movement-hero-quote {
-  max-width: 52rem;
+  width: 100%;
+  max-width: none;
   margin: 0;
   font-family: 'EB Garamond', Georgia, serif !important;
-  font-size: clamp(2.2rem, 3.2vw, 3.2rem);
+  font-size: clamp(0.5rem, 3vw, 3rem);
   font-style: italic;
   font-weight: 400;
-  line-height: 1.7;
-  text-wrap: balance;
+  line-height: 1.2;
+  white-space: nowrap;
   text-shadow: 0 2px 16px rgba(0, 0, 0, 0.42);
 }
 
@@ -861,6 +862,24 @@ nav a:hover,
   margin: 0;
 }
 
+.footer-content-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: start;
+  gap: 2.5rem;
+}
+
+@media (min-width: 1024px) {
+  .footer-content-layout {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    column-gap: 4rem;
+  }
+
+  .footer-page-links {
+    justify-self: end;
+  }
+}
+
 @keyframes movementScreenEnter {
   from {
     opacity: 0;
@@ -881,10 +900,6 @@ nav a:hover,
   .movement-hero-logo {
     width: 5rem;
     height: 6rem;
-  }
-
-  .movement-hero-quote {
-    font-size: 1.5rem;
   }
 
   .movement-tabs {
