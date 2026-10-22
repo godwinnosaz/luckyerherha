@@ -77,7 +77,7 @@ export default function Footer({ color = false, secondaryColor = false }) {
                       className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors duration-300 mb-0"
                     >
                       <div className="w-[15px]">
-                        <img src="assets/imgs/icons/footer/insta.png" alt="" className="w-full" />
+                        <img src="assets/imgs/icons/footer/insta.png" alt="" className="w-full no-animate" />
                       </div>
                     </a>
                     <a
@@ -253,7 +253,7 @@ export default function Footer({ color = false, secondaryColor = false }) {
                   className="flex items-center gap-3 text-white transition-colors duration-300"
                 >
                   <div className="w-[15px]">
-                    <img src="assets/imgs/icons/footer/insta.png" alt="" className="w-full" />
+                    <img src="assets/imgs/icons/footer/insta.png" alt="" className="w-full no-animate" />
                   </div>
                   <span>INSTAGRAM</span>
                 </a>
