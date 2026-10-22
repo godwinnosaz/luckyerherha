@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
-import '@fontsource/eb-garamond/400-italic.css';
 import App from './App';
 import './index.css';
 
