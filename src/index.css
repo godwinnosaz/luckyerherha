@@ -906,6 +906,20 @@ nav a:hover,
   gap: 2.5rem;
 }
 
+.mission-action-copy {
+  max-width: 60%;
+}
+
+.mission-action-copy > div {
+  text-align: justify;
+}
+
+@media (max-width: 640px) {
+  .mission-action-copy {
+    max-width: 100%;
+  }
+}
+
 @media (min-width: 1024px) {
   .footer-content-layout {
     grid-template-columns: auto minmax(0, 1fr) auto;

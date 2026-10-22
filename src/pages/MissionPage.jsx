@@ -151,8 +151,8 @@ export default function MissionPage({ embedded = false }) {
                   className="w-full h-auto object-cover"
                 />
               </div>
-              <div className="w-full space-y-6">
-                <div className="space-y-4 text-gray-700 text-base md:text-lg leading-relaxed manrope text-justify md:text-left">
+              <div className="mission-action-copy w-full mx-auto space-y-20">
+                <div className="space-y-20 text-gray-700 text-base md:text-lg leading-relaxed manrope">
                   <p className="font-semibold text-gray-900">
                     Africa does not lack people who care. What we lack is the transformation of anger and concern into creation.
                   </p>
