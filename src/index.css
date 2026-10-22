@@ -700,24 +700,57 @@ nav a:hover,
 }
 
 .echoes-feature-frame {
+  order: 2;
+  flex: 1.35 1 0;
+  min-width: 0;
+  aspect-ratio: 4 / 5;
+  border-radius: 0.5rem;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.16);
+}
+
+.echoes-feature-layout {
+  display: flex;
+  align-items: stretch;
+  gap: 2.5rem;
+}
+
+.echoes-feature-frame img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.echoes-feature-copy {
+  order: 1;
+  flex: 1 1 0;
+  min-width: 0;
+  align-self: start;
 }
 
 .about-vanguard-content {
   display: flex;
+  align-items: stretch;
   width: 100%;
   max-width: 80rem;
-  flex-direction: column;
+  flex-direction: row;
   gap: 2.5rem;
   margin: 0 auto 2rem;
   padding: 0 2rem;
 }
 
 .about-vanguard-image {
-  width: 100%;
+  flex: 1.35 1 0;
+  min-width: 0;
+  aspect-ratio: 4 / 5;
   overflow: hidden;
   border-radius: 0.5rem;
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.16);
+}
+
+.about-vanguard-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .movement-switch {
@@ -862,6 +895,10 @@ nav a:hover,
   margin: 0;
 }
 
+.movement-paragraphs > p + p {
+  margin-top: 20px;
+}
+
 .footer-content-layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
@@ -938,18 +975,19 @@ nav a:hover,
 }
 
 .about-vanguard-copy {
+  flex: 1 1 0;
+  min-width: 0;
   display: grid;
-  width: 100%;
-  max-width: 68rem;
-  gap: 1.5rem;
-  margin: 0 auto;
+  align-content: start;
+  gap: 0.5rem;
 }
 
-.about-vanguard-copy h2 {
+.about-vanguard-copy .about-vanguard-title {
   margin: 0;
-  text-align: center;
-  font-size: clamp(1.75rem, 3.2vw, 2.5rem);
-  line-height: 1.2;
+  color: var(--text-grey);
+  text-align: left;
+  font-size: 1.5rem !important;
+  line-height: 1.3;
 }
 
 .about-vanguard-copy > div {
@@ -963,13 +1001,36 @@ nav a:hover,
 
 .echoes-feature-image {
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 @media (max-width: 640px) {
+  .echoes-feature-layout {
+    flex-direction: column;
+    gap: 1.75rem;
+  }
+
+  .echoes-feature-frame {
+    order: 1;
+    flex: none;
+    width: 100%;
+  }
+
+  .echoes-feature-copy {
+    order: 2;
+    width: 100%;
+  }
+
   .about-vanguard-content {
+    flex-direction: column;
     gap: 1.75rem;
     padding-inline: 1rem;
+  }
+
+  .about-vanguard-image {
+    flex: none;
+    width: 100%;
+    aspect-ratio: 4 / 5;
   }
 
   .about-vanguard-copy {

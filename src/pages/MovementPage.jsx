@@ -102,7 +102,7 @@ export default function MovementPage() {
               </div>
               <div className="movement-copy">
                 <h2 className="trajan-pro text-2xl md:text-4xl font-black">The Reset: The Originality of Creation</h2>
-                <div className="leading-relaxed space-y-4 text-base md:text-[1.05rem] manrope text-justify md:text-left">
+                <div className="movement-paragraphs leading-relaxed text-base md:text-[1.05rem] manrope text-justify md:text-left">
                   <p>
                     Civilizations are not saved by miracles. They are preserved by human beings like you and I. The future of Africa is not someone else's job. It is ours.
                   </p>
@@ -129,7 +129,7 @@ export default function MovementPage() {
               </div>
               <div className="movement-copy">
                 <h2 className="trajan-pro text-2xl md:text-3xl font-black">The New Generation of African Creators</h2>
-                <div className="leading-relaxed space-y-4 text-base md:text-[1.05rem] manrope text-justify md:text-left">
+                <div className="movement-paragraphs leading-relaxed text-base md:text-[1.05rem] manrope text-justify md:text-left">
                   <p>
                     The resistance does not start out there - it starts within you. It begins the exact moment you stop accepting limitations as an excuse and stop waiting for someone else to prove what is possible before you dare to try.
                   </p>

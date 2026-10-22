@@ -34,7 +34,7 @@ export default function AboutPage() {
             />
           </div>
           <div className="about-vanguard-copy">
-            <h2 className="trajan-pro font-black">AFRICA’S RETURN</h2>
+            <h2 className="about-vanguard-title text-3xl md:text-4xl trajan-pro font-black">AFRICA’S RETURN</h2>
             <div className="space-y-4 text-(--primary-color) leading-relaxed manrope text-base md:text-[1.05rem]">
                 <p className="trajan-pro text-xl font-bold text-black">
                   What if we returned to the raw, original power we once owned?
@@ -61,7 +61,7 @@ export default function AboutPage() {
           <h2 className="text-4xl md:text-4xl text-center text-(--text-grey) mb-16 tracking-wide trajan-pro font-black">
             ECHOES OF RESISTANCE & INFLUENCE
           </h2>
-          <div className="flex flex-col gap-10 md:gap-14">
+          <div className="echoes-feature-layout">
             <div className="echoes-feature-frame image-zoom-frame w-full rounded-lg shadow-xl">
               <img
                 src="assets/imgs/about/echoes.jpg"
@@ -69,7 +69,7 @@ export default function AboutPage() {
                 className="echoes-feature-image w-full object-cover shadow-lg"
               />
             </div>
-            <div className="w-full space-y-6">
+            <div className="echoes-feature-copy">
               <h3 className="text-3xl md:text-4xl font-bold trajan-pro mb-6 leading-tight text-(--text-grey)">
                 AFRICA’S RETURN PHILOSOPHY OF LIBERATION
               </h3>
