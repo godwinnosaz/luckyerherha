@@ -15,8 +15,8 @@ export default function NavSm({ isDark = false }) {
   };
 
   const logoSrc = isDark
-    ? 'assets/imgs/icons/logos/new-logo.png'
-    : 'assets/imgs/icons/logos/new-logo.png';
+    ? 'assets/imgs/icons/logos/full_logo_white.png'
+    : 'assets/imgs/icons/logos/full_logo_white.png';
 
   const menuBgClass = isDark ? 'mobile-menu-surface-light' : 'mobile-menu-surface-dark';
 

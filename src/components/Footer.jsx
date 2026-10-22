@@ -27,7 +27,7 @@ export default function Footer({ color = false, secondaryColor = false }) {
       <footer className={`text-white ${bgClass}`}>
         <div className="relative z-10 flex flex-col flex-1 text-white max-w-sm md:max-w-7xl mx-auto w-full pt-16">
           <div className="flex flex-col items-center md:items-start mb-8 mr-4">
-            <FullLogo src="assets/imgs/icons/logos/new-logo.png" />
+            <FullLogo src="assets/imgs/icons/logos/full_logo_white.png" size="navbar-brand-logo" />
           </div>
 
           <div className="flex-1 py-8">
@@ -58,6 +58,7 @@ export default function Footer({ color = false, secondaryColor = false }) {
                     <span className="manrope">BACK TO TOP</span>
                   </button>
 
+                  <p className="manrope text-sm font-bold text-white pt-4">SOCIAL MEDIA</p>
                   <div className="space-y-3 manrope flex gap-2 pt-4">
                     <a
                       href="https://www.facebook.com/share/18tZawxAqR/?mibextid=qi2Omg"
@@ -142,16 +143,16 @@ export default function Footer({ color = false, secondaryColor = false }) {
                     </Link>
                   </div>
                   <div className="space-y-4 manrope">
-                    <Link to="/legacy-of-impact" className="block text-white transition-colors duration-300 font-semibold hover:text-white/80">
-                      ZUMERA
-                    </Link>
                     <Link to="/leadership" className="block text-white transition-colors duration-300">
                       THOUGHT LEADERSHIP
                     </Link>
                   </div>
                   <div className="space-y-4 manrope">
                     <Link to="/movement" className="block text-white transition-colors duration-300">
-                      The Movement
+                      THE MOVEMENT
+                    </Link>
+                    <Link to="/legacy-of-impact" className="block text-white transition-colors duration-300 font-semibold hover:text-white/80">
+                      ZUMERA
                     </Link>
                   </div>
                 </div>
@@ -164,7 +165,7 @@ export default function Footer({ color = false, secondaryColor = false }) {
                     <p className="manrope text-sm text-gray-300">+2347045068663</p>
                     <p className="manrope text-sm text-gray-300">LRE@luckyerherha.com</p>
                     <Link to="/terms" className="block text-white transition-colors duration-300 manrope text-sm mt-2">
-                      TERMS &amp; CONDITIONS
+                      LEGAL
                     </Link>
                   </div>
                 </div>
@@ -184,7 +185,7 @@ export default function Footer({ color = false, secondaryColor = false }) {
     <footer className="text-white relative bg-[url(/assets/imgs/home/Footer1.png)] min-h-screen flex flex-col overflow-hidden bg-cover bg-center bg-no-repeat">
       <div className="max-w-2xs md:max-w-7xl mx-auto flex flex-col w-full flex-1">
         <div className="py-10 self-center md:self-start">
-          <FullLogo src="assets/imgs/icons/logos/new-logo.png" />
+          <FullLogo src="assets/imgs/icons/logos/full_logo_white.png" size="navbar-brand-logo" />
         </div>
 
         <div className="flex-1 py-12">
@@ -218,20 +219,21 @@ export default function Footer({ color = false, secondaryColor = false }) {
                   <Link to="/about" className="block text-white transition-colors duration-300">
                     LRE
                   </Link>
-                  <Link to="/legacy-of-impact" className="block text-white transition-colors duration-300 font-semibold hover:text-white/80">
-                    ZUMERA
-                  </Link>
                   <Link to="/leadership" className="block text-white transition-colors duration-300">
                     THOUGHT LEADERSHIP
                   </Link>
                   <Link to="/movement" className="block text-white transition-colors duration-300">
-                    MOVEMENT
+                    THE MOVEMENT
+                  </Link>
+                  <Link to="/legacy-of-impact" className="block text-white transition-colors duration-300 font-semibold hover:text-white/80">
+                    ZUMERA
                   </Link>
                 </div>
               </div>
             </div>
 
             <div className="lg:col-span-1 flex flex-col">
+              <p className="manrope font-bold text-white">SOCIAL MEDIA</p>
               <div className="space-y-2 pt-8 manrope">
                 <a
                   href="https://www.facebook.com/share/18tZawxAqR/?mibextid=qi2Omg"
@@ -321,7 +323,7 @@ export default function Footer({ color = false, secondaryColor = false }) {
                 <p className="manrope text-sm text-gray-300">+2347045068663</p>
                 <p className="manrope text-sm text-gray-300">LRE@luckyerherha.com</p>
                 <Link to="/terms" className="block text-white hover:text-white transition-colors duration-300 manrope text-sm mt-2">
-                  TERMS &amp; CONDITIONS
+                  LEGAL
                 </Link>
               </div>
               <div className="mt-8 md:hidden">

@@ -41,7 +41,7 @@ export default function Navbar({ isDark = false, className = '' }) {
             <div className="flex justify-center items-center">
               <FullLogo
                 src="assets/imgs/icons/logos/full_logo_white.png"
-                size="mx-auto mt-3"
+                size="navbar-brand-logo mx-auto mt-3"
                 invert
               />
             </div>
@@ -91,7 +91,7 @@ export default function Navbar({ isDark = false, className = '' }) {
             <div className="flex justify-center items-center">
               <FullLogo
                 src="assets/imgs/icons/logos/full_logo_white.png"
-                size="mx-auto mt-3"
+                size="navbar-brand-logo mx-auto mt-3"
               />
             </div>
             <div className="navlinks nav-desktop-links text-lg bg-light-gray md:flex items-center hidden py-4 px-5 my-5">

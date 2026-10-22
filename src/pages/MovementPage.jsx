@@ -48,7 +48,7 @@ export default function MovementPage() {
             className="movement-hero-logo"
           />
           <blockquote className="movement-hero-quote">
-            "it is time for our people to dream new dreams"
+            "it is time for our people to dream new dreams."
           </blockquote>
           <p className="movement-hero-name">Lucky R. Erherha</p>
         </div>
@@ -93,7 +93,7 @@ export default function MovementPage() {
         >
           {activeScreen === 'kingdom' ? (
             <div className="movement-screen-inner">
-              <div className="image-zoom-frame w-full rounded-lg shadow-xl">
+              <div className="movement-image-frame image-zoom-frame rounded-lg shadow-xl">
                 <img
                   src="assets/imgs/movement/custodians_new.jpg"
                   alt="Custodians gathered in conversation"
@@ -120,7 +120,7 @@ export default function MovementPage() {
             </div>
           ) : (
             <div className="movement-screen-inner">
-              <div className="image-zoom-frame w-full rounded-lg shadow-xl">
+              <div className="movement-image-frame image-zoom-frame rounded-lg shadow-xl">
                 <img
                   src="assets/imgs/movement/movement.jpg"
                   alt="The Movement"

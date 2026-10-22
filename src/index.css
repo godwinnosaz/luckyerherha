@@ -1,6 +1,8 @@
 /* ==========================================================================
    LUCKY R. ERHERHA - Intelligent Animations & Enhanced Typography
    ========================================================================== */
+@import '@fontsource/eb-garamond/400-italic.css';
+
 :root {
   --type-display: 3rem;
   --type-large: 2rem;
@@ -38,6 +40,11 @@ html {
 
 .brand-logo-image-invert {
   filter: brightness(0) saturate(100%);
+}
+
+.navbar-brand-logo.brand-logo-link {
+  width: 8rem;
+  height: 7rem;
 }
 
 /* ==========================================================================
@@ -772,7 +779,7 @@ nav a:hover,
   justify-content: center;
   gap: 1.25rem;
   color: #ffffff;
-  transform: translateY(-12vh);
+  transform: translateY(-22vh);
 }
 
 .movement-hero-logo {
@@ -785,11 +792,11 @@ nav a:hover,
 .movement-hero-quote {
   max-width: 52rem;
   margin: 0;
-  font-family: 'Minion Web Pro', Georgia, serif;
-  font-size: clamp(1.375rem, 2vw, 1.875rem);
+  font-family: 'EB Garamond', Georgia, serif !important;
+  font-size: clamp(2.2rem, 3.2vw, 3.2rem);
   font-style: italic;
   font-weight: 400;
-  line-height: 1.35;
+  line-height: 1.7;
   text-wrap: balance;
   text-shadow: 0 2px 16px rgba(0, 0, 0, 0.42);
 }
@@ -802,18 +809,41 @@ nav a:hover,
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
 }
 
+.movement-hero-quote,
+.movement-hero-name {
+  transform: translateY(-1.5rem);
+}
+
 .movement-screen {
   animation: movementScreenEnter 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 .movement-screen-inner {
-  display: grid;
+  display: flex;
+  align-items: stretch;
   gap: 2.5rem;
 }
 
+.movement-image-frame {
+  flex: 1.35 1 0;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  max-height: 52rem;
+  min-width: 0;
+}
+
+.movement-image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .movement-copy {
+  flex: 1 1 0;
+  min-width: 0;
   display: grid;
-  gap: 1.5rem;
+  align-content: start;
+  gap: 0.5rem;
   color: var(--text-grey);
 }
 
@@ -848,7 +878,7 @@ nav a:hover,
   }
 
   .movement-hero-quote {
-    font-size: 1.375rem;
+    font-size: 1.5rem;
   }
 
   .movement-tabs {
@@ -865,7 +895,18 @@ nav a:hover,
   }
 
   .movement-screen-inner {
+    flex-direction: column;
     gap: 1.75rem;
+  }
+
+  .movement-image-frame {
+    flex: none;
+    height: auto;
+    aspect-ratio: 4 / 5;
+  }
+
+  .movement-image-frame img {
+    height: 100%;
   }
 }
 
