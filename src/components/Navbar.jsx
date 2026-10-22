@@ -17,11 +17,9 @@ export default function Navbar({ isDark = false, className = '' }) {
           color: var(--primary-color);
         }
         .nav-desktop-links {
-          width: fit-content;
-          max-width: 100%;
-          margin-inline: auto;
-          justify-content: center;
-          gap: clamp(0.75rem, 1.5vw, 1.5rem);
+          width: 100%;
+          justify-content: space-evenly;
+          gap: 0;
         }
         .nav-desktop-links .nav-cta-blue {
           flex-shrink: 0;
@@ -42,7 +40,7 @@ export default function Navbar({ isDark = false, className = '' }) {
           <div className="mx-auto relative top-0 w-full max-w-7xl z-10">
             <div className="flex justify-center items-center">
               <FullLogo
-                src="assets/imgs/icons/logos/new-logo.png"
+                src="assets/imgs/icons/logos/full_logo_white.png"
                 size="mx-auto mt-3"
                 invert
               />
@@ -61,12 +59,6 @@ export default function Navbar({ isDark = false, className = '' }) {
                 LRE
               </NavLink>
               <NavLink
-                to="/legacy-of-impact"
-                className={({ isActive }) => `trajan-pro ${isActive ? 'active-link' : ''}`}
-              >
-                Zumera
-              </NavLink>
-              <NavLink
                 to="/leadership"
                 className={({ isActive }) => `trajan-pro ${isActive ? 'active-link' : ''}`}
               >
@@ -76,7 +68,13 @@ export default function Navbar({ isDark = false, className = '' }) {
                 to="/movement"
                 className={({ isActive }) => `trajan-pro ${isActive ? 'active-link' : ''}`}
               >
-                The Moment
+                The Movement
+              </NavLink>
+              <NavLink
+                to="/legacy-of-impact"
+                className={({ isActive }) => `trajan-pro ${isActive ? 'active-link' : ''}`}
+              >
+                Zumera
               </NavLink>
               <NavLink
                 to="/contact-us"
@@ -92,7 +90,7 @@ export default function Navbar({ isDark = false, className = '' }) {
           <div className="mx-auto absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl z-10">
             <div className="flex justify-center items-center">
               <FullLogo
-                src="assets/imgs/icons/logos/new-logo.png"
+                src="assets/imgs/icons/logos/full_logo_white.png"
                 size="mx-auto mt-3"
               />
             </div>
@@ -110,12 +108,6 @@ export default function Navbar({ isDark = false, className = '' }) {
                 LRE
               </NavLink>
               <NavLink
-                to="/legacy-of-impact"
-                className={({ isActive }) => `trajan-pro ${isActive ? 'active-link' : ''}`}
-              >
-                Zumera
-              </NavLink>
-              <NavLink
                 to="/leadership"
                 className={({ isActive }) => `trajan-pro ${isActive ? 'active-link' : ''}`}
               >
@@ -125,7 +117,13 @@ export default function Navbar({ isDark = false, className = '' }) {
                 to="/movement"
                 className={({ isActive }) => `trajan-pro ${isActive ? 'active-link' : ''}`}
               >
-                The Moment
+                The Movement
+              </NavLink>
+              <NavLink
+                to="/legacy-of-impact"
+                className={({ isActive }) => `trajan-pro ${isActive ? 'active-link' : ''}`}
+              >
+                Zumera
               </NavLink>
               <NavLink
                 to="/contact-us"

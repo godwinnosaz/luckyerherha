@@ -151,10 +151,7 @@ export default function Footer({ color = false, secondaryColor = false }) {
                   </div>
                   <div className="space-y-4 manrope">
                     <Link to="/movement" className="block text-white transition-colors duration-300">
-                      The Moment
-                    </Link>
-                    <Link to="/terms" className="block text-white transition-colors duration-300">
-                      LEGAL TERMS
+                      The Movement
                     </Link>
                   </div>
                 </div>
@@ -164,8 +161,11 @@ export default function Footer({ color = false, secondaryColor = false }) {
                     CONTACT
                   </Link>
                   <div>
-                    <p className="manrope text-sm text-gray-300">LRE@luckyerherha.com</p>
                     <p className="manrope text-sm text-gray-300">+2347045068663</p>
+                    <p className="manrope text-sm text-gray-300">LRE@luckyerherha.com</p>
+                    <Link to="/terms" className="block text-white transition-colors duration-300 manrope text-sm mt-2">
+                      TERMS &amp; CONDITIONS
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -232,11 +232,6 @@ export default function Footer({ color = false, secondaryColor = false }) {
             </div>
 
             <div className="lg:col-span-1 flex flex-col">
-              <div className="flex-1">
-                <Link to="/terms" className="text-white hover:text-white transition-colors duration-300 manrope">
-                  TERMS & CONDITIONS
-                </Link>
-              </div>
               <div className="space-y-2 pt-8 manrope">
                 <a
                   href="https://www.facebook.com/share/18tZawxAqR/?mibextid=qi2Omg"
@@ -323,8 +318,11 @@ export default function Footer({ color = false, secondaryColor = false }) {
                 CONTACT
               </Link>
               <div>
-                <p className="manrope text-sm text-gray-300">LRE@luckyerherha.com</p>
                 <p className="manrope text-sm text-gray-300">+2347045068663</p>
+                <p className="manrope text-sm text-gray-300">LRE@luckyerherha.com</p>
+                <Link to="/terms" className="block text-white hover:text-white transition-colors duration-300 manrope text-sm mt-2">
+                  TERMS &amp; CONDITIONS
+                </Link>
               </div>
               <div className="mt-8 md:hidden">
                 <Link to="/contact-us" className="block hover:text-white transition-colors duration-300 manrope mb-5">

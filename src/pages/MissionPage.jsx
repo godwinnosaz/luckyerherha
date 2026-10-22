@@ -79,16 +79,6 @@ export default function MissionPage({ embedded = false }) {
           {/* Declaration of Purpose Section (Down) */}
           <div className="bg-(--grey) py-16 px-6 md:py-20 md:px-14 mb-20 md:mb-24 rounded-2xl shadow-2xl transition-all duration-300 hover:shadow-3xl animate-fade-in-up">
             <div className="flex flex-col justify-center items-center">
-              <div className="text-center mb-10 md:mb-12">
-                <h2 className="text-lg md:text-2xl font-bold tracking-[0.25em] uppercase text-(--text-grey) opacity-70 trajan-pro mb-3">
-                  DECLARATION OF PURPOSE
-                </h2>
-                <h3 className="text-3xl md:text-4xl lg:text-5xl font-black text-(--text-grey) trajan-pro leading-tight">
-                  Africa's Return Declaration of Purpose
-                </h3>
-                <div className="w-16 h-1 bg-(--secondary-color)/40 mx-auto mt-4 rounded-full"></div>
-              </div>
-
               <div
                 className="text-(--text-grey) text-lg md:text-[1.2rem] leading-relaxed font-medium manrope space-y-6 max-w-3xl mx-auto px-4"
                 style={{ textAlign: 'justify', textAlignLast: 'center' }}

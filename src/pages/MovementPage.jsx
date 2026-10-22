@@ -50,7 +50,7 @@ export default function MovementPage() {
           <blockquote className="movement-hero-quote">
             "it is time for our people to dream new dreams"
           </blockquote>
-          <p className="movement-hero-name">Luck R. Erherha</p>
+          <p className="movement-hero-name">Lucky R. Erherha</p>
         </div>
       </AppHeaderBg>
 

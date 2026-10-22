@@ -114,9 +114,9 @@ export default function ContactPage() {
         <NavSm isDark={true} />
       </div>
 
-      <AppIntersection externalClass="bg-(--white) sticky top-0 z-15">
+      {/* <AppIntersection externalClass="bg-(--white) sticky top-0 z-15">
         <h1 className="trajan-pro text-(--text-grey) text-4xl">Book LRE</h1>
-      </AppIntersection>
+      </AppIntersection> */}
 
       <EngagementPage embedded />
 

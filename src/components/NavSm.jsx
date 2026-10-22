@@ -119,13 +119,6 @@ export default function NavSm({ isDark = false }) {
             LRE
           </NavLink>
           <NavLink
-            to="/legacy-of-impact"
-            className={({ isActive }) => `trajan-pro ${isActive ? 'active-link' : ''}`}
-            onClick={closeNav}
-          >
-            Zumera
-          </NavLink>
-          <NavLink
             to="/leadership"
             className={({ isActive }) => `trajan-pro ${isActive ? 'active-link' : ''}`}
             onClick={closeNav}
@@ -137,7 +130,14 @@ export default function NavSm({ isDark = false }) {
             className={({ isActive }) => `trajan-pro ${isActive ? 'active-link' : ''}`}
             onClick={closeNav}
           >
-            The Moment
+            The Movement
+          </NavLink>
+          <NavLink
+            to="/legacy-of-impact"
+            className={({ isActive }) => `trajan-pro ${isActive ? 'active-link' : ''}`}
+            onClick={closeNav}
+          >
+            Zumera
           </NavLink>
           <NavLink
             to="/contact-us"
