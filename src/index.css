@@ -1235,6 +1235,11 @@ button:active,
   text-decoration: none !important;
 }
 
+.leadership-arsenal-button {
+  background-color: var(--secondary-color) !important;
+  color: #ffffff !important;
+}
+
 .navlinks a::after,
 .navlinks-dark a::after {
   content: '';

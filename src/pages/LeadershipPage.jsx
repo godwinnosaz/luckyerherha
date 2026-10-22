@@ -68,7 +68,7 @@ export default function LeadershipPage() {
                 href="https://youtube.com/@luckyrerherha?si=BTtNAUEU46Uc5e0Z"
                 target="_blank"
                 rel="noreferrer"
-                className="trajan-pro cta-grey text-[1.1rem] tracking-wider uppercase font-bold hover:scale-105 active:scale-95 shadow-md hover:shadow-xl transition-all duration-300"
+                className="trajan-pro cta-grey leadership-arsenal-button text-[1.1rem] tracking-wider uppercase font-bold hover:scale-105 active:scale-95 shadow-md hover:shadow-xl transition-all duration-300"
               >
                 ENTER THE ARSENAL
               </a>
