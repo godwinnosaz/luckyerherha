@@ -125,8 +125,7 @@ export default function ContactPage() {
           <div className="lg:w-1/2 p-8 lg:p-12 flex flex-col md:items-start text-justify md:text-left mb-10">
             <div className="w-full max-w-md mx-auto">
               <h1 className="text-3xl lg:text-4xl font-extrabold text-gray-900 manrope md:trajan-pro leading-tight mb-8 start-text">
-                Events &amp; Engagements <br className="hidden md:block" /> with LRE{' '}
-                <br className="hidden md:block" /> (Lucky R. Erherha).
+                Events &amp; Engagements <br className="hidden md:block" /> with LRE
               </h1>
               <div className="space-y-4 text-gray-700 text-justify md:text-left">
                 <div className="leading-6 space-y-6">

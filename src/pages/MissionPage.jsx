@@ -58,19 +58,22 @@ export default function MissionPage({ embedded = false }) {
                   Africa’s Return is The New Era of Creators.
                 </p>
                 <p>
-                  We cannot afford to wait. Africa’s Return exists because something essential was interrupted and the time to reclaim it is now.
+                  There is no time.
                 </p>
                 <p>
-                  There was a time when Africans never questioned their worth. They built, governed, and imagined their future from within. They didn’t ask, “What do others think of me?” They demanded: “What can we create?”
+                  Africa’s Return exists because something real was taken from us and if we don’t take it now, we never will.
                 </p>
                 <p>
-                  That connection was fractured, but it is waiting to be restored.
+                  Look back at our history. Our people knew exactly who they were. We built our own homes, ran our own lives, and decided our own future.
                 </p>
                 <p>
-                  The Rise of Royals is our call to action to fierce responsibility. It is the absolute refusal to live passively in a world designed by others when we have the power to shape it.
+                  That was taken from us. We were disconnected from our own strength and we’ve been living on other people’s terms ever since.
                 </p>
-                <p className="font-bold text-black text-xl">
-                  Africa's Return is a wakeup call: remembering what we are capable of and forging an Africa that dominates the global stage right now.
+                <p>
+                  We are done with that. The Rise of Royals means taking total responsibility for our lives.
+                </p>
+                <p>
+                  Africa’s Return is simple. Remember what we can do. Stop playing small. It is time Africa runs its own show and makes the world respect us.
                 </p>
               </div>
             </div>
@@ -118,19 +121,16 @@ export default function MissionPage({ embedded = false }) {
               style={{ textAlign: 'justify', textAlignLast: 'center' }}
             >
               <p>
-                True freedom does not start with a flag, it starts in the mind. If we do not own our thoughts, political independence is an illusion.
+                A flag on a pole doesn’t make you free. If you do not control your own mind, you are still playing someone else’s game.
               </p>
               <p>
-                We are starving for a new kind of freedom: the sovereignty of imagination.
+                We are starving for real freedom - the freedom to think for ourselves and build what we actually need.
               </p>
               <p>
-                We must stop instinctively reaching for foreign blueprints to solve African problems. We have imitated foreign blueprints enough.
-              </p>
-              <p className="font-semibold text-white">
-                Now, we take authorship for our continent.
+                For decades, we have copied the West and it hasn't worked for us. It is time to stop copying and start building.
               </p>
               <p>
-                The time for Africa to play on the global stage: unapologetic, self-reliant, and driven by the sheer strength of our own minds is NOW.
+                We rely on ourselves, we trust our own brains and we take our place at the front starting today.
               </p>
             </div>
           </div>
@@ -154,19 +154,16 @@ export default function MissionPage({ embedded = false }) {
               <div className="mission-action-copy w-full mx-auto space-y-20">
                 <div className="space-y-20 text-gray-700 text-base md:text-lg leading-relaxed manrope">
                   <p className="font-semibold text-gray-900">
-                    Africa does not lack people who care. What we lack is the transformation of anger and concern into creation.
+                    Africa has plenty of people who care. That is not the problem. The problem is that anger and talk do not build anything.
                   </p>
                   <p>
-                    We are experts at discussing our challenges, but pointing out a fire does not put it out. Identifying the problem is only where responsibility begins.
+                    We are experts at sitting in a room listing everything that seems wrong but pointing at a house on fire does not put the flames out.
                   </p>
                   <p>
-                    The real, uncomfortable question is: What are we going to build in place of what we do not like?
-                  </p>
-                  <p>
-                    You do not need to transform a continent overnight. Find a problem close enough to touch. Master it. Build a solution. Refine it. Pass the torch. This is how civilizations are born.
+                    Transformation happens when Africans become solution driven. This is how civilizations are born.
                   </p>
                   <p className="font-bold text-gray-900">
-                    We can no longer afford to just protest what is wrong. We must become useful in building the future we desire.
+                    We must become useful in building the future we desire.
                   </p>
                 </div>
               </div>

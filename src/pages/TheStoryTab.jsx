@@ -9,7 +9,7 @@ export default function TheStoryTab() {
         </div>
       </article>
       <article className="w-[90%] md:w-[50%] text-center md:text-left space-y-6 text-(--black) text-[1.15rem] md:text-[1.25rem] font-medium leading-relaxed mt-5 md:mt-0">
-        <h3 className="text-2xl md:text-3xl font-extrabold text-black trajan-pro">About The RJ Brand</h3>
+        <h3 className="text-2xl md:text-3xl font-extrabold text-black trajan-pro">About The Brand</h3>
         <p className="font-bold text-lg text-black">Power. Prestige. Style.</p>
         <p>
           The RJ Brand is the world’s most exclusive African experience. It provides the essence for

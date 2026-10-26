@@ -211,18 +211,17 @@ nav a:hover,
 @keyframes pageTransitionEnter {
   0% {
     opacity: 0;
-    transform: translateY(22px);
   }
 
   100% {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 
 .page-transition-enter {
   animation: pageTransitionEnter 0.95s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  will-change: opacity, transform;
+  will-change: opacity;
+  transform: none;
 }
 
 /* Scroll Progress Indicator Bar */
@@ -899,6 +898,158 @@ nav a:hover,
   margin-top: 20px;
 }
 
+.join-resistance-section {
+  width: 100%;
+  padding: 2rem 1rem 4rem;
+}
+
+.join-resistance-inner {
+  width: min(100%, 70rem);
+  margin: 0 auto;
+  display: grid;
+  gap: 1.5rem;
+  justify-items: center;
+  text-align: center;
+}
+
+.join-resistance-title {
+  margin: 0;
+  color: var(--text-grey);
+  font-family: 'TrajanPro', serif;
+  font-size: clamp(2rem, 2vw, 2.25rem);
+  line-height: 1.1;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.join-resistance-copy {
+  width: min(100%, 40rem);
+  display: grid;
+  gap: 1.25rem;
+  text-align: left;
+  font-family: 'Manrope', sans-serif;
+  color: var(--text-grey);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.join-resistance-copy p {
+  margin: 0;
+}
+
+.join-resistance-callout {
+  font-weight: 800;
+  color: #101010;
+  font-family: 'TrajanPro', serif;
+  font-size: 1.25rem;
+  letter-spacing: 0.02em;
+}
+
+.join-resistance-button,
+.join-book-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3.2rem;
+  padding: 0.9rem 1.8rem;
+  border: none;
+  border-radius: 999px;
+  background: #062441;
+  color: #ffffff;
+  font-family: 'TrajanPro', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 10px 24px rgba(6, 36, 65, 0.18);
+}
+
+.join-resistance-button:hover,
+.join-book-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 28px rgba(6, 36, 65, 0.22);
+}
+
+.join-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  background: rgba(10, 10, 10, 0.6);
+}
+
+.join-overlay-panel {
+  position: relative;
+  width: min(100%, 34rem);
+  max-height: min(88vh, 46rem);
+  overflow-y: auto;
+  background: rgba(11, 17, 24, 0.96);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 1.25rem;
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.35);
+  padding: 2rem 1.5rem 1.5rem;
+}
+
+.join-overlay-close {
+  position: absolute;
+  top: 0.9rem;
+  right: 1rem;
+  border: none;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.join-overlay-header {
+  margin: 0 0 1rem;
+  color: #ffffff;
+  text-align: center;
+  font-family: 'TrajanPro', serif;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 1.2rem;
+}
+
+.join-overlay-socials {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+  margin-bottom: 1.25rem;
+}
+
+.join-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.8rem;
+  padding: 0.8rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  text-decoration: none;
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.join-social-link:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-1px);
+}
+
+.join-book-button {
+  width: 100%;
+  margin-top: 0.25rem;
+}
+
 .footer-content-layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
@@ -917,6 +1068,32 @@ nav a:hover,
 @media (max-width: 640px) {
   .mission-action-copy {
     max-width: 100%;
+  }
+
+  .join-overlay {
+    padding: 0.75rem;
+  }
+
+  .join-overlay-panel {
+    width: 100%;
+    max-height: 90vh;
+    padding: 1.5rem 1rem 1rem;
+    border-radius: 1rem;
+  }
+
+  .join-overlay-header {
+    font-size: 1rem;
+    letter-spacing: 0.06em;
+  }
+
+  .join-overlay-socials {
+    grid-template-columns: 1fr;
+    gap: 0.7rem;
+  }
+
+  .join-social-link {
+    min-height: 2.6rem;
+    font-size: 0.82rem;
   }
 }
 

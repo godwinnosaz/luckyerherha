@@ -40,7 +40,7 @@ export default function AboutPage() {
                   What if we returned to the raw, original power we once owned?
                 </p>
                 <p>
-                  We are done trying to “catch up.” Catching up is a trap that keeps us chasing someone else's path. The real question is: What will we build that makes us focus on our own creations and forget about “catching up”?
+                  We are done trying to "catch up." Catching up is a trap that keeps us chasing someone else's path. The real question is: What will we build that makes us focus on our own creations and forget about "catching up"?
                 </p>
                 <p>
                   Beyond discussing the future; we are here to forge it.
@@ -75,25 +75,10 @@ export default function AboutPage() {
               </h3>
               <div className="space-y-4 text-justify md:text-start manrope text-base md:text-[1.05rem] leading-relaxed">
                 <p className="font-semibold">
-                  Real freedom starts in the mind.
+                  Real freedom does not happen on the outside first. It begins in the spirit.
                 </p>
                 <p>
-                  Changing what is around us changes nothing if our minds remain unchanged. Give a man new technology without transforming his imagination and he will only ever copy the man who built it.
-                </p>
-                <p>
-                  Our philosophy of liberation begins with first principles: return to the beginning of a problem, question the assumptions beneath it, understand its actual cause, and then create from that understanding rather than simply copying an existing response.
-                </p>
-                <p className="font-semibold">
-                  True intellectual freedom means being able to learn from another person without becoming a smaller version of that person.
-                </p>
-                <p>
-                  True liberation is creative and Africans must unlock their levels of consciousness to tap into their original creativity.
-                </p>
-                <p>
-                  Africa's Return is moving Africans from consumer to creator. From passive observer to active builder. From waiting for solutions to producing them.
-                </p>
-                <p className="font-semibold text-(--text-grey) text-lg pt-2 border-t border-gray-300">
-                  Freedom isn't just about having more. It is becoming capable of building whatever we need.
+                  True liberation means returning to the root. It means looking past the surface of our struggles, questioning what we’ve been told to accept, and creating solutions from our own deep truth rather than copying someone else’s shadow.
                 </p>
               </div>
             </div>
