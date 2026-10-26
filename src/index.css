@@ -900,7 +900,7 @@ nav a:hover,
 
 .join-resistance-section {
   width: 100%;
-  padding: 2rem 1rem 4rem;
+  padding: 88px 2rem 5rem;
 }
 
 .join-resistance-inner {
@@ -926,7 +926,7 @@ nav a:hover,
   width: min(100%, 40rem);
   display: grid;
   gap: 1.25rem;
-  text-align: left;
+  text-align: justify;
   font-family: 'Manrope', sans-serif;
   color: var(--text-grey);
   font-size: 1rem;
@@ -938,6 +938,7 @@ nav a:hover,
 }
 
 .join-resistance-callout {
+  text-align: center;
   font-weight: 800;
   color: #101010;
   font-family: 'TrajanPro', serif;
@@ -1415,6 +1416,17 @@ button:active,
 .leadership-arsenal-button {
   background-color: var(--secondary-color) !important;
   color: #ffffff !important;
+}
+
+.leadership-arsenal-content {
+  width: 90%;
+  max-width: 64rem;
+}
+
+@media (min-width: 768px) {
+  .leadership-arsenal-content {
+    width: 55%;
+  }
 }
 
 .navlinks a::after,

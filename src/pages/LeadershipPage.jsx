@@ -30,7 +30,7 @@ export default function LeadershipPage() {
       <section className="my-12">
         <article className="flex justify-center items-center py-8">
           <div
-            className="text-(--black) space-y-8 w-[90%] md:w-[80%] max-w-5xl mx-auto text-[1.15rem] manrope"
+            className="leadership-arsenal-content text-(--black) space-y-8 mx-auto text-[1.15rem] manrope"
             style={{ color: '#1a202c' }}
           >
             <div className="text-center space-y-4 pb-2 animate-editorial-lead">
@@ -46,7 +46,7 @@ export default function LeadershipPage() {
             <div className="w-24 h-[2px] bg-gray-300 mx-auto"></div>
 
             {/* Editorial Body Text */}
-            <div className="space-y-6 text-justify md:text-center leading-relaxed text-gray-800 text-[1.1rem] md:text-[1.15rem]">
+            <div className="space-y-6 text-center leading-relaxed text-gray-800 text-[1.1rem] md:text-[1.15rem]">
               <p>
                 The Arsenal of Knowledge is where we gather the intellectual weight behind Africa’s Return. This is not a library designed to tell you what to think; it is a training ground to make you think harder, deeper, and clearer.
               </p>
