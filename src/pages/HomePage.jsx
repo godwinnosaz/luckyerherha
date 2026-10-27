@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar';
 import NavSm from '../components/NavSm';
 import AppIntersection from '../components/AppIntersection';
 import Footer from '../components/Footer';
-import declarationImage from '../../assets/imgs/home/declaration.jpeg';
+import declarationImage from '../../assets/imgs/home/declaration.png';
 
 export default function HomePage() {
   return (
