@@ -144,27 +144,29 @@ export default function MissionPage({ embedded = false }) {
               <h2 className="text-3xl md:text-4xl text-center font-black text-(--text-grey) trajan-pro tracking-wide uppercase">
                 Africa's Call to Action
               </h2>
-              <div className="mission-action-image image-zoom-frame w-full rounded-2xl shadow-2xl">
-                <img
-                  src="/assets/imgs/mission/action.png"
-                  alt="Africa's Call to Action"
-                  className="w-full h-auto object-cover"
-                />
-              </div>
-              <div className="mission-action-copy w-full mx-auto space-y-20">
-                <div className="space-y-20 text-gray-700 text-base md:text-lg leading-relaxed manrope">
-                  <p className="font-semibold text-gray-900">
-                    Africa has plenty of people who care. That is not the problem. The problem is that anger and talk do not build anything.
-                  </p>
-                  <p>
-                    We are experts at sitting in a room listing everything that seems wrong but pointing at a house on fire does not put the flames out.
-                  </p>
-                  <p>
-                    Transformation happens when Africans become solution driven. This is how civilizations are born.
-                  </p>
-                  <p className="font-bold text-gray-900">
-                    We must become useful in building the future we desire.
-                  </p>
+              <div className="echoes-feature-layout mission-action-layout">
+                <div className="mission-action-image echoes-feature-frame image-zoom-frame w-full rounded-2xl shadow-2xl">
+                  <img
+                    src="/assets/imgs/mission/action.png"
+                    alt="Africa's Call to Action"
+                    className="echoes-feature-image w-full object-cover"
+                  />
+                </div>
+                <div className="echoes-feature-copy mission-action-copy space-y-20">
+                  <div className="space-y-20 text-gray-700 text-base md:text-lg leading-relaxed manrope">
+                    <p className="font-semibold text-gray-900">
+                      Africa has plenty of people who care. That is not the problem. The problem is that anger and talk do not build anything.
+                    </p>
+                    <p>
+                      We are experts at sitting in a room listing everything that seems wrong but pointing at a house on fire does not put the flames out.
+                    </p>
+                    <p>
+                      Transformation happens when Africans become solution driven. This is how civilizations are born.
+                    </p>
+                    <p className="font-bold text-gray-900">
+                      We must become useful in building the future we desire.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>

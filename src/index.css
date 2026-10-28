@@ -1062,6 +1062,10 @@ nav a:hover,
   max-width: 60%;
 }
 
+.mission-action-layout .mission-action-copy {
+  max-width: none;
+}
+
 .mission-action-copy > div {
   text-align: justify;
 }
