@@ -139,6 +139,13 @@ export default function NavSm({ isDark = false }) {
           >
             Zumera
           </NavLink>
+            <NavLink
+              to="/articles"
+              className={({ isActive }) => `trajan-pro ${isActive ? 'active-link' : ''}`}
+              onClick={closeNav}
+            >
+              Articles
+            </NavLink>
           <NavLink
             to="/contact-us"
             className={({ isActive }) =>
