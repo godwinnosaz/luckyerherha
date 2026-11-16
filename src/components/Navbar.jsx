@@ -77,6 +77,12 @@ export default function Navbar({ isDark = false, className = '' }) {
                 Zumera
               </NavLink>
               <NavLink
+                to="/articles"
+                className={({ isActive }) => `trajan-pro ${isActive ? 'active-link' : ''}`}
+              >
+                Articles
+              </NavLink>
+              <NavLink
                 to="/contact-us"
                 className={({ isActive }) =>
                   `trajan-pro nav-cta-blue rounded-xs ${isActive ? 'active-link' : ''}`
@@ -124,6 +130,12 @@ export default function Navbar({ isDark = false, className = '' }) {
                 className={({ isActive }) => `trajan-pro ${isActive ? 'active-link' : ''}`}
               >
                 Zumera
+              </NavLink>
+              <NavLink
+                to="/articles"
+                className={({ isActive }) => `trajan-pro ${isActive ? 'active-link' : ''}`}
+              >
+                Articles
               </NavLink>
               <NavLink
                 to="/contact-us"
