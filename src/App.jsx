@@ -15,10 +15,10 @@ import ZumeraTab from './pages/ZumeraTab';
 import InvestorInfoTab from './pages/InvestorInfoTab';
 import MovementPage from './pages/MovementPage';
 import TermsPage from './pages/TermsPage';
+import ArticlesPage from './pages/ArticlesPage';
 
 export default function App() {
   const location = useLocation();
-
   return (
     <>
       <ScrollToTop />
@@ -39,6 +39,7 @@ export default function App() {
             <Route path="investor-info" element={<Navigate to="/legacy-of-impact" replace />} />
           </Route>
           <Route path="/movement" element={<MovementPage />} />
+          <Route path="/articles" element={<ArticlesPage />} />
           <Route path="/engagement" element={<Navigate to="/contact-us" replace />} />
           <Route path="/terms" element={<TermsPage />} />
           {/* Fallback to home */}
